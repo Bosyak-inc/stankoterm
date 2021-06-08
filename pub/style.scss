@@ -1,0 +1,258 @@
+$logo-width: 57;
+
+body {
+	background-color: #fff;
+	color: #000;
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+#header {
+	position: relative;
+
+	font-size: 1.75em;
+	/* width: 100%; */
+	padding: 3px;
+	padding-bottom: 0;
+	background-color: #eee;
+}
+
+.logo {
+	/* width: 100px; */
+	margin: 0.2em;
+}
+
+.headerTitle {
+	position: absolute;
+	left: $logo-width;
+
+	margin-left: 1.2em;
+	margin-top: 0.3em;
+}
+
+.headerTitle a {
+	color: #17a;
+	transition: 0.5s all;
+}
+
+.headerTitle a:hover {
+	text-shadow: 4px 2px 2px #ccc;
+	transition: 1s all;
+}
+
+#menu {
+	position: absolute;
+	bottom: 0;
+	left: $logo-width + 10px;
+	width: 100%;
+
+	text-align: left;
+	/* overflow: hidden; */
+	/* clear: none; */
+	font-size: 0.6em;
+
+	padding: 0.5em 14px;
+	margin-left: 1em;
+	margin-bottom: 0;
+	padding-bottom: 0.4em;
+
+	background-color: #17a;
+	border: none;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #069;
+	border-top-left-radius: 20px;
+}
+
+#menu a {
+	vertical-align: middle;
+	padding: 0.5em 5px;
+	color: #fff;
+	transition: 0.5s all;
+}
+
+#menu a:hover {
+	background-color: #069;
+	transition: 0.8s all;
+}
+
+.right{
+	float: right;
+    margin: 0;
+    padding: 0;
+}
+
+#header a, #menu a, #footer a {
+	text-decoration: none;
+}
+
+.hidden {
+	display: none;
+}
+
+// FOOTER
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+#footer {
+	position: relative;
+	bottom: 0;
+
+	width: 100%;
+
+	color: #000;
+}
+
+.top {
+	padding: 25px;
+	padding-top: 0;
+	margin: 0;
+
+	background-color: #eee;
+}
+
+div.info {
+	display: inline-block;
+	vertical-align: top;
+
+	width: 15em;
+
+	padding: 1em;
+}
+
+div.contacts {
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+
+	width: 15em;
+
+	text-align: left;
+	padding: 1em;
+}
+
+div.forClients {
+	display: inline-block;
+	vertical-align: top;
+
+	width: 15em;
+
+	text-align: left;
+	padding: 1em;
+}
+
+div.forClients ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+div.forClients li {
+	text-decoration: underline;
+	transition: 0.8s all;
+}
+
+div.forClients li a {
+	color: #000;
+}
+
+div.forClients li:hover {
+	text-decoration: none;
+	transition: 0.8s all;
+}
+
+.top p, ul {
+	font-size: 70%;
+}
+
+#footer .top h2 a {
+	color: #000;
+}
+
+#CopyRight {
+	// position: ;
+	// bottom: 0;
+	// left: 0;
+
+	width: 100%;
+
+	text-align: center;
+
+	font-size: 0.8em;
+	color: #fff;
+	background-color: #17a;
+	border-bottom: 1px solid #069;
+	padding: 0;
+	margin: 0;
+}
+
+#CopyRight a {
+	color: #fff;
+	transition: 0.5s all;
+}
+
+#CopyRight a:hover {
+	transition: 0.5s all;
+	color: #d3d3d3;
+}
+
+.contact {
+	color: #6699cc;
+	font-style: italic;
+}
+
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+#content {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	min-height: 300px;
+	/* overflow: hidden; */
+}
+
+#content a {
+	text-decoration: none;
+	font-weight: bold;
+	background-image: linear-gradient(currentColor, currentColor);
+	background-position: 0% 100%;
+	background-repeat: no-repeat;
+	background-size: 0% 2px;
+	transition: background-size .3s;
+}
+
+#content a:hover {
+	/* text-decoration: underline; */
+	background-size: 100% 2px;
+}
+
+#main {
+	margin: 0 0 0 200px;
+	max-width: 50em;
+	padding: 1.5em;
+}
+
+.left {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin: 1em 1ex 0.5ex 0;
+	font-size: 1.4em;
+}
+
+h2 {
+	margin: 1em 1ex 0.5ex 0;
+	font-size: 1.3em;
+}
+
+h3 {
+	margin: 1em 1ex 0.5ex 0;
+	font-size: 1.0em;
+}
+
+h4 {
+	margin: 1em 1ex 0.5ex 0;
+	font-size: 0.9em;
+}
