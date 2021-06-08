@@ -1,0 +1,177 @@
+body {
+	background-color: #fff;
+	color: #000;
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+#header {
+	width: 100%;
+	display: flex;
+	font-size: 1.75em;
+	background-color: #eee;
+	padding: 3px;
+	padding-bottom: 0;
+	width: 100%;
+}
+
+#headerText {
+	position: relative;
+}
+
+#header .logo {
+}
+
+#header .headerTitle {
+	position: absolute;
+	margin-left: 1em;
+	margin-top: 0.3em;
+	width: 16em;
+}
+
+#headerText .headerTitle a {
+	color: #17a;
+	transition: 0.5s all;
+}
+
+#headerText .headerTitle a:hover {
+	text-shadow: 4px 2px 2px #ccc;
+	transition: 1s all;
+}
+
+#menu {
+	overflow: hidden;
+	text-align: left;
+	background-color: #17a;
+	border: none;
+	border-top-left-radius: 20px;
+	font-size: 0.6em;
+	clear: none;
+	overflow: hidden;
+	padding: 0.5em 18px;
+	margin-left: 0.5em;
+	margin-bottom: 0;
+	padding-bottom: 0.4em;
+	width: 74em;  /* TODO */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #069;
+}
+
+#menu a {
+	padding: 0.5em 5px;
+	color: #fff;
+	transition: 0.5s all;
+}
+
+#menu a:hover {
+	background-color: #069;
+	transition: 0.8s all;
+}
+
+.right{
+	float: right;
+    margin: 0;
+    padding: 0;
+}
+
+#header a, #menu a, #footer a {
+	text-decoration: none;
+}
+
+.hidden {
+	display: none;
+}
+
+#footer {
+	width: 100%;
+	background-color: #eee;
+	color: #000;
+}
+
+#footer .top h2 a {
+	float: left;
+	color: #000;
+	display: inline-block;
+}
+
+#footer p.cont {
+	text-align: right;
+	color: #;
+}
+
+#CopyRight {
+	font-size: 0.8em;
+	color: #fff;
+	background-color: #17a;
+	border-top: 1px solid #069;
+	text-align: center;
+}
+
+#CopyRight a {
+	color: #fff;
+	/* transition: 0.5s all; */
+	transition: 0.5s all;
+}
+
+#CopyRight a:hover {
+	transition: 0.5s all;
+	color: #d3d3d3;
+}
+
+#content {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	/* overflow: hidden; */
+}
+
+#content a {
+	text-decoration: none;
+	font-weight: bold;
+	background-image: linear-gradient(currentColor, currentColor);
+	background-position: 0% 100%;
+	background-repeat: no-repeat;
+	background-size: 0% 2px;
+	transition: background-size .3s;
+}
+
+#content a:hover {
+	/* text-decoration: underline; */
+	background-size: 100% 2px;
+}
+
+#main {
+	margin: 0 0 0 200px;
+	max-width: 50em;
+	padding: 1.5em;
+}
+
+.left {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	margin: 1em 1ex 0.5ex 0;
+	font-size: 1.4em;
+}
+
+h2 {
+	margin: 1em 1ex 0.5ex 0;
+	font-size: 1.3em;
+	}
+
+h3 {
+	margin: 1em 1ex 0.5ex 0;
+	font-size: 1.0em;
+}
+
+h4 {
+	margin: 1em 1ex 0.5ex 0;
+	font-size: 0.9em;
+}
