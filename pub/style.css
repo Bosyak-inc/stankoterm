@@ -225,6 +225,14 @@ ul.production li {
 ul.production li a {
 }
 
+#footer .top .info a.footer:hover {
+	color: #333;
+}
+
+#footer .top .contacts a.footer:hover {
+	color: #333;
+}
+
 h1 {
   margin: 1em 1ex 0.5ex 0;
   font-size: 1.4em; }
