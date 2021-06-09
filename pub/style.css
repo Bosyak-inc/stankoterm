@@ -14,9 +14,15 @@ body {
   padding-bottom: 0;
   background-color: #eee; }
 
-.logo {
-  /* width: 100px; */
-  margin: 0.2em; }
+img.logo {
+  padding: 0;
+  margin: 0.2em;
+  margin-bottom: 0;
+  transition: 0.5s all; }
+
+img.logo:hover {
+  text-shadow: 4px 2px 20px #ccc;
+  transition: 1s all; }
 
 .headerTitle {
   position: absolute;
