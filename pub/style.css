@@ -24,6 +24,7 @@ body {
         text-shadow: 4px 2px 2px #ccc;
         transition: 1s all; }
   #header #menu {
+    display: block;
     position: absolute;
     bottom: 0;
     left: 67px;
@@ -41,8 +42,14 @@ body {
       font-size: 0.6em;
       padding: 0;
       margin: 0 0 0 1em; }
+      #header #menu ul.menu:after {
+        display: block;
+        float: none;
+        content: ' ';
+        clear: both; }
       #header #menu ul.menu li {
-        display: inline-block; }
+        display: inline-block;
+        position: relative; }
       #header #menu ul.menu a {
         display: block;
         vertical-align: middle;
@@ -52,6 +59,34 @@ body {
         #header #menu ul.menu a:hover {
           background-color: #069;
           transition: 0.8s all; }
+    #header #menu ul.subMenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      max-width: 1000px;
+      z-index: 10;
+      padding: 0;
+      margin: 0;
+      background-color: #17a;
+      color: #fff;
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+      transform: scaleY(0);
+      -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      transform-origin: 0 0; }
+      #header #menu ul.subMenu li {
+        display: block; }
+        #header #menu ul.subMenu li a {
+          display: block; }
+    #header #menu ul.menu > li:hover > ul.subMenu {
+      -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+      transform: scaleY(1); }
 
 img.logo {
   padding: 0;
@@ -134,13 +169,46 @@ img.logo:hover {
         color: #d3d3d3; }
 
 #main {
-  margin: 0 0 0 200px;
-  max-width: 50em;
-  padding: 1.5em; }
+  clear: both;
+  margin: 0;
+  padding: 0; }
+  #main #nav {
+    position: fixed;
+    float: left;
+    margin: 0 1px 0 0;
+    padding: 1em 0;
+    border-right: 1px dotted #ccc;
+    width: 200px; }
+    #main #nav ul {
+      overflow: hidden;
+      padding: 0;
+      margin: 0; }
+      #main #nav ul li {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+        #main #nav ul li a {
+          display: block;
+          margin: 0;
+          padding: 0.8ex 2em 0.8ex 1em;
+          color: #17a; }
+          #main #nav ul li a:hover {
+            background-color: #ddd; }
+    #main #nav #go {
+      display: none; }
+    #main #nav #go:checked ~ ul.subMenu {
+      display: block; }
+    #main #nav ul.subMenu {
+      display: none; }
+    #main #nav .st {
+      padding: 0 20px 0 20px;
+      background: green;
+      cursor: pointer;
+      color: white; }
   #main #content {
-    clear: both;
-    margin: 0;
-    padding: 0;
+    margin: 0 0 0 200px;
+    max-width: 50em;
+    padding: 1.5em;
     margin-bottom: 10em;
     min-height: 300px;
     overflow: hidden; }
@@ -202,7 +270,7 @@ h4 {
   margin: 1em 1ex 0.5ex 0;
   font-size: 0.9em; }
 
-#header a, #menu a, #footer a {
+#header a, #nav a, #menu a, #footer a {
   text-decoration: none; }
 
 .hidden {

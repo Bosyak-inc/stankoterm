@@ -42,6 +42,7 @@ body {
 	}
 
 	#menu {
+		display: block;
 		position: absolute;
 		bottom: 0;
 		left: $logo-width + 10px;
@@ -66,8 +67,16 @@ body {
 			padding: 0;
 			margin: 0 0 0 1em;
 
+			&:after {
+				display: block;
+				float: none;
+				content: ' ';
+				clear: both;
+			}
+
 			li {
 				display: inline-block;
+				position: relative;
 			}
 
 			a {
@@ -82,6 +91,45 @@ body {
 					transition: 0.8s all;
 				}
 			}
+		}
+
+		ul.subMenu {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			// width: 100%;
+			max-width: 1000px;
+			z-index: 10;
+			padding: 0;
+			margin: 0;
+
+			background-color: #17a;
+			color: #fff;
+
+			-webkit-transition: 0.5s ease-in-out;
+			-moz-transition: 0.5s ease-in-out;
+			-o-transition: 0.5s ease-in-out;
+			transition: 0.5s ease-in-out;
+
+			-webkit-transform: scaleY(0);
+			-ms-transform: scaleY(0);
+			transform: scaleY(0);
+			-webkit-transform-origin: 0 0;
+			-ms-transform-origin: 0 0;
+			transform-origin: 0 0;
+
+			li {
+				display: block;
+				a {
+					display: block;
+				}
+			}
+		}
+
+		ul.menu > li:hover > ul.subMenu {
+			-webkit-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+			transform: scaleY(1);
 		}
 	}
 }
@@ -219,14 +267,68 @@ ul.production {
 }
 
 #main {
-	margin: 0 0 0 200px;
-	max-width: 50em;
-	padding: 1.5em;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	
+	#nav {
+		position: fixed;
+		float: left;
+		margin: 0 1px 0 0;
+		padding: 1em 0;
+		border-right: 1px dotted #ccc;
+		width: 200px;
+
+		ul {
+			overflow: hidden;
+			padding: 0;
+			margin: 0;
+
+			li {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+
+				a {
+					display: block;
+					margin: 0;
+					padding: 0.8ex 2em 0.8ex 1em;
+
+					color: #17a;
+
+					&:hover {
+						background-color: #ddd;
+					}
+				}
+			}
+		}
+
+		#go {display:none;}
+		#go:checked ~ ul.subMenu {
+			display: block;
+		}
+
+		ul.subMenu {
+			display: none;
+
+			li a:before {
+				// content: "> ";
+				// padding-left: 0.8em;
+			}
+		}
+
+		.st {
+			padding:0 20px 0 20px;
+			background:green;
+			cursor:pointer;
+			color:white;
+		}
+	}
 
 	#content {
-		clear: both;
-		margin: 0;
-		padding: 0;
+		margin: 0 0 0 200px;
+		max-width: 50em;
+		padding: 1.5em;
 		margin-bottom: 10em;
 		min-height: 300px;
 		overflow: hidden;
@@ -266,7 +368,6 @@ ul.production {
 			}
 		}
 	}
-
 }
 
 img.directorImg {
@@ -309,7 +410,7 @@ h4 {
 	font-size: 0.9em;
 }
 
-#header a, #menu a, #footer a {
+#header a, #nav a, #menu a, #footer a {
 	text-decoration: none;
 }
 
