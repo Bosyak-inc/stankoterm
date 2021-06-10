@@ -145,11 +145,15 @@ div.forClients li:hover {
 
 #CopyRight {
   width: 100%;
-  text-align: center;
   font-size: 0.8em;
   color: #fff;
   background-color: #17a;
   border-bottom: 1px solid #069;
+  padding: 0;
+  margin: 0; }
+
+#CopyRight p {
+  text-align: center;
   padding: 0;
   margin: 0; }
 
@@ -162,7 +166,7 @@ div.forClients li:hover {
   color: #d3d3d3; }
 
 .contact {
-  color: #6699cc;
+  color: #333;
   font-style: italic; }
 
 #content {
