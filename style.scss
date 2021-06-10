@@ -196,18 +196,19 @@ div.forClients li:hover {
 }
 
 #CopyRight {
+	display: table;
 	width: 100%;
 
 	font-size: 0.8em;
 	color: #fff;
 	background-color: #17a;
-	border-top: 1px solid #069;
+	border-top: 1px solid #ccc;
 	padding: 0;
 	margin: 0;
 }
 
 #CopyRight p {
-	text-align: ;
+	text-align: center;
 	padding: 0;
 	margin: 0;
 }

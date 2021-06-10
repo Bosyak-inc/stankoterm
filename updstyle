@@ -1,0 +1,18 @@
+#!/bin/sh
+
+_die() {
+	[[ $1 != "" ]] && echo "$1"
+	echo "Terminating"
+	exit 1
+}
+
+compil="sassc"
+
+which $compil &>/dev/null
+[[ $? == 1 ]] && _die "No $compil compiler"
+
+emsg=""
+[[ -z $1 || ! -f $1 ]] && [[ -z $2 || ! -f $2 ]] && _die "invalid arg"
+
+$compil $1 $2
+echo "Styles succesfuly updated"
