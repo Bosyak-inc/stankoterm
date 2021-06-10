@@ -54,8 +54,8 @@ img.logo:hover {
 	left: $logo-width + 10px;
 	width: calc(100% - (1.5em + 67px + 14px + 3px + 2px));
 
-	text-align: left;
-	overflow: hidden;
+	// text-align: left;
+	// overflow: hidden;
 	clear: none;
 	font-size: 0.6em;
 
@@ -71,16 +71,36 @@ img.logo:hover {
 	border-top-left-radius: 20px;
 }
 
-#menu a {
+#menu a, #subMenu a {
 	vertical-align: middle;
 	padding: 0.5em 5px;
 	color: #fff;
 	transition: 0.5s all;
 }
 
-#menu a:hover {
+#menu a:hover, #subMenu a:hover {
 	background-color: #069;
 	transition: 0.8s all;
+}
+
+#subMenu {
+	position: relative;
+	top: 0;
+	left: 200px;
+	width: 100em;
+
+	font-size: 0.8em;
+	clear: both;
+
+	padding: 0.5em 14px;
+
+	background-color: #17a;
+
+	border: none;
+	border-bottom-right-radius: 20px;
+}
+
+#popUpMenu {
 }
 
 .right{
@@ -89,7 +109,7 @@ img.logo:hover {
     padding: 0;
 }
 
-#header a, #menu a, #footer a {
+#header a, #menu a, #subMenu a, #footer a {
 	text-decoration: none;
 }
 
