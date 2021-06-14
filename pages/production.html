@@ -3,7 +3,6 @@
 		<title>Продукция | Официальный сайт ОАО "Станкотерм"</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../pub/style.css">
-		<script src="https://kit.fontawesome.com/5f295d2822.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div id="header">
@@ -33,22 +32,57 @@
 		<div id="main">
 			<div id="nav">
 				<ul class="menu">
-					<li>
-						<a href="#ourProd">Наша продукция</a>
-						<ul class="subMenu">
+					<li style="display:inline;">
+						<nobr>
+						<a style="display:inline-block;" href="#ourProd">Продукция</a>
+						<a style="display:inline-block;" id="opsInp">V</a>
+						</nobr>
+						<br/>
+						<ul id="ourProdSub" class="subMenu">
 							<li><a href="#">sub1</a></li>
 							<li><a href="#">sub2</a></li>
 							<li><a href="#">sub3</a></li>
 						</ul>
 					</li>
-					<li>
-						<nobr><a href="#services">Услуги</a></nobr>
-						<ul class="subMenu">
+					<li style="display: inline;">
+						<a style="display: inline-block;" href="#services">Услуги</a>
+						<a id="servInp" style="display: inline-block;">V</a>
+						<ul id="servSub" class="subMenu">
 							<li><a href="#">sub</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
+
+	<script>
+		let ops = document.getElementById('ourProdSub');
+		let ss  = document.getElementById('servSub');
+		let opsInp = document.getElementById('opsInp');
+		let servInp = document.getElementById('servInp');
+
+		let opsStatus = 0;
+		let servStatus = 0;
+
+		opsInp.onclick = function() {
+			if (opsStatus === 0) {
+				opsStatus = 1;
+				ops.style.display = "block";
+			} else {
+				opsStatus = 0;
+				ops.style.display = "none";
+			}
+		};
+
+		servInp.onclick = function() {
+			if (servStatus === 0) {
+				servStatus = 1;
+				ss.style.display = "block";
+			} else {
+				servStatus = 0;
+				ss.style.display = "none";
+			}
+		};
+	</script>
 
 			<div id="content">
 				<h1><article id="ourProd">Наша продукция</article></h1>

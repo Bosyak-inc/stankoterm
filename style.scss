@@ -93,44 +93,44 @@ body {
 			}
 		}
 
-		ul.subMenu {
-			position: absolute;
-			top: 100%;
-			left: 0;
-			// width: 100%;
-			max-width: 1000px;
-			z-index: 10;
-			padding: 0;
-			margin: 0;
+		// ul.subMenu {
+		// 	position: absolute;
+		// 	top: 100%;
+		// 	left: 0;
+		// 	// width: 100%;
+		// 	max-width: 1000px;
+		// 	z-index: 10;
+		// 	padding: 0;
+		// 	margin: 0;
 
-			background-color: #17a;
-			color: #fff;
+		// 	background-color: #17a;
+		// 	color: #fff;
 
-			-webkit-transition: 0.5s ease-in-out;
-			-moz-transition: 0.5s ease-in-out;
-			-o-transition: 0.5s ease-in-out;
-			transition: 0.5s ease-in-out;
+		// 	-webkit-transition: 0.5s ease-in-out;
+		// 	-moz-transition: 0.5s ease-in-out;
+		// 	-o-transition: 0.5s ease-in-out;
+		// 	transition: 0.5s ease-in-out;
 
-			-webkit-transform: scaleY(0);
-			-ms-transform: scaleY(0);
-			transform: scaleY(0);
-			-webkit-transform-origin: 0 0;
-			-ms-transform-origin: 0 0;
-			transform-origin: 0 0;
+		// 	-webkit-transform: scaleY(0);
+		// 	-ms-transform: scaleY(0);
+		// 	transform: scaleY(0);
+		// 	-webkit-transform-origin: 0 0;
+		// 	-ms-transform-origin: 0 0;
+		// 	transform-origin: 0 0;
 
-			li {
-				display: block;
-				a {
-					display: block;
-				}
-			}
-		}
+		// 	li {
+		// 		display: block;
+		// 		a {
+		// 			display: block;
+		// 		}
+		// 	}
+		// }
 
-		ul.menu > li:hover > ul.subMenu {
-			-webkit-transform: scaleY(1);
-			-ms-transform: scaleY(1);
-			transform: scaleY(1);
-		}
+		// ul.menu > li:hover > ul.subMenu {
+		// 	-webkit-transform: scaleY(1);
+		// 	-ms-transform: scaleY(1);
+		// 	transform: scaleY(1);
+		// }
 	}
 }
 
@@ -303,25 +303,11 @@ ul.production {
 			}
 		}
 
-		#go {display:none;}
-		#go:checked ~ ul.subMenu {
-			display: block;
-		}
-
 		ul.subMenu {
 			display: none;
 
 			li a:before {
-				// content: "> ";
-				// padding-left: 0.8em;
 			}
-		}
-
-		.st {
-			padding:0 20px 0 20px;
-			background:green;
-			cursor:pointer;
-			color:white;
 		}
 	}
 
@@ -416,4 +402,12 @@ h4 {
 
 .hidden {
 	display: none;
+}
+
+.splitMajor {
+	display: inline;
+}
+
+.splitMinor {
+	display: inline-block;
 }

@@ -59,34 +59,6 @@ body {
         #header #menu ul.menu a:hover {
           background-color: #069;
           transition: 0.8s all; }
-    #header #menu ul.subMenu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      max-width: 1000px;
-      z-index: 10;
-      padding: 0;
-      margin: 0;
-      background-color: #17a;
-      color: #fff;
-      -webkit-transition: 0.5s ease-in-out;
-      -moz-transition: 0.5s ease-in-out;
-      -o-transition: 0.5s ease-in-out;
-      transition: 0.5s ease-in-out;
-      -webkit-transform: scaleY(0);
-      -ms-transform: scaleY(0);
-      transform: scaleY(0);
-      -webkit-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-      transform-origin: 0 0; }
-      #header #menu ul.subMenu li {
-        display: block; }
-        #header #menu ul.subMenu li a {
-          display: block; }
-    #header #menu ul.menu > li:hover > ul.subMenu {
-      -webkit-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-      transform: scaleY(1); }
 
 img.logo {
   padding: 0;
@@ -194,17 +166,8 @@ img.logo:hover {
           color: #17a; }
           #main #nav ul li a:hover {
             background-color: #ddd; }
-    #main #nav #go {
-      display: none; }
-    #main #nav #go:checked ~ ul.subMenu {
-      display: block; }
     #main #nav ul.subMenu {
       display: none; }
-    #main #nav .st {
-      padding: 0 20px 0 20px;
-      background: green;
-      cursor: pointer;
-      color: white; }
   #main #content {
     margin: 0 0 0 200px;
     max-width: 50em;
@@ -275,3 +238,9 @@ h4 {
 
 .hidden {
   display: none; }
+
+.splitMajor {
+  display: inline; }
+
+.splitMinor {
+  display: inline-block; }
