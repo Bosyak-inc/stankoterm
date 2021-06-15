@@ -258,3 +258,13 @@ h4 {
 
 .splitMinor {
   display: inline-block; }
+
+.tooltip span {
+  position: relative;
+  display: none;
+  top: -100px;
+  left: 0;
+  animation: animate 0.5s ease-in-out; }
+
+.tooltip:hover span {
+  display: block; }

@@ -15,7 +15,7 @@
 #mtk600Img {
 	float: right;
 	width: 400px;
-	margin-top: 1em;
+	// margin-top: 1em;
 	padding: 0.5em;
 
 	img {
@@ -38,6 +38,71 @@
 
 	p {
 		padding: 0 1em;
+		text-align: center;
+	}
+}
+
+#mtkEl {
+	float: right;
+	padding: 1em;
+
+	img {
+		width: 300px;
+		height: 198px;
+	}
+
+	p {
+		text-align: center;
+	}
+}
+
+#eep {
+	float: left;
+	padding: 2em;
+	padding-bottom: 0.1em;
+
+	p {
+		text-align: center;
+	}
+}
+
+#epp {
+	float: left;
+	padding: 2em;
+	padding-bottom: 0.1em;
+	width: 170px;
+
+	p {
+		text-align: center;
+	}
+}
+
+#eep25 {
+	float: left;
+	width: 185px;
+	padding: 2em;
+	padding-bottom: 0.1em;
+	
+	img {
+	}
+
+	p {
+		text-align: center;
+	}
+}
+
+#eep60, #eep60frame {
+	display: block;
+	float: left;
+	padding: 2em;
+	padding-bottom: 0.1em;
+
+	img {
+		width: 185px;
+		height: 235px;
+	}
+
+	p {
 		text-align: center;
 	}
 }
