@@ -157,7 +157,6 @@ img.logo:hover {
       #main #nav ul li.buttoned {
         display: inline; }
         #main #nav ul li.buttoned .split {
-          text-align: center;
           display: inline-block; }
         #main #nav ul li.buttoned #servInp, #main #nav ul li.buttoned #opsInp {
           -ms-user-select: none;

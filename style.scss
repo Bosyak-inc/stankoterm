@@ -287,7 +287,6 @@ ul.production {
 				display: inline;
 
 				.split {
-					text-align: center;
 					display: inline-block;
 				}
 
@@ -320,9 +319,6 @@ ul.production {
 
 		ul.subMenu {
 			display: none;
-
-			li a:before {
-			}
 		}
 	}
 
