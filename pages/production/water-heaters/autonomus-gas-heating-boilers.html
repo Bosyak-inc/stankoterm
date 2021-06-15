@@ -1,9 +1,9 @@
-
 <html lang="ru">
 	<head>
 		<title>Продукция | Официальный сайт ОАО "Станкотерм"</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../../../pub/style.css">
+		<link rel="stylesheet" href="../style.css">
 		<script src="https://kit.fontawesome.com/5f295d2822.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
@@ -17,39 +17,237 @@
 			</span>
 
 			<div id="menu">
-				<a href="../../../index.html">Главная</a>
-				<a href="../../production.html">
-					<b>Продукция</b>
-				</a>
-				<a href="../../prices.html">Реестр цен</a>
-				<a href="../../news.html">Новости</a>
-				<a href="../../documents.html">Документы</a>
-				<a href="../../contacts.html">Контакты</a>
+				<ul class="menu">
+					<li><a href="../../../index.html">Главная</a></li>
+					<li><a href="../../production.html">
+							<b>Продукция</b>
+						</a>
+					</li>
+					<li><a href="../../prices.html">Реестр цен</a></li>
+					<li><a href="../../news.html">Новости</a></li>
+					<li><a href="../../documents.html">Документы</a></li>
+					<li><a href="../../contacts.html">Контакты</a></li>
+				</ul>
 			</div>
 		</div>
 
 		<div id="main">
-			<div id="content">
+			<div id="nav">
+				<ul class="menu">
+					<li class="buttoned">
+						<nobr>
+						<a class="split" href="#ourProd">Продукция</a>
+						<a class="split" id="opsInp">
+							<i id="opsTxt" class="fa fa-angle-down"></i>
+						</a>
+						</nobr>
+						<ul id="ourProdSub" class="subMenu">
+							<li><a href="#">Отопление</a></li>
+							<li><a href="#">Вентиляция для птичников</a></li>
+							<li><a href="#">Разное</a></li>
+							<li><a href="#">Металлоконструкции</a></li>
+						</ul>
+					</li>
+					<li class="buttoned">
+						<nobr>
+						<a class="split" href="#services">Услуги</a>
+						<a class="split" id="servInp">
+							<i id="servTxt" class="fa fa-angle-down"></i>
+						</a>
+						</nobr>
+						<ul id="servSub" class="subMenu">
+							<li><a href="#">Изготовление</a></li>
+							<li><a href="#">Ремонт</a></li>
+							<li><a href="#">Металло отбработка</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 
+	<script>
+		function SubMenu(bt, mn, txt, st = 0) {
+			this.stat   = st;
+			this.button = bt;
+			this.menu   = mn;
+			this.text   = txt;
+		}
+
+		let ourProd = new SubMenu(document.getElementById('opsInp'),
+								  document.getElementById('ourProdSub'),
+								  document.getElementById('opsTxt'));
+		let serv    = new SubMenu(document.getElementById('servInp'),
+								  document.getElementById('servSub'),
+								  document.getElementById('servTxt'));
+
+		function toggleSub(sm) {
+			if (sm.stat === 0) {
+				sm.stat = 1;
+				sm.menu.style.display = "block";
+				sm.text.className = "fa fa-angle-up";
+			} else {
+				sm.stat = 0;
+				sm.menu.style.display = "none";
+				sm.text.className = "fa fa-angle-down";
+			}
+		}
+
+		ourProd.button.addEventListener("click", function(){ toggleSub(ourProd); });
+		serv.button.addEventListener("click",    function(){ toggleSub(serv); });
+	</script>
+
+			<div id="content">
+				<h1>Котлы отопительные газовые</h1>
+				<p>
+				С целью повышения безопасности и удешевления тепловой энергии на заводе "Станкотерм" выпускаются жароводотрубные котлы КЖВГ-10, КЖВГ-20, "Клен", КЖВГ-50, КЖВГ-100 и КЖВГ-200, работающие в системах отопления с естественной и принудительной циркуляцией. Они предназначены для нагрева воды в автономных отопительных системах, водоподогревателях для горячего водоснабжения, для комплектации блочных котельных МТК. Котлы КЖВГ представляют собой сварную конструкцию цилиндрической формы. На передней панели котла устанавливается газогорелочное устройство соответствующей мощности - "Пламя-1", "Арбат", УГТ-41 или УГТ-100 и т.п. Высокий КПД котлов получен за счет сложной, оригинальной конструкции топки и газохода, что позволяет снизить расход газа на 30% по сравнению с другими серийно выпускаемыми котлами.
+				</p>
+				<div id="illustrations">
+					<span class="inline">
+						<img src="../../../img/production/klen.jpg"/>
+						<p>Клен-Г</p>
+					</span>
+					<span class="inline">
+						<img src="../../../img/production/jvg-10.jpg"/>
+						<p>КЖВГ-10</p>
+					</span>
+					<span class="inline">
+						<img src="../../../img/production/kjvg-50.jpg"/>
+						<p>КЖВГ-50</p>
+					</span>
+					<span class="inline">
+						<img src="../../../img/production/kjvg-100.jpg"/>
+						<p>КЖВГ-100</p>
+					</span>
+					<span class="inline">
+						<img src="../../../img/production/kjvg-200.jpg"/>
+						<p>КЖВГ-200</p>
+					</span>
+				</div>
+
+				<br/>
+				<table>
+					<tr>
+						<th>Тип котла</th>
+						<th>КЖВГ-10</th>
+						<th>КЖВГ-20</th>
+						<th>Клен-Г</th>
+						<th>КЖВГ-50</th>
+						<th>КЖВГ-100</th>
+						<th>КЖВГ-200</th>
+					</tr>
+					<tr>
+						<td>Номинальная мощность, кВт 10</td>
+						<td>20</td>
+						<td>25</td>
+						<td>50</td>
+						<td>100</td>
+						<td>200</td>
+					</tr>
+					<tr>
+						<td>Производительность, Гкал/час</td>
+						<td>0,0086</td>
+						<td>0,017</td>
+						<td>0,021</td>
+						<td>0,043</td>
+						<td>0,086</td>
+						<td>0,17</td>
+					</tr>
+					<tr>
+						<td>Отапливаемый объем, куб.м/час</td>
+						<td>300</td>
+						<td>600</td>
+						<td>750</td>
+						<td>1500</td>
+						<td>3000</td>
+						<td>6000</td>
+					</tr>
+					<tr>
+						<td>Абсолютное давление, мПа</td>
+						<td>0,2</td>
+						<td>0,2</td>
+						<td>0,3</td>
+						<td>0,3</td>
+						<td>0,3</td>
+						<td>0,3</td>
+					</tr>
+					<tr>
+						<td>Расход газа, куб.м/час</td>
+						<td>1,25</td>
+						<td>2,1</td>
+						<td>2,6</td>
+						<td>5,1</td>
+						<td>10,2</td>
+						<td>20,4</td>
+					</tr>
+					<tr>
+						<td>КПД</td>
+						<td>89</td>
+						<td>93</td>
+						<td>92</td>
+						<td>92</td>
+						<td>92</td>
+						<td>92</td>
+					</tr>
+					<tr>
+						<td>Максим. температура воды град.С</td>
+						<td>90</td>
+						<td>90</td>
+						<td>90</td>
+						<td>90</td>
+						<td>90</td>
+						<td>90</td>
+					</tr>
+					<tr>
+						<td>Габариты (мм). длина</td>
+						<td>600</td>
+						<td>600</td>
+						<td>600</td>
+						<td>670</td>
+						<td>800</td>
+						<td>1100</td>
+					</tr>
+					<tr>
+						<td style="padding-left: 8.3em;">ширина (диаметр)</td>
+						<td>(400)</td>
+						<td>(470)</td>
+						<td>500</td>
+						<td>(590)</td>
+						<td>(750)</td>
+						<td>(1000)</td>
+					</tr>
+					<tr>
+						<td>Масса не более, кг</td>
+						<td>50</td>
+						<td>90</td>
+						<td>85</td>
+						<td>170</td>
+						<td>295</td>
+						<td>800</td>
+					</tr>
+				</table>
+				<br/>
+
+				<p>
+				Специалисты ОАО "Станкотерм" по заявке покупателя могут произвести монтаж и наладку автономных газовых котлов на объекте заказчика.
+				</p>
 			</div>
 		</div>
 
 		<div id="footer">
 			<div class="top">
 				<div class="info">
-					<h2><a class="footer" href="../../../index.html">Станкотерм</a></h2> 
+					<h2><a href="../../../index.html">Станкотерм</a></h2> 
 					<p>ОАО "Станкотерм" учереждено в 1998. Основной вид деятельности - выпуск отопительного и водонагрейного оборудования бытового и производственного назначения, а так же станков и механизмов и товаров народного потребления.</p>
 				</div>
 				<div class="forClients">
 					<h2>Клиентам</h2>
-					<ul>
+					<ul class="forClients">
 						<li><a href="../../production.html">Продукция</a></li>
 						<li><a href="../../prices.html">Реест цен</a></li>
 						<li><a href="../../documents.html">Документы</a></li>
 					</ul>
 				</div>
 				<div class="contacts">
-					<h2><a class="footer" href="../../contacts.html">Контакты</a></h2>
+					<h2><a href="../../contacts.html">Контакты</a></h2>
 					<p><i class="fas fa-home"></i> г. Пятигорск, пос. Горячеводский, ул. 6-я линия, д. 121</p>
 					<p><i class="fas fa-clock"></i> Время работы - c 9:00 до XX:XX</p>
 					<p><i class="fas fa-phone-alt"></i> <span class="contact">(8793) 31-66-67</span></p>
@@ -59,7 +257,7 @@
 			</div>
 
 			<div id="CopyRight">
-				© 2021 <a href="http://stankoterm.ru">stankoterm.ru</a> | All Rights Reserved | Design by siisgoo@mail.ru
+				<p>© 2021 <a href="stankoterm.ru">stankoterm.ru</a> | All Rights Reserved | Design by siisgoo@mail.ru</p>
 			</div>
 		</div>
 	</body>

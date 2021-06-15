@@ -155,14 +155,18 @@ img.logo:hover {
       padding: 0;
       margin: 0; }
       #main #nav ul li.buttoned {
-        display: inline; }
+        display: inline;
+        width: auto; }
         #main #nav ul li.buttoned .split {
           display: inline-block; }
         #main #nav ul li.buttoned #servInp, #main #nav ul li.buttoned #opsInp {
           -ms-user-select: none;
           -moz-user-select: none;
           -khtml-user-select: none;
-          -webkit-user-select: none; }
+          -webkit-user-select: none;
+          float: right;
+          width: 0.2em;
+          height: 1em; }
       #main #nav ul li {
         list-style: none;
         padding: 0;
@@ -176,6 +180,8 @@ img.logo:hover {
             background-color: #ddd; }
     #main #nav ul.subMenu {
       display: none; }
+      #main #nav ul.subMenu li {
+        padding-left: 1em; }
   #main #content {
     margin: 0 0 0 200px;
     max-width: 50em;
@@ -202,7 +208,7 @@ img.logo:hover {
       color: #333;
       text-align: center; }
       #main #content hr:after {
-        content: "⚙⚙⚙";
+        content: "⚙" "⚙" "⚙";
         display: inline-block;
         position: relative;
         top: -0.7em;

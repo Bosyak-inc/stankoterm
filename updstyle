@@ -15,4 +15,8 @@ emsg=""
 [[ -z $1 || ! -f $1 ]] && [[ -z $2 || ! -f $2 ]] && _die "invalid arg"
 
 $compil $1 $2
-echo "Styles succesfuly updated"
+if [[ $? == 0 ]]; then
+	echo "Styles succesfuly updated"
+else
+	echo "Cant update styles"
+fi

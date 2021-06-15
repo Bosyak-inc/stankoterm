@@ -1,0 +1,8 @@
+#illustrations {
+  display: inline; }
+  #illustrations img {
+    width: 100px;
+    height: 200px;
+    padding: 0.5em; }
+  #illustrations .inline {
+    display: inline-block; }

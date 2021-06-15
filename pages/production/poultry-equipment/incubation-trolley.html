@@ -16,18 +16,84 @@
 			</span>
 
 			<div id="menu">
-				<a href="../../../index.html">Главная</a>
-				<a href="../../production.html">
-					<b>Продукция</b>
-				</a>
-				<a href="../../prices.html">Реестр цен</a>
-				<a href="../../news.html">Новости</a>
-				<a href="../../documents.html">Документы</a>
-				<a href="../../contacts.html">Контакты</a>
+				<ul class="menu">
+					<li><a href="../../../index.html">Главная</a></li>
+					<li><a href="../../production.html">
+							<b>Продукция</b>
+						</a>
+					</li>
+					<li><a href="../../prices.html">Реестр цен</a></li>
+					<li><a href="../../news.html">Новости</a></li>
+					<li><a href="../../documents.html">Документы</a></li>
+					<li><a href="../../contacts.html">Контакты</a></li>
+				</ul>
 			</div>
 		</div>
 
 		<div id="main">
+			<div id="nav">
+				<ul class="menu">
+					<li class="buttoned">
+						<nobr>
+						<a class="split" href="#ourProd">Продукция</a>
+						<a class="split" id="opsInp">
+							<i id="opsTxt" class="fa fa-angle-down"></i>
+						</a>
+						</nobr>
+						<ul id="ourProdSub" class="subMenu">
+							<li><a href="#">Отопление</a></li>
+							<li><a href="#">Вентиляция для птичников</a></li>
+							<li><a href="#">Разное</a></li>
+							<li><a href="#">Металлоконструкции</a></li>
+						</ul>
+					</li>
+					<li class="buttoned">
+						<nobr>
+						<a class="split" href="#services">Услуги</a>
+						<a class="split" id="servInp">
+							<i id="servTxt" class="fa fa-angle-down"></i>
+						</a>
+						</nobr>
+						<ul id="servSub" class="subMenu">
+							<li><a href="#">Изготовление</a></li>
+							<li><a href="#">Ремонт</a></li>
+							<li><a href="#">Металло отбработка</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+	<script>
+		function SubMenu(bt, mn, txt, st = 0) {
+			this.stat   = st;
+			this.button = bt;
+			this.menu   = mn;
+			this.text   = txt;
+		}
+
+		let ourProd = new SubMenu(document.getElementById('opsInp'),
+								  document.getElementById('ourProdSub'),
+								  document.getElementById('opsTxt'));
+		let serv    = new SubMenu(document.getElementById('servInp'),
+								  document.getElementById('servSub'),
+								  document.getElementById('servTxt'));
+
+		function toggleSub(sm) {
+			if (sm.stat === 0) {
+				sm.stat = 1;
+				sm.menu.style.display = "block";
+				sm.text.className = "fa fa-angle-up";
+			} else {
+				sm.stat = 0;
+				sm.menu.style.display = "none";
+				sm.text.className = "fa fa-angle-down";
+			}
+		}
+
+		ourProd.button.addEventListener("click", function(){ toggleSub(ourProd); });
+		serv.button.addEventListener("click",    function(){ toggleSub(serv); });
+	</script>
+
 			<div id="content">
 
 			</div>
@@ -36,19 +102,19 @@
 		<div id="footer">
 			<div class="top">
 				<div class="info">
-					<h2><a class="footer" href="../../../index.html">Станкотерм</a></h2> 
+					<h2><a href="../../../index.html">Станкотерм</a></h2> 
 					<p>ОАО "Станкотерм" учереждено в 1998. Основной вид деятельности - выпуск отопительного и водонагрейного оборудования бытового и производственного назначения, а так же станков и механизмов и товаров народного потребления.</p>
 				</div>
 				<div class="forClients">
 					<h2>Клиентам</h2>
-					<ul>
+					<ul class="forClients">
 						<li><a href="../../production.html">Продукция</a></li>
 						<li><a href="../../prices.html">Реест цен</a></li>
 						<li><a href="../../documents.html">Документы</a></li>
 					</ul>
 				</div>
 				<div class="contacts">
-					<h2><a class="footer" href="../../contacts.html">Контакты</a></h2>
+					<h2><a href="../../contacts.html">Контакты</a></h2>
 					<p><i class="fas fa-home"></i> г. Пятигорск, пос. Горячеводский, ул. 6-я линия, д. 121</p>
 					<p><i class="fas fa-clock"></i> Время работы - c 9:00 до XX:XX</p>
 					<p><i class="fas fa-phone-alt"></i> <span class="contact">(8793) 31-66-67</span></p>
@@ -58,9 +124,8 @@
 			</div>
 
 			<div id="CopyRight">
-				© 2021 <a href="http://stankoterm.ru">stankoterm.ru</a> | All Rights Reserved | Design by siisgoo@mail.ru
+				<p>© 2021 <a href="stankoterm.ru">stankoterm.ru</a> | All Rights Reserved | Design by siisgoo@mail.ru</p>
 			</div>
 		</div>
 	</body>
 </html>
-
