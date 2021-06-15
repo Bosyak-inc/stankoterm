@@ -1,4 +1,4 @@
-#illustrations {
+.illustrations {
 	display: inline;
 
 	img {
@@ -9,5 +9,35 @@
 
 	.inline {
 		display: inline-block;
+	}
+}
+
+#mtk600Img {
+	float: right;
+	width: 400px;
+	margin-top: 1em;
+	padding: 0.5em;
+
+	img {
+		width: 400px;
+	}
+
+	p {
+		padding: 0 1em;
+		text-align: center;
+	}
+}
+
+#mtk200Img {
+	float: left;
+	width: 370px;
+
+	img {
+		width: 350px;
+	}
+
+	p {
+		padding: 0 1em;
+		text-align: center;
 	}
 }

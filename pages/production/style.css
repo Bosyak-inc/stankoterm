@@ -1,8 +1,28 @@
-#illustrations {
+.illustrations {
   display: inline; }
-  #illustrations img {
+  .illustrations img {
     width: 100px;
     height: 200px;
     padding: 0.5em; }
-  #illustrations .inline {
+  .illustrations .inline {
     display: inline-block; }
+
+#mtk600Img {
+  float: right;
+  width: 400px;
+  margin-top: 1em;
+  padding: 0.5em; }
+  #mtk600Img img {
+    width: 400px; }
+  #mtk600Img p {
+    padding: 0 1em;
+    text-align: center; }
+
+#mtk200Img {
+  float: left;
+  width: 370px; }
+  #mtk200Img img {
+    width: 350px; }
+  #mtk200Img p {
+    padding: 0 1em;
+    text-align: center; }
