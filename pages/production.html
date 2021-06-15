@@ -3,6 +3,7 @@
 		<title>Продукция | Официальный сайт ОАО "Станкотерм"</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="../pub/style.css">
+		<script src="https://kit.fontawesome.com/5f295d2822.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div id="header">
@@ -32,21 +33,22 @@
 		<div id="main">
 			<div id="nav">
 				<ul class="menu">
-					<li style="display:inline;">
+					<li class="buttoned">
 						<nobr>
-						<a style="display:inline-block;" href="#ourProd">Продукция</a>
-						<a style="display:inline-block;" id="opsInp">V</a>
+						<a class="split" href="#ourProd">Продукция</a>
+						<a class="split" id="opsInp"><i id="opsTxt" class="fa fa-angle-down"></i></a>
 						</nobr>
-						<br/>
 						<ul id="ourProdSub" class="subMenu">
 							<li><a href="#">sub1</a></li>
 							<li><a href="#">sub2</a></li>
 							<li><a href="#">sub3</a></li>
 						</ul>
 					</li>
-					<li style="display: inline;">
-						<a style="display: inline-block;" href="#services">Услуги</a>
-						<a id="servInp" style="display: inline-block;">V</a>
+					<li class="buttoned">
+						<nobr>
+						<a class="split" href="#services">Услуги</a>
+						<a class="split" id="servInp"><i id="servTxt" class="fa fa-angle-down"></i></a>
+						</nobr>
 						<ul id="servSub" class="subMenu">
 							<li><a href="#">sub</a></li>
 						</ul>
@@ -55,33 +57,34 @@
 			</div>
 
 	<script>
-		let ops = document.getElementById('ourProdSub');
-		let ss  = document.getElementById('servSub');
-		let opsInp = document.getElementById('opsInp');
-		let servInp = document.getElementById('servInp');
+		function SubMenu(bt, mn, txt, st = 0) {
+			this.stat   = st;
+			this.button = bt;
+			this.menu   = mn;
+			this.text   = txt;
+		}
 
-		let opsStatus = 0;
-		let servStatus = 0;
+		let ourProd = new SubMenu(document.getElementById('opsInp'),
+								  document.getElementById('ourProdSub'),
+								  document.getElementById('opsTxt'));
+		let serv    = new SubMenu(document.getElementById('servInp'),
+								  document.getElementById('servSub'),
+								  document.getElementById('servTxt'));
 
-		opsInp.onclick = function() {
-			if (opsStatus === 0) {
-				opsStatus = 1;
-				ops.style.display = "block";
+		function toggleSub(sm) {
+			if (sm.stat === 0) {
+				sm.stat = 1;
+				sm.menu.style.display = "block";
+				sm.text.className = "fa fa-angle-up";
 			} else {
-				opsStatus = 0;
-				ops.style.display = "none";
+				sm.stat = 0;
+				sm.menu.style.display = "none";
+				sm.text.className = "fa fa-angle-down";
 			}
-		};
+		}
 
-		servInp.onclick = function() {
-			if (servStatus === 0) {
-				servStatus = 1;
-				ss.style.display = "block";
-			} else {
-				servStatus = 0;
-				ss.style.display = "none";
-			}
-		};
+		ourProd.button.addEventListener("click", function(){ toggleSub(ourProd); });
+		serv.button.addEventListener("click",    function(){ toggleSub(serv); });
 	</script>
 
 			<div id="content">
