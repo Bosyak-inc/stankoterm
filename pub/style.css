@@ -11,7 +11,29 @@ body {
   font-size: 1.75em;
   padding: 3px;
   padding-bottom: 0;
-  background-color: #eee; }
+  background-color: #eee;
+  height: 100px; }
+  #header #logo {
+    position: absolute;
+    width: 57;
+    height: 84;
+    padding: 0;
+    margin: 0.2em;
+    margin-bottom: 0;
+    text-align: center; }
+    #header #logo span {
+      vertical-align: middle; }
+    #header #logo #c {
+      color: #17a;
+      font-size: 2.5em;
+      font-weight: bold; }
+    #header #logo #t {
+      position: absolute;
+      top: 1px;
+      left: 16px;
+      color: red;
+      font-size: 2.1em;
+      font-weight: bold; }
   #header .headerTitle {
     position: absolute;
     left: 57;
@@ -185,8 +207,7 @@ img.logo:hover {
     max-width: 50em;
     padding: 1.5em;
     margin-bottom: 10em;
-    min-height: 300px;
-    overflow: hidden; }
+    min-height: 300px; }
     #main #content a {
       text-decoration: none;
       font-weight: bold;

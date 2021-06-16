@@ -80,3 +80,23 @@
     height: 235px; }
   #eep60 p, #eep60frame p {
     text-align: center; }
+
+table.tableInfo {
+  background-color: #eee; }
+  table.tableInfo tr {
+    margin: 0;
+    padding: 0; }
+    table.tableInfo tr th, table.tableInfo tr td {
+      text-align: left;
+      padding: 0.2em; }
+    table.tableInfo tr th {
+      background-color: #17a;
+      color: #fff; }
+    table.tableInfo tr td {
+      padding-right: 1.5em;
+      border-right: 1px solid #17a; }
+      table.tableInfo tr td:first-child {
+        background-color: #ccc;
+        border: none; }
+      table.tableInfo tr td:last-child {
+        border: none; }
