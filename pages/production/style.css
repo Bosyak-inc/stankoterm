@@ -4,12 +4,10 @@
     width: 100px;
     height: 200px;
     padding: 0.5em; }
-  .illustrations .inline {
-    display: inline-block; }
 
 .imgCaption {
   display: inline-block;
-  padding: 2em;
+  padding: 1em;
   padding-bottom: 0.1em;
   width: auto;
   text-align: center; }
@@ -19,56 +17,16 @@
     padding: 0 1em;
     text-align: center; }
 
-#mtk600Img {
-  float: right;
-  width: 400px;
-  padding: 0.5em; }
-  #mtk600Img img {
-    width: 400px; }
-  #mtk600Img p {
-    padding: 0 1em;
-    text-align: center; }
-
-#mtk200Img {
-  float: left;
-  width: 370px; }
-  #mtk200Img img {
-    width: 350px; }
-  #mtk200Img p {
-    padding: 0 1em;
-    text-align: center; }
-
-#mtkEl {
-  float: right;
-  padding: 1em; }
-  #mtkEl img {
-    width: 300px;
-    height: 198px; }
-  #mtkEl p {
-    text-align: center; }
-
 #eep {
   float: left;
   padding: 2em;
   padding-bottom: 0.1em; }
-  #eep p {
-    text-align: center; }
-
-#epp {
-  float: left;
-  padding: 2em;
-  padding-bottom: 0.1em;
-  width: 170px; }
-  #epp p {
-    text-align: center; }
 
 #eep25 {
   float: left;
-  width: 185px;
+  width: auto;
   padding: 2em;
   padding-bottom: 0.1em; }
-  #eep25 p {
-    text-align: center; }
 
 #eep60, #eep60frame {
   display: block;
@@ -78,8 +36,23 @@
   #eep60 img, #eep60frame img {
     width: 185px;
     height: 235px; }
-  #eep60 p, #eep60frame p {
-    text-align: center; }
+
+#epp {
+  float: left;
+  padding: 2em;
+  padding-bottom: 0.1em; }
+
+#mtk200 {
+  float: left;
+  width: 350px; }
+
+#mtk600 {
+  float: right;
+  width: 400px;
+  padding: 0.5em; }
+
+#mtkEl {
+  float: right; }
 
 table.tableInfo {
   background-color: #eee; }
@@ -94,9 +67,13 @@ table.tableInfo {
       color: #fff; }
     table.tableInfo tr td {
       padding-right: 1.5em;
-      border-right: 1px solid #17a; }
+      border-right: 1px solid #17a;
+      border-bottom: 1px solid #17a; }
       table.tableInfo tr td:first-child {
         background-color: #ccc;
         border: none; }
       table.tableInfo tr td:last-child {
-        border: none; }
+        border-bottom: 1px solid #17a;
+        border-right: none; }
+    table.tableInfo tr:last-child td {
+      border-bottom: none; }
