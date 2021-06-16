@@ -1,4 +1,38 @@
 @charset "UTF-8";
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  details {
+    max-height: none; }
+    details summary ~ * {
+      max-height: 0;
+      overflow: hidden;
+      position: absolute; }
+    details summary:focus {
+      color: #d06c6c; }
+      details summary:focus::before {
+        transform: rotate(90deg);
+        -ms-transform: rotate(90deg); }
+      details summary:focus ~ * {
+        max-height: 20em;
+        position: static;
+        opacity: 1; } }
+
+@supports (-ms-ime-align: auto) {
+  details {
+    max-height: none; }
+    details summary ~ * {
+      max-height: 0;
+      overflow: hidden;
+      position: absolute; }
+    details summary:focus {
+      color: #d06c6c; }
+      details summary:focus::before {
+        transform: rotate(90deg);
+        -ms-transform: rotate(90deg); }
+      details summary:focus ~ * {
+        max-height: 20em;
+        position: static;
+        opacity: 1; } }
+
 body {
   background-color: #fff;
   color: #000;
@@ -176,16 +210,6 @@ img.logo:hover {
       overflow: hidden;
       padding: 0;
       margin: 0; }
-      #main #nav ul li.buttoned {
-        display: inline;
-        width: auto; }
-        #main #nav ul li.buttoned .split {
-          display: inline-block; }
-        #main #nav ul li.buttoned #servInp, #main #nav ul li.buttoned #opsInp {
-          user-select: none;
-          float: right;
-          width: 0.2em;
-          height: 1em; }
       #main #nav ul li {
         list-style: none;
         padding: 0;
@@ -197,6 +221,21 @@ img.logo:hover {
           color: #17a; }
           #main #nav ul li a:hover {
             background-color: #ddd; }
+      #main #nav ul li.buttoned {
+        display: table;
+        width: 100%; }
+        #main #nav ul li.buttoned .wrap {
+          width: 102.4px; }
+        #main #nav ul li.buttoned .split {
+          display: table-cell; }
+          #main #nav ul li.buttoned .split li {
+            width: 80%; }
+        #main #nav ul li.buttoned #servInp, #main #nav ul li.buttoned #opsInp {
+          display: table-cell;
+          user-select: none;
+          float: right;
+          width: .1em;
+          height: 1em; }
     #main #nav ul.subMenu {
       display: none;
       font-size: 80%; }
@@ -234,6 +273,56 @@ img.logo:hover {
         font-size: 1.5em;
         padding: 0 0.25em;
         background: white; }
+  #main details {
+    position: relative;
+    margin-bottom: .5rem;
+    min-height: 1rem;
+    max-height: 3rem;
+    transition: min-height .15s linear, max-height .5s linear;
+    -webkit-transition: min-height .15s linear, max-height .5s linear;
+    will-change: max-height;
+    overflow: hidden; }
+    #main details summary {
+      display: inline-block;
+      padding-left: 1.5em;
+      cursor: pointer;
+      outline: 0;
+      transition: color .12s;
+      -webkit-transition: color .12s; }
+      #main details summary::-webkit-details-marker {
+        display: none; }
+      #main details summary::-moz-list-bullet {
+        list-style-type: none; }
+      #main details summary span {
+        border-bottom: 1px currentColor dotted; }
+      #main details summary::before {
+        content: "";
+        left: 0;
+        top: .4em;
+        position: absolute;
+        background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=") no-repeat 50% 50%/1em 1em;
+        width: 1em;
+        height: 1em;
+        transition: transform .1s linear;
+        -webkit-transition: transform .1s linear; }
+      #main details summary:hover {
+        color: #d06c6c; }
+      #main details summary ~ * {
+        padding-left: 1.5em;
+        opacity: 0;
+        transition: opacity .15s linear;
+        -webkit-transition: opacity .15s linear; }
+    #main details[open] {
+      min-height: 2em;
+      max-height: 20em; }
+      #main details[open] summary {
+        color: #d06c6c; }
+        #main details[open] summary ~ * {
+          opacity: 1; }
+        #main details[open] summary:before {
+          transform: rotate(90deg);
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg); }
 
 img.directorImg {
   display: inline-block;

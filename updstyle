@@ -12,15 +12,26 @@ _check_components() {
 
 	which "sed" &>/dev/null
 	(( $? == 1 )) && _die "No sed installed"
+
+	which "grep" &>/dev/null
+	(( $? == 1 )) && _die "No grep installed"
+
+	which "awk" &>/dev/null
+	(( $? == 1 )) && _die "No awk installed"
+
+	which "realpath" &>/dev/null
+	(( $? == 1 )) && _die "No realpath installed"
 }
 
 isProfEx() {
-	[[ -n $(grep "'$1'" "$profilef") ]] && return 0
+	[[ -n "$(awk -v r="^$1:" '/r/ {print $0}' "$profilef")" ]] && return 0
 	return 1
 }
 
 save_profiel() {
-	printf "$3:$1:$2\n" >> "$profilef"
+	isProfEx $3
+	(( $? == 0 )) && return
+	printf "$3:$(realpath $1):$(realpath $2)\n" >> "$profilef"
 }
 
 del_profile() {
@@ -29,13 +40,11 @@ del_profile() {
 }
 
 load_profile() {
-	inp=
-	outp=
+	inp="$(awk -v p="^$1" -F':' '/p/ {print $2}' "$profilef")"
+	outp="$(awk -v p="^$1" -F':' '/p/ {print $3}' "$profilef")"
 }
 
-_check_input() {
-	[[ $(isProfEx $1) == 0 ]] && load_profile $1 && return
-
+_check_arg() {
 	[[ -z $1 || ! -f $1 ]] && emsg="Missing input file"
 	if [[ -z $2 || ! -f $2 ]]; then
 		if [[ -n $emsg ]]; then
@@ -45,8 +54,14 @@ _check_input() {
 		fi
 	fi
 	[[ -n $emsg ]] && _die "$emsg"
+}
+
+_check_input() {
+	isProfEx $1
+	[[ $? == 0 ]] && load_profile $1 && return
 
 	if [[ $1 == "-s" ]]; then
+		_check_arg $3 $4
 		save_profiel $3 $4 $2
 		load_profile $2
 	fi
