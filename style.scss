@@ -8,6 +8,13 @@ $gear: "⚙";
 	transform: $property;
 }
 
+@mixin user-select($prop) {
+	-ms-user-select: $prop;
+	-moz-user-select: $prop;
+	-khtml-user-select: $prop;
+	-webkit-user-select: $prop;
+}
+
 body {
 	background-color: #fff;
 	color: #000;
@@ -297,10 +304,7 @@ ul.production {
 				}
 
 				#servInp, #opsInp {
-					-ms-user-select: none;
-            		-moz-user-select: none;
-					-khtml-user-select: none;
-					-webkit-user-select: none;
+					user-select: none;
 
 					float: right;
 					width: 0.2em;
@@ -332,6 +336,7 @@ ul.production {
 
 		ul.subMenu {
 			display: none;
+			font-size: 80%;
 
 			li {
 				padding-left: 1em;
@@ -446,10 +451,12 @@ h4 {
 }
 
 .tooltip span {
+	width: auto;
+	height: auto;
 	position: relative;
 	display: none;
-	top: -100px;
-	left: 0;
+	// top: -100px;
+	// left: 0;
 	animation: animate 0.5s ease-in-out;
 }
 

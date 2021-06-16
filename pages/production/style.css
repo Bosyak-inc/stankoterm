@@ -7,6 +7,18 @@
   .illustrations .inline {
     display: inline-block; }
 
+.imgCaption {
+  display: inline-block;
+  padding: 2em;
+  padding-bottom: 0.1em;
+  width: auto;
+  text-align: center; }
+  .imgCaption img {
+    vertical-align: middle; }
+  .imgCaption p {
+    padding: 0 1em;
+    text-align: center; }
+
 #mtk600Img {
   float: right;
   width: 400px;

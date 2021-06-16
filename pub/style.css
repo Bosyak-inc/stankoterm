@@ -160,10 +160,7 @@ img.logo:hover {
         #main #nav ul li.buttoned .split {
           display: inline-block; }
         #main #nav ul li.buttoned #servInp, #main #nav ul li.buttoned #opsInp {
-          -ms-user-select: none;
-          -moz-user-select: none;
-          -khtml-user-select: none;
-          -webkit-user-select: none;
+          user-select: none;
           float: right;
           width: 0.2em;
           height: 1em; }
@@ -179,7 +176,8 @@ img.logo:hover {
           #main #nav ul li a:hover {
             background-color: #ddd; }
     #main #nav ul.subMenu {
-      display: none; }
+      display: none;
+      font-size: 80%; }
       #main #nav ul.subMenu li {
         padding-left: 1em; }
   #main #content {
@@ -260,10 +258,10 @@ h4 {
   display: inline-block; }
 
 .tooltip span {
+  width: auto;
+  height: auto;
   position: relative;
   display: none;
-  top: -100px;
-  left: 0;
   animation: animate 0.5s ease-in-out; }
 
 .tooltip:hover span {
