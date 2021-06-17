@@ -6,15 +6,23 @@
       max-height: 0;
       overflow: hidden;
       position: absolute; }
-    details summary:focus {
-      color: #d06c6c; }
-      details summary:focus::before {
-        transform: rotate(90deg);
-        -ms-transform: rotate(90deg); }
-      details summary:focus ~ * {
-        max-height: 20em;
-        position: static;
-        opacity: 1; } }
+    details summary span {
+      text-decoration: none;
+      font-weight: bold;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 2px;
+      transition: background-size .3s; }
+      details summary span:hover {
+        background-size: 100% 2px; }
+    details summary:focus::before {
+      transform: rotate(90deg);
+      -ms-transform: rotate(90deg); }
+    details summary:focus ~ * {
+      max-height: 20em;
+      position: static;
+      opacity: 1; } }
 
 @supports (-ms-ime-align: auto) {
   details {
@@ -23,19 +31,25 @@
       max-height: 0;
       overflow: hidden;
       position: absolute; }
-    details summary:focus {
-      color: #d06c6c; }
-      details summary:focus::before {
-        transform: rotate(90deg);
-        -ms-transform: rotate(90deg); }
-      details summary:focus ~ * {
-        max-height: 20em;
-        position: static;
-        opacity: 1; } }
+    details summary span {
+      text-decoration: none;
+      font-weight: bold;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 2px;
+      transition: background-size .3s; }
+      details summary span:hover {
+        background-size: 100% 2px; }
+    details summary:focus::before {
+      transform: rotate(90deg);
+      -ms-transform: rotate(90deg); }
+    details summary:focus ~ * {
+      max-height: 20em;
+      position: static;
+      opacity: 1; } }
 
 body {
-  background-color: #fff;
-  color: #000;
   font-family: sans-serif;
   padding: 0;
   margin: 0; }
@@ -47,7 +61,7 @@ body {
   padding-bottom: 0;
   background-color: #eee;
   height: 100px; }
-  #header #logo {
+  #header img.logo {
     position: absolute;
     width: 57;
     height: 84;
@@ -55,19 +69,6 @@ body {
     margin: 0.2em;
     margin-bottom: 0;
     text-align: center; }
-    #header #logo span {
-      vertical-align: middle; }
-    #header #logo #c {
-      color: #17a;
-      font-size: 2.5em;
-      font-weight: bold; }
-    #header #logo #t {
-      position: absolute;
-      top: 1px;
-      left: 16px;
-      color: red;
-      font-size: 2.1em;
-      font-weight: bold; }
   #header .headerTitle {
     position: absolute;
     left: 57;
@@ -101,7 +102,7 @@ body {
       #header #menu ul.menu:after {
         display: block;
         float: none;
-        content: ' ';
+        content: '';
         clear: both; }
       #header #menu ul.menu li {
         display: inline-block;
@@ -120,21 +121,22 @@ body {
       top: 100%;
       left: 0;
       max-width: 1000px;
-      z-index: 10;
+      z-index: 100;
       padding: 0;
       margin: 0;
       background-color: #17a;
       color: #fff;
-      -webkit-transition: 0.5s ease-in-out;
-      -moz-transition: 0.5s ease-in-out;
-      -o-transition: 0.5s ease-in-out;
-      transition: 0.5s ease-in-out;
+      -webkit-transition: 0.5s, ease-in-out;
+      -moz-transition: 0.5s, ease-in-out;
+      -o-transition: 0.5s, ease-in-out;
+      transition: 0.5s, ease-in-out;
+      -webkit-transform-origin: 0, 0;
+      -ms-transform-origin: 0, 0;
+      transform-origin: 0, 0;
       -webkit-transform: scaleY(0);
       -ms-transform: scaleY(0);
-      transform: scaleY(0);
-      -webkit-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-      transform-origin: 0 0; }
+      -o-transition: scaleY(0);
+      transform: scaleY(0); }
       #header #menu ul.subMenu li {
         display: block; }
         #header #menu ul.subMenu li a {
@@ -142,67 +144,50 @@ body {
     #header #menu ul.menu > li:hover > ul.subMenu {
       -webkit-transform: scaleY(1);
       -ms-transform: scaleY(1);
+      -o-transition: scaleY(1);
       transform: scaleY(1); }
-
-img.logo {
-  padding: 0;
-  margin: 0.2em;
-  margin-bottom: 0;
-  transition: 0.5s all; }
-
-img.logo:hover {
-  text-shadow: 4px 2px 20px #ccc;
-  transition: 1s all; }
 
 #footer {
   width: 100%;
   color: #000;
   padding: 0;
   margin: 0; }
-  #footer .top {
+  #footer #fcontent {
     display: table;
     padding: 0 25px 0 25px;
     margin: 0;
     width: calc(100% - 50px);
     background-color: #eee; }
-    #footer .top .info {
+    #footer #fcontent #info,
+    #footer #fcontent #forclients,
+    #footer #fcontent #contacts {
       display: inline-block;
       vertical-align: top;
       width: 15em;
-      padding: 1em; }
-    #footer .top .contacts {
-      display: inline-block;
-      vertical-align: top;
-      float: right;
-      width: 15em;
-      text-align: left;
-      padding: 1em; }
-      #footer .top .contacts .contact {
+      padding: 1em;
+      text-align: left; }
+    #footer #fcontent #forclients ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      #footer #fcontent #forclients ul li {
+        transition: 0.8s all; }
+        #footer #fcontent #forclients ul li a {
+          color: #000;
+          text-decoration: underline; }
+          #footer #fcontent #forclients ul li a:hover {
+            text-decoration: none;
+            transition: 0.8s all; }
+    #footer #fcontent #contacts {
+      float: right; }
+      #footer #fcontent #contacts .contact {
         color: #333;
         font-style: italic; }
-    #footer .top .forClients {
-      display: inline-block;
-      vertical-align: top;
-      width: 15em;
-      text-align: left;
-      padding: 1em; }
-      #footer .top .forClients ul {
-        list-style: none;
-        margin: 0;
-        padding: 0; }
-        #footer .top .forClients ul li {
-          transition: 0.8s all; }
-          #footer .top .forClients ul li a {
-            color: #000;
-            text-decoration: underline; }
-            #footer .top .forClients ul li a:hover {
-              text-decoration: none;
-              transition: 0.8s all; }
-    #footer .top p, #footer .top ul {
+    #footer #fcontent p, #footer #fcontent ul {
       font-size: 70%; }
-    #footer .top h2 a {
+    #footer #fcontent h2 a {
       color: #000; }
-      #footer .top h2 a:hover {
+      #footer #fcontent h2 a:hover {
         color: #333; }
   #footer #CopyRight {
     display: table;
@@ -210,7 +195,7 @@ img.logo:hover {
     font-size: 0.8em;
     color: #fff;
     background-color: #17a;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #333;
     padding: 0;
     margin: 0; }
     #footer #CopyRight p {
@@ -222,7 +207,7 @@ img.logo:hover {
       transition: 0.5s all; }
       #footer #CopyRight a:hover {
         transition: 0.5s all;
-        color: #d3d3d3; }
+        color: #ccc; }
 
 #main {
   clear: both;
@@ -248,7 +233,7 @@ img.logo:hover {
           padding: 0.8ex 2em 0.8ex 1em;
           color: #17a; }
           #main #nav ul li a:hover {
-            background-color: #ddd; }
+            background-color: #eee; }
       #main #nav ul li.buttoned {
         display: table;
         width: 100%; }
@@ -271,6 +256,8 @@ img.logo:hover {
       #main #nav ul.subMenu li {
         padding-left: 1em; }
   #main #content {
+    background-color: #fff;
+    color: #000;
     margin: 0 0 0 200px;
     max-width: 50em;
     padding: 1.5em;
@@ -283,7 +270,7 @@ img.logo:hover {
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 0% 2px;
-      transition: background-size .3s; }
+      transition: background-size 0.3s; }
       #main #content a:hover {
         background-size: 100% 2px; }
     #main #content hr {
@@ -298,18 +285,20 @@ img.logo:hover {
         content: "⚙" "⚙" "⚙";
         display: inline-block;
         position: relative;
-        top: -0.7em;
+        top: -0.6em;
         font-size: 1.5em;
         padding: 0 0.25em;
-        background: white; }
+        background: #fff; }
   #main details {
     margin: 1em 1ex 0.5ex 0;
     position: relative;
     margin-bottom: .5rem;
     min-height: 1rem;
     max-height: 3rem;
-    transition: min-height .15s linear, max-height .5s linear;
-    -webkit-transition: min-height .15s linear, max-height .5s linear;
+    -webkit-transition: min-height 0.15s linear, max-height 0.5s linear;
+    -moz-transition: min-height 0.15s linear, max-height 0.5s linear;
+    -o-transition: min-height 0.15s linear, max-height 0.5s linear;
+    transition: min-height 0.15s linear, max-height 0.5s linear;
     will-change: max-height;
     overflow: hidden; }
     #main details ul {
@@ -319,8 +308,10 @@ img.logo:hover {
       padding-left: 1.5em;
       cursor: pointer;
       outline: 0;
-      transition: color .12s;
-      -webkit-transition: color .12s; }
+      -webkit-transition: color 0.12s;
+      -moz-transition: color 0.12s;
+      -o-transition: color 0.12s;
+      transition: color 0.12s; }
       #main details summary::-webkit-details-marker {
         display: none; }
       #main details summary::-moz-list-bullet {
@@ -332,7 +323,7 @@ img.logo:hover {
         background-position: 0% 100%;
         background-repeat: no-repeat;
         background-size: 0% 2px;
-        transition: background-size .3s; }
+        transition: background-size 0.3s; }
         #main details summary span:hover {
           background-size: 100% 2px; }
       #main details summary::before {
@@ -343,22 +334,27 @@ img.logo:hover {
         background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=") no-repeat 50% 50%/1em 1em;
         width: 1em;
         height: 1em;
-        transition: transform .1s linear;
-        -webkit-transition: transform .1s linear; }
+        -webkit-transition: transform 0.1s linear;
+        -moz-transition: transform 0.1s linear;
+        -o-transition: transform 0.1s linear;
+        transition: transform 0.1s linear; }
       #main details summary ~ * {
         padding-left: 1.5em;
         opacity: 0;
-        transition: opacity .15s linear;
-        -webkit-transition: opacity .15s linear; }
+        -webkit-transition: opacity 0.15s linear;
+        -moz-transition: opacity 0.15s linear;
+        -o-transition: opacity 0.15s linear;
+        transition: opacity 0.15s linear; }
     #main details[open] {
       min-height: 2em;
       max-height: 200em; }
       #main details[open] summary ~ * {
         opacity: 1; }
       #main details[open] summary:before {
-        transform: rotate(90deg);
         -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg); }
+        -ms-transform: rotate(90deg);
+        -o-transition: rotate(90deg);
+        transform: rotate(90deg); }
 
 img.directorImg {
   display: inline-block;
@@ -396,12 +392,6 @@ h4 {
 
 .hidden {
   display: none; }
-
-.splitMajor {
-  display: inline; }
-
-.splitMinor {
-  display: inline-block; }
 
 .tooltip span {
   width: auto;

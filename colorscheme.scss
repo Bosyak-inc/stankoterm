@@ -1,0 +1,54 @@
+$blue: #17a;
+$blue-hard: #069;
+$white: #fff;
+$black: #000;
+$gray: #ccc;
+$gray-hard: #333;
+$gray-light: #eee;
+
+// BODY
+	// HEADER
+		$header-background: $gray-light;
+
+		// Menu
+			$menu-background: $blue;
+			$menu-foreground: $white;
+			$menu-bot-border: $blue-hard;
+			$menu-top-border: $gray;
+			$menu-hover-background: $blue-hard;
+
+		// Title
+			$title-foreground: $blue;
+			$title-shadow: $gray;
+
+	// Main
+		// nav
+			$nav-border-right: $gray;
+			// $nav-foreground: $;
+			// $nav-background: $;
+			$nav-link-foreground: $blue;
+			// $nav-link-background: $;
+			$nav-link-hover-background: $gray-light;
+
+		// content
+			$content-foreground: $black;
+			$content-background: $white;
+			// $content-link-foreground: $;
+
+	// FOOTER
+		$footer-foreground: $black;
+		$footer-background: $gray-light;
+		$footer-link-foreground: $black;
+		$footer-contact-foreground: $gray-hard;
+		$footer-link-background: $gray-hard;
+		// CopyRight
+			$cr-foreground: $white;
+			$cr-background: $blue;
+			$cr-top-border: $gray-hard;
+			$cr-link-foreground: $white;
+			$cr-link-hover-foreground: $gray;
+
+// OTHER
+	$hr-color: $gray-hard;
+	$hr-top-border: $gray-hard;
+	$link-foreground: blue;

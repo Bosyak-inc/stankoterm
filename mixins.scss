@@ -1,0 +1,80 @@
+@mixin ie_fix() {
+	details {
+		max-height: none;
+		summary {
+			& ~ * {
+				max-height: 0;
+				overflow: hidden;
+				position: absolute;
+			}
+
+			span {
+				text-decoration: none;
+				font-weight: bold;
+				background-image: linear-gradient(currentColor, currentColor);
+				background-position: 0% 100%;
+				background-repeat: no-repeat;
+				background-size: 0% 2px;
+				transition: background-size .3s;
+
+				&:hover {
+					background-size: 100% 2px;
+				}
+			}
+
+			&:focus {
+				&::before { 
+					transform: rotate(90deg);
+					-ms-transform: rotate(90deg);
+				}
+
+				& ~ * {
+					max-height: 20em;
+					position: static;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+@mixin transform($props...) {
+	-webkit-transform: $props;
+	-ms-transform: $props;
+	-o-transition: $props;
+	transform: $props;
+}
+
+@mixin transition($props...) {
+	-webkit-transition: $props;
+	-moz-transition: $props;
+	-o-transition: $props;
+	transition: $props;
+}
+
+@mixin transform-origin($props...) {
+	-webkit-transform-origin: $props;
+	-ms-transform-origin: $props;
+	transform-origin: $props;
+}
+
+@mixin user-select($prop) {
+	-ms-user-select: $prop;
+	-moz-user-select: $prop;
+	-khtml-user-select: $prop;
+	-webkit-user-select: $prop;
+}
+
+@mixin hover-underline-sliding($time) {
+	text-decoration: none;
+	font-weight: bold;
+	background-image: linear-gradient(currentColor, currentColor);
+	background-position: 0% 100%;
+	background-repeat: no-repeat;
+	background-size: 0% 2px;
+	transition: background-size $time;
+
+	&:hover {
+		background-size: 100% 2px;
+	}
+}
