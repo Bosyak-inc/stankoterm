@@ -115,6 +115,34 @@ body {
         #header #menu ul.menu a:hover {
           background-color: #069;
           transition: 0.8s all; }
+    #header #menu ul.subMenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      max-width: 1000px;
+      z-index: 10;
+      padding: 0;
+      margin: 0;
+      background-color: #17a;
+      color: #fff;
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+      transform: scaleY(0);
+      -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      transform-origin: 0 0; }
+      #header #menu ul.subMenu li {
+        display: block; }
+        #header #menu ul.subMenu li a {
+          display: block; }
+    #header #menu ul.menu > li:hover > ul.subMenu {
+      -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+      transform: scaleY(1); }
 
 img.logo {
   padding: 0;
@@ -231,6 +259,7 @@ img.logo:hover {
           #main #nav ul li.buttoned .split li {
             width: 80%; }
         #main #nav ul li.buttoned #servInp, #main #nav ul li.buttoned #opsInp {
+          cursor: pointer;
           display: table-cell;
           user-select: none;
           float: right;
@@ -274,6 +303,7 @@ img.logo:hover {
         padding: 0 0.25em;
         background: white; }
   #main details {
+    margin: 1em 1ex 0.5ex 0;
     position: relative;
     margin-bottom: .5rem;
     min-height: 1rem;
@@ -282,6 +312,8 @@ img.logo:hover {
     -webkit-transition: min-height .15s linear, max-height .5s linear;
     will-change: max-height;
     overflow: hidden; }
+    #main details ul {
+      margin-left: 1.5em; }
     #main details summary {
       display: inline-block;
       padding-left: 1.5em;
@@ -294,19 +326,25 @@ img.logo:hover {
       #main details summary::-moz-list-bullet {
         list-style-type: none; }
       #main details summary span {
-        border-bottom: 1px currentColor dotted; }
+        text-decoration: none;
+        font-weight: bold;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s; }
+        #main details summary span:hover {
+          background-size: 100% 2px; }
       #main details summary::before {
         content: "";
         left: 0;
-        top: .4em;
+        top: .1em;
         position: absolute;
         background: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=") no-repeat 50% 50%/1em 1em;
         width: 1em;
         height: 1em;
         transition: transform .1s linear;
         -webkit-transition: transform .1s linear; }
-      #main details summary:hover {
-        color: #d06c6c; }
       #main details summary ~ * {
         padding-left: 1.5em;
         opacity: 0;
@@ -314,15 +352,13 @@ img.logo:hover {
         -webkit-transition: opacity .15s linear; }
     #main details[open] {
       min-height: 2em;
-      max-height: 20em; }
-      #main details[open] summary {
-        color: #d06c6c; }
-        #main details[open] summary ~ * {
-          opacity: 1; }
-        #main details[open] summary:before {
-          transform: rotate(90deg);
-          -webkit-transform: rotate(90deg);
-          -moz-transform: rotate(90deg); }
+      max-height: 200em; }
+      #main details[open] summary ~ * {
+        opacity: 1; }
+      #main details[open] summary:before {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg); }
 
 img.directorImg {
   display: inline-block;

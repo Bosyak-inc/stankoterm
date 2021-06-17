@@ -19,6 +19,9 @@
   .imgCaption p {
     padding: 0 1em;
     text-align: center; }
+  .imgCaption .wrap1 {
+    display: inherit;
+    max-width: 350px; }
 
 #eep {
   float: left;
@@ -58,7 +61,10 @@
   float: right; }
 
 table.tableInfo {
-  background-color: #eee; }
+  background-color: #eee;
+  border-collapse: collapse; }
+  table.tableInfo tbody tr:hover td {
+    background: #fff; }
   table.tableInfo tr {
     margin: 0;
     padding: 0; }
@@ -74,7 +80,8 @@ table.tableInfo {
       border-bottom: 1px solid #17a; }
       table.tableInfo tr td:first-child {
         background-color: #ccc;
-        border: none; }
+        border-bottom: 1px solid #eee;
+        border-right: none; }
       table.tableInfo tr td:last-child {
         border-bottom: 1px solid #17a;
         border-right: none; }

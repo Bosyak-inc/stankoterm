@@ -26,6 +26,11 @@
 		padding: 0 1em;
 		text-align: center;
 	}
+
+	.wrap1 {
+		display: inherit;
+		max-width: 350px;
+	}
 }
 
 #eep {
@@ -77,6 +82,13 @@
 
 table.tableInfo {
 	background-color: #eee;
+	border-collapse: collapse;
+
+	tbody tr:hover {
+		td{
+			background: #fff;
+		}
+	}
 
 	tr {
 		margin: 0;
@@ -84,6 +96,7 @@ table.tableInfo {
 
 		th, td {
 			text-align: left;
+			// padding: 0.2em 0.1em 0.2em 1em;
 			padding: 0.2em;
 		}
 
@@ -99,12 +112,14 @@ table.tableInfo {
 
 			&:first-child {
 				background-color: #ccc;
-				border: none;
+				border-bottom: 1px solid #eee;
+				border-right: none;
 			}
 			&:last-child {
 				border-bottom: 1px solid #17a;
 				border-right: none;
 			}
+
 		}
 
 		&:last-child td {
