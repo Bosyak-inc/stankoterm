@@ -1,5 +1,8 @@
 @import "colorscheme.scss";
 @import "mixins.scss";
+$fa-font-path: "fontawesome-free/webfonts";
+@import "fontawesome-free/scss/fontawesome.scss";
+@import "fontawesome-free/scss/solid.scss";
 
 $logo-width: 57;
 $logo-height: 84;
