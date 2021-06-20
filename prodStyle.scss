@@ -83,6 +83,8 @@
 }
 
 table.tableInfo {
+	margin-top: 1em;
+	margin-bottom: 1em;
 	background-color: #eee;
 	border-collapse: collapse;
 
@@ -127,5 +129,14 @@ table.tableInfo {
 		&:last-child td {
 			border-bottom: none;
 		}
+	}
+
+	.lvl1 td {
+		border-right: none;
+	}
+
+	.lvl2 td:first-child {
+		// content: "123";
+		padding-left: 2em;
 	}
 }

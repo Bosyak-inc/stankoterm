@@ -61,6 +61,8 @@
   float: right; }
 
 table.tableInfo {
+  margin-top: 1em;
+  margin-bottom: 1em;
   background-color: #eee;
   border-collapse: collapse; }
   table.tableInfo tbody tr:hover td {
@@ -87,3 +89,7 @@ table.tableInfo {
         border-right: none; }
     table.tableInfo tr:last-child td {
       border-bottom: none; }
+  table.tableInfo .lvl1 td {
+    border-right: none; }
+  table.tableInfo .lvl2 td:first-child {
+    padding-left: 2em; }

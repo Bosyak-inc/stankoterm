@@ -1,8 +1,9 @@
 @import "colorscheme.scss";
 @import "mixins.scss";
-$fa-font-path: "fontawesome-free/webfonts";
-@import "fontawesome-free/scss/fontawesome.scss";
-@import "fontawesome-free/scss/solid.scss";
+
+// $fa-font-path: "pub/fonts/fontawesome/webfonts";
+@import "pub/fonts/fontawesome/scss/fontawesome.scss";
+@import "pub/fonts/fontawesome/scss/solid.scss";
 
 $logo-width: 57;
 $logo-height: 84;
@@ -321,18 +322,50 @@ body {
 		}
 
 		ul.subMenu {
+			padding: 0;
 			display: none;
 			font-size: 80%;
 
 			li {
-				padding-left: 1em;
-
-				// &:before {
-				// 	content: $gear;
-				// }
+				position: relative;
+				margin-left: 20px;
+				-webkit-transition-duration: 0.3s;
+				transition-duration: 0.3s;
 			}
 
+			li:before {
+				content: $gear;
+				text-align: center;
+				// -webkit-box-sizing: border-box;
+				// -moz-box-sizing: border-box;
+				// box-sizing: border-box;  
+				top: 1em;
+				left: -1em;
+			}
+
+			li:after {
+				// position: absolute;
+				// top: 0;
+				// left: -30px;
+				// width: 42px;
+				// height: 42px;
+				// border: 6px solid #DDDDDD;
+				// border-radius: 50%;
+				// content: '';
+				// opacity: 0.5;
+				// -webkit-box-sizing: border-box;
+				// -moz-box-sizing: border-box;
+				// box-sizing: border-box;    
+			}
+
+			li:hover {
+				color: red;
+				animation: 500ms ease-in-out 0s bounceIn;
+			}
 		}
+	}
+
+	@keyframes spining {
 	}
 
 	#content {

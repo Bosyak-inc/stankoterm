@@ -4575,8 +4575,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("fontawesome-free/webfonts/fa-solid-900.eot");
-  src: url("fontawesome-free/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("fontawesome-free/webfonts/fa-solid-900.woff2") format("woff2"), url("fontawesome-free/webfonts/fa-solid-900.woff") format("woff"), url("fontawesome-free/webfonts/fa-solid-900.ttf") format("truetype"), url("fontawesome-free/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
+  src: url("../webfonts/fa-solid-900.eot");
+  src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
 
 .fa,
 .fas {
@@ -4835,10 +4835,21 @@ body {
           width: .1em;
           height: 1em; }
     #main #nav ul.subMenu {
+      padding: 0;
       display: none;
       font-size: 80%; }
       #main #nav ul.subMenu li {
-        padding-left: 1em; }
+        position: relative;
+        margin-left: 20px;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s; }
+      #main #nav ul.subMenu li:before {
+        content: "⚙";
+        text-align: center;
+        top: 1em;
+        left: -1em; }
+      #main #nav ul.subMenu li:hover {
+        color: red; }
   #main #content {
     background-color: #fff;
     color: #000;
