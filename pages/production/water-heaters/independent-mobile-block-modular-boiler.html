@@ -2,6 +2,7 @@
 	<head>
 		<title>Продукция | Официальный сайт ОАО "Станкотерм"</title>
 		<meta charset="utf-8">
+		<script src="/engine/utils.js"></script>
 		<link rel="stylesheet" href="/pub/style.css">
 		<link rel="stylesheet" href="../style.css">
 		<link href="/pub/fonts/fontawesome/css/solid.css" rel="stylesheet">
@@ -65,31 +66,12 @@
 			</div>
 
 	<script>
-		function SubMenu(bt, mn, txt, st = 0) {
-			this.stat   = st;
-			this.button = bt;
-			this.menu   = mn;
-			this.text   = txt;
-		}
-
 		let ourProd = new SubMenu(document.getElementById('opsInp'),
 								  document.getElementById('ourProdSub'),
 								  document.getElementById('opsTxt'));
 		let serv    = new SubMenu(document.getElementById('servInp'),
 								  document.getElementById('servSub'),
 								  document.getElementById('servTxt'));
-
-		function toggleSub(sm) {
-			if (sm.stat === 0) {
-				sm.stat = 1;
-				sm.menu.style.display = "block";
-				sm.text.className = "fa fa-angle-up";
-			} else {
-				sm.stat = 0;
-				sm.menu.style.display = "none";
-				sm.text.className = "fa fa-angle-down";
-			}
-		}
 
 		ourProd.button.addEventListener("click", function(){ toggleSub(ourProd); });
 		serv.button.addEventListener("click",    function(){ toggleSub(serv); });

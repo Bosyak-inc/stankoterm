@@ -38,8 +38,19 @@
 				<h2>Наш адрес</h2>
 				<p>
 				357562 г. Пятигорск, пос. Горячеводский, ул. 6-я линия, д. 121
-				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5ad816753ee90b38e5c98082a458e0c4941bf76021d999b9e078815680480f6f&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
 				</p>
+				<div class="loadContentWrapper">
+					<div id="yMap" class="loadContent">
+						<iframe id="yMapFrame" class="hidden" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5ad816753ee90b38e5c98082a458e0c4941bf76021d999b9e078815680480f6f&amp;source=constructor"></iframe>
+					</div>
+				</div>
+
+				<script>
+					let yMap = document.getElementById("yMapFrame");
+					yMap.onload = function() {
+						yMap.classList.remove("hidden");
+					};
+				</script>
 
 				<hr/>
 				<h2>Рабочие телефоны</h2>
