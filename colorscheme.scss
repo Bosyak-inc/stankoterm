@@ -22,9 +22,16 @@ $gray-light: #eee;
 			$title-shadow: $gray;
 
 	// Main
+		$main-foreground: $black;
+		$main-background: $white;
+		// go_up
+			$go_up-foreground: $blue;
+			$go_up-background: $main-background;
+			$go_up-hover-background: $gray-light;
+
 		// content
-			$content-foreground: $black;
-			$content-background: $white;
+			$content-foreground: $main-foreground;
+			$content-background: $main-background;
 			$content-link-foreground: blue;
 
 		// nav

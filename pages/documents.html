@@ -2,6 +2,7 @@
 	<head>
 		<title>Документы | Официальный сайт ОАО "Станкотерм"</title>
 		<meta charset="utf-8">
+		<script src="/engine/utils.js"></script>
 		<link rel="stylesheet" href="/pub/style.css">
 		<link href="/pub/fonts/fontawesome/css/solid.css" rel="stylesheet">
 	</head>
@@ -11,26 +12,27 @@
 				<img class="logo" src="/img/logo.png"></img>
 			</a>
 			
-			<span class="headerTitle">
-				<a href="/index.html">ОАО "Станкотерм"</a>
+			<span id="headerTitle">
+				<a href="/index.html">ОАО "Станк<span>⚙</span>терм"</a>
 			</span>
 
 			<div id="menu">
-				<ul class="menu">
-					<li><a href="/index.html">Главная</a></li>
-					<li><a href="/pages/production.html">Продукция</a></li>
-					<li><a href="/pages/prices.html">Реестр цен</a></li>
-					<li><a href="/pages/news.html">Новости</a></li>
-					<li><a href="/pages/documents.html">
-							<b>Документы</b>
-						</a>
-					</li>
-					<li><a href="/pages/contacts.html">Контакты</a></li>
-				</ul>
+				<span class="ws"></span>
+				<a data-hover="Главная" href="/index.html">Главная</a>
+				<a data-hover="Продукция" href="/pages/production.html">Продукция</a>
+				<a data-hover="Реестр цен" href="/pages/prices.html">Реестр цен</a>
+				<a data-hover="Новости" href="/pages/news.html">Новости</a>
+				<a class="opened" data-hover="Документы" href="/pages/documents.html">Документы</a>
+				<a data-hover="Отзывы" href="/pages/reviews.html">Отзывы</a>
+				<a data-hover="Контакты" href="/pages/contacts.html">Контакты</a>
 			</div>
 		</div>
 
 		<div id="main">
+			<div id="go_up">
+				<nobr><i class="fas fa-angle-double-up"></i> Наверх</nobr>
+			</div>
+
 			<div id="content">
 				<h1>Документы</h1>
 				<br/>

@@ -2,6 +2,7 @@
 	<head>
 		<title>Официальный сайт ОАО "Станкотерм"</title>
 		<meta charset="utf-8">
+		<script src="/engine/utils.js"></script>
 		<link rel="stylesheet" href="/pub/style.css">
 		<link href="/pub/fonts/fontawesome/css/solid.css" rel="stylesheet">
 	</head>
@@ -12,28 +13,26 @@
 			</a>
 			
 			<span id="headerTitle">
-				<a href="/index.html">ОАО "Станкотерм"</a>
+				<a href="/index.html">ОАО "Станк<span>⚙</span>терм"</a>
 			</span>
 
 			<div id="menu">
-				<ul class="menu">
-					<li>
-						<span>
-							<a href="/index.html">
-								<b>Главная</b>
-							</a>
-						</span>
-					</li>
-					<li><a href="/pages/production.html"><span>Продукция</span></a></li>
-					<li><a href="/pages/prices.html"><span>Реестр цен</span></a></li>
-					<li><a href="/pages/news.html"><span>Новости</span></a></li>
-					<li><a href="/pages/documents.html"><span>Документы</span></a></li>
-					<li><a href="/pages/contacts.html"><span>Контакты</span></a></li>
-				</ul>
+				<span class="ws"></span>
+				<a class="opened" data-hover="Главная" href="/index.html">Главная</a>
+				<a data-hover="Продукция" href="/pages/production.html">Продукция</a>
+				<a data-hover="Реестр цен" href="/pages/prices.html">Реестр цен</a>
+				<a data-hover="Новости" href="/pages/news.html">Новости</a>
+				<a data-hover="Документы" href="/pages/documents.html">Документы</a>
+				<a data-hover="Отзывы" href="/pages/reviews.html">Отзывы</a>
+				<a data-hover="Контакты" href="/pages/contacts.html">Контакты</a>
 			</div>
 		</div>
 
 		<div id="main">
+			<div id="go_up">
+				<nobr><i class="fas fa-angle-double-up"></i> Наверх</nobr>
+			</div>
+
 			<div id="content">
 				<h1>Уважаемые посетители!</h1>
 				<p>Открытое акционерное общество "Станкотерм" учреждено в 1998 году на базе ОАО "Станкотерм", основанного в 1965 году. Основной вид деятельности завода - выпуск отопительного и водогрейного оборудования бытового и производственного назначения, а так же станков и механизмов и товаров народного потребления. Номенклатура завода - более 100 наименований изделий.</p>
@@ -69,7 +68,7 @@
 			</div>
 
 			<div id="CopyRight">
-				<p>© 2021 <a href="/index.html">stankoter.ru</a> | All Rights Reserved | Design by sIIsgOO</p>
+				<p><i class="fa fa-copyright"></i> 2021 <a href="/index.html">stankoter.ru</a> | All Rights Reserved | Design by sIIsgOO</p>
 			</div>
 		</div>
 	</body>

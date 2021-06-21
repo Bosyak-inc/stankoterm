@@ -2,6 +2,7 @@
 	<head>
 		<title>Новости | Официальный сайт ОАО "Станкотерм"</title>
 		<meta charset="utf-8">
+		<script src="/engine/utils.js"></script>
 		<link rel="stylesheet" href="/pub/style.css">
 		<link href="/pub/fonts/fontawesome/css/solid.css" rel="stylesheet">
 	</head>
@@ -11,26 +12,27 @@
 				<img class="logo" src="/img/logo.png"></img>
 			</a>
 			
-			<span class="headerTitle">
-				<a href="/index.html">ОАО "Станкотерм"</a>
+			<span id="headerTitle">
+				<a href="/index.html">ОАО "Станк<span>⚙</span>терм"</a>
 			</span>
 
 			<div id="menu">
-				<ul class="menu">
-					<li><a href="/index.html">Главная</a></li>
-					<li><a href="/pages/production.html">Продукция</a></li>
-					<li><a href="/pages/prices.html">Реестр цен</a></li>
-					<li><a href="/pages/news.html">
-							<b>Новости</b>
-						</a>
-					</li>
-					<li><a href="/pages/documents.html">Документы</a></li>
-					<li><a href="/pages/contacts.html">Контакты</a></li>
-				</ul>
+				<span class="ws"></span>
+				<a data-hover="Главная" href="/index.html">Главная</a>
+				<a data-hover="Продукция" href="/pages/production.html">Продукция</a>
+				<a data-hover="Реестр цен" href="/pages/prices.html">Реестр цен</a>
+				<a class="opened" data-hover="Новости" href="/pages/news.html">Новости</a>
+				<a data-hover="Документы" href="/pages/documents.html">Документы</a>
+				<a data-hover="Отзывы" href="/pages/reviews.html">Отзывы</a>
+				<a data-hover="Контакты" href="/pages/contacts.html">Контакты</a>
 			</div>
 		</div>
 
 		<div id="main">
+			<div id="go_up">
+				<nobr><i class="fas fa-angle-double-up"></i> Наверх</nobr>
+			</div>
+
 			<div id="content">
 				<p>
 				Раскрытие информации эмитентом эмисионных ценных бумаг производится на страницах в интернете <a target="_blank" href="https://e-disclosure.ru/portal/company.aspx?id=1351&attempt=1">ОАО "Станкотерм"</a>.

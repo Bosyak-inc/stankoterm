@@ -2,7 +2,6 @@
 @import "mixins.scss";
 @import "animations.scss";
 
-// $fa-font-path: "pub/fonts/fontawesome/webfonts";
 @import "pub/fonts/fontawesome/scss/fontawesome.scss";
 @import "pub/fonts/fontawesome/scss/solid.scss";
 
@@ -70,7 +69,7 @@ body {
 		}
 
 		&:hover span {
-			color: $gray;
+			// color: $gray;
 			// animation-play-state: running;
 		}
 
@@ -94,157 +93,70 @@ body {
 		border-bottom: 1px solid $menu-bot-border;
 		border-top-left-radius: 20px;
 
-		ul.menu {
-			list-style: none;
-			font-size: 0.6em;
-			padding: 0;
-			margin: 0 0 0 1em;
+		font-size: 0.6em;
+		padding: 0;
 
-			&:after {
-				display: block;
-				float: none;
-				content: '';
-				clear: both;
-			}
-
-			li {
-				display: inline-block;
-				position: relative;
-			}
-
-			a {
-				display: block;
-				vertical-align: middle;
-				outline: none;
-				padding: 0.5em 5px;
-				color: $menu-foreground;
-				transition: 0.5s all;
-
-				&:hover {
-					background-color: $menu-hover-background;
-					transition: 0.8s all;
-				}
-			}
-
-			// a {
-			//   overflow: hidden;
-			//   margin: 0 15px;
-			// }
-
-			// a span {
-			//   display: block;
-			//   padding: 10px 20px;
-			//   background: #0f7c67;
-			//   -webkit-transition: -webkit-transform 0.3s;
-			//   -moz-transition: -moz-transform 0.3s;
-			//   transition: transform 0.3s;
-			// }
-
-			// a::before {
-			//   position: absolute;
-			//   top: 0;
-			//   left: 0;
-			//   z-index: -1;
-			//   padding: 10px 20px;
-			//   width: 100%;
-			//   height: 100%;
-			//   background: #fff;
-			//   color: #0f7c67;
-			//   content: attr(data-hover);
-			//   -webkit-transition: -webkit-transform 0.3s;
-			//   -moz-transition: -moz-transform 0.3s;
-			//   transition: transform 0.3s;
-			//   -webkit-transform: translateX(-25%);
-			// }
-
-			// a:hover span,
-			// a:focus span {
-			//   -webkit-transform: translateX(100%);
-			//   -moz-transform: translateX(100%);
-			//   transform: translateX(100%);
-			// }
-
-			// a:hover::before,
-			// a:focus::before {
-			//   -webkit-transform: translateX(0%);
-			//   -moz-transform: translateX(0%);
-			//   transform: translateX(0%);
-			// }
-
-
-			// TMP
-			// a::before {
-			// 	position: absolute;
-			//   	top: 0;
-			// 	left: 0;
-			// 	width: 100%;
-			// 	height: 2px;
-			// 	background: #fff;
-			// 	content: '';
-			// 	-webkit-transition: top 0.3s;
-			// 	-moz-transition: top 0.3s;
-			// 	transition: top 0.3s;
-			// }
-
-			// a::after {
-			//   	position: absolute;
-			// 	top: 0;
-			// 	left: 0;
-			// 	width: 2px;
-			// 	height: 2px;
-			// 	background: #fff;
-			// 	content: '';
-			// 	-webkit-transition: height 0.3s;
-			// 	-moz-transition: height 0.3s;
-			// 	transition: height 0.3s;
-			// }
-
-			// a:hover::before {
-			// 	top: 100%;
-			// 	opacity: 1;
-			// }
-
-			// a:hover::after {
-			// 	height: 100%;
-			// } 
+		span.ws {
+			padding-left: 1em;
 		}
 
-		// ul.subMenu {
-		// 	position: absolute;
-		// 	top: 100%;
-		// 	left: 0;
-		// 	// width: 100%;
-		// 	max-width: 1000px;
-		// 	z-index: 100;
-		// 	padding: 0;
-		// 	margin: 0;
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0.5em 5px;
+			margin: 0 0.5em;
 
-		// 	background-color: $menu-background;
-		// 	color: $menu-foreground;
+			font-weight: 700;
+			text-shadow: none;
+			color: rgba(0,0,0,0.2);
+			outline: none;
+			overflow: hidden;
 
-		// 	@include transition(0.5s, ease-in-out);
-		// 	@include transform-origin(0, 0);
-		// 	@include transform(scaleY(0));
+			&::before {
+				color: $menu-foreground;
+				content: attr(data-hover);
+				position: absolute;
+				@include transition(transform 0.3s, opacity 0.3s);
+			}
 
-		// 	li {
-		// 		display: block;
-		// 		a {
-		// 			display: block;
-		// 		}
-		// 	}
-		// }
+			&:hover::before,
+			&:focus::before {
+				@include transform(scale(0.9));
+			  	opacity: 0;
+			}
+		}
 
-		// ul.menu > li:hover > ul.subMenu {
-		// 	@include transform(scaleY(1));
-		// }
+		a.opened {
+			&:hover {
+				color: $menu-background;
+			}
+		
+			&::before {
+				opacity: 0;
+				@include transform(scale(1));
+			}
+			
+			&:hover::before,
+			&:focus::before {
+				color: $menu-foreground;
+				content: attr(data-hover);
+				position: absolute;
+				opacity: 1;
+				@include transition(transform 0.3s, opacity 0.3s);
+			}
+		}
 	}
 }
 
 #footer {
+	position: absolute;
 	width: 100%;
 	color: $footer-foreground;
 	padding: 0;
 	margin: 0;
+
+	z-index: 999;
 
 	#fcontent {
 		display: table;
@@ -343,6 +255,29 @@ body {
 	clear: both;
 	margin: 0;
 	padding: 0;
+
+	#go_up {
+		display: none;
+		position: fixed;
+		right: 0;
+		height: 100%;
+		width: 130px;
+		text-align: center;
+		padding-top: 1em;
+		opacity: 0;
+		transition: background-color 200ms linear,opacity 200ms linear;
+		cursor: pointer;
+
+		background-color: $go_up-background;
+		color: $go_up-foreground;
+
+		z-index: 500;
+
+		&:hover {
+			background: $go_up-hover-background;
+			transition: background-color 200ms linear,opacity 200ms linear;
+		}
+	}
 	
 	#nav {
 		float: left;
