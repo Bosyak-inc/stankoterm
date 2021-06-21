@@ -1,4 +1,10 @@
 @charset "UTF-8";
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -4635,6 +4641,7 @@ readers do not read off random characters that represent icons */
 
 body {
   font-family: sans-serif;
+  font-size: 16px;
   padding: 0;
   margin: 0; }
 
@@ -4653,26 +4660,26 @@ body {
     margin: 0.2em;
     margin-bottom: 0;
     text-align: center; }
-  #header .headerTitle {
+  #header #headerTitle {
     position: absolute;
-    left: 57;
-    margin-left: 1.5em;
-    margin-top: 0.3em; }
-    #header .headerTitle a {
-      color: #17a;
-      transition: 0.5s all; }
-      #header .headerTitle a:hover {
-        text-shadow: 4px 2px 2px #ccc;
-        transition: 1s all; }
+    left: 93px;
+    top: 0.3em;
+    width: 284px;
+    height: 34px;
+    transition: all 1s; }
+    #header #headerTitle span {
+      transition: 0.5s; }
+    #header #headerTitle:hover span {
+      color: #ccc; }
+    #header #headerTitle a {
+      color: #17a; }
   #header #menu {
     display: block;
     position: absolute;
     bottom: 0;
-    left: 67px;
-    width: calc(100% - (1em + 67px));
+    left: 93px;
+    width: calc(100% - 93px);
     clear: none;
-    margin-left: 1em;
-    margin-bottom: 0;
     background-color: #17a;
     border: none;
     border-top: 1px solid #ccc;
@@ -4694,42 +4701,13 @@ body {
       #header #menu ul.menu a {
         display: block;
         vertical-align: middle;
+        outline: none;
         padding: 0.5em 5px;
         color: #fff;
         transition: 0.5s all; }
         #header #menu ul.menu a:hover {
           background-color: #069;
           transition: 0.8s all; }
-    #header #menu ul.subMenu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      max-width: 1000px;
-      z-index: 100;
-      padding: 0;
-      margin: 0;
-      background-color: #17a;
-      color: #fff;
-      -webkit-transition: 0.5s, ease-in-out;
-      -moz-transition: 0.5s, ease-in-out;
-      -o-transition: 0.5s, ease-in-out;
-      transition: 0.5s, ease-in-out;
-      -webkit-transform-origin: 0, 0;
-      -ms-transform-origin: 0, 0;
-      transform-origin: 0, 0;
-      -webkit-transform: scaleY(0);
-      -ms-transform: scaleY(0);
-      -o-transition: scaleY(0);
-      transform: scaleY(0); }
-      #header #menu ul.subMenu li {
-        display: block; }
-        #header #menu ul.subMenu li a {
-          display: block; }
-    #header #menu ul.menu > li:hover > ul.subMenu {
-      -webkit-transform: scaleY(1);
-      -ms-transform: scaleY(1);
-      -o-transition: scaleY(1);
-      transform: scaleY(1); }
 
 #footer {
   width: 100%;
@@ -4764,9 +4742,6 @@ body {
             transition: 0.8s all; }
     #footer #fcontent #contacts {
       float: right; }
-      #footer #fcontent #contacts .contact {
-        color: #333;
-        font-style: italic; }
     #footer #fcontent p, #footer #fcontent ul {
       font-size: 70%; }
     #footer #fcontent h2 a {
@@ -4838,27 +4813,8 @@ body {
       padding: 0;
       display: none;
       font-size: 80%; }
-      #main #nav ul.subMenu li {
-        position: relative;
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s; }
-        #main #nav ul.subMenu li:before {
-          width: 1em;
-          height: 1em;
-          content: "⚙";
-          color: #ccc;
-          top: -1em;
-          text-align: center;
-          padding-right: 1em; }
-        #main #nav ul.subMenu li:hover:before {
-          animation: spin 1s linear;
-          color: #333; }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
+      #main #nav ul.subMenu li a {
+        padding-left: 2.3em; }
   #main #content {
     background-color: #fff;
     color: #000;
@@ -4867,6 +4823,18 @@ body {
     padding: 1.5em;
     margin-bottom: 10em;
     min-height: 300px; }
+    #main #content img.directorImg {
+      width: 400px;
+      height: 300px;
+      display: inline-block;
+      padding: 0.1em;
+      padding-top: 1em; }
+    #main #content p.directorInfo {
+      display: inline-block;
+      margin: 0;
+      padding: 1em;
+      padding-top: 1em;
+      vertical-align: top; }
     #main #content a {
       text-decoration: none;
       font-weight: bold;
@@ -4893,54 +4861,25 @@ body {
         font-size: 1.5em;
         padding: 0 0.25em;
         background: #fff; }
-  #main .loadContentWrapper {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: #080705; }
-    #main .loadContentWrapper .loadContent {
-      position: absolute;
-      height: 60px;
-      width: 60px;
-      border: 3px solid transparent;
-      border-top-color: #A04668;
-      top: 50%;
-      left: 50%;
-      margin: -30px;
-      border-radius: 50%;
-      animation: spin 2s linear infinite; }
-      #main .loadContentWrapper .loadContent:before, #main .loadContentWrapper .loadContent:after {
-        content: '';
-        position: absolute;
-        border: 3px solid transparent;
-        border-radius: 50%; }
-      #main .loadContentWrapper .loadContent:before {
-        border-top-color: #254E70;
-        top: -12px;
-        left: -12px;
-        right: -12px;
-        bottom: -12px;
-        animation: spin 3s linear infinite; }
-      #main .loadContentWrapper .loadContent:after {
-        border-top-color: #FFFBFE;
-        top: 6px;
-        left: 6px;
-        right: 6px;
-        bottom: 6px;
-        animation: spin 4s linear infinite; }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
-  #main #yMap {
-    width: 500;
-    height: 400; }
-    #main #yMap iframe {
-      width: 500;
-      height: 400;
-      border: none; }
+  #main .loader-wrapper {
+    width: 800;
+    height: 400;
+    display: flex;
+    justify-content: center;
+    /*Центрирование по горизонтали*/
+    align-items: center; }
+  #main .loader {
+    width: 100;
+    height: 100;
+    border: 16px solid #eee;
+    border-top: 16px solid #17a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite; }
+  #main #yMap iframe {
+    width: 800;
+    height: 400;
+    border: none;
+    z-index: 100; }
   #main details {
     margin: 1em 1ex 0.5ex 0;
     position: relative;
@@ -5008,18 +4947,6 @@ body {
         -o-transition: rotate(90deg);
         transform: rotate(90deg); }
 
-img.directorImg {
-  display: inline-block;
-  padding: 0.1em;
-  padding-top: 1em; }
-
-p.directorInfo {
-  display: inline-block;
-  margin: 0;
-  padding: 1em;
-  padding-top: 1em;
-  vertical-align: top; }
-
 * a {
   color: blue; }
 
@@ -5041,6 +4968,10 @@ h4 {
 
 #header a, #nav a, #menu a, #footer a {
   text-decoration: none; }
+
+.contact {
+  color: #333;
+  font-style: italic; }
 
 .hidden {
   display: none; }

@@ -16,10 +16,10 @@
 .imgCaption {
 	display: inline-block;
 	padding: 1em;
-	padding-bottom: 0.1em;
+	// padding-bottom: 0.1em;
 	width: auto;
 	text-align: center;
-	border: 1px solid black;
+	border: 1px solid $imgCaption-border;
 
 	img {
 		vertical-align: middle;
@@ -40,12 +40,18 @@
 	float: left;
 	padding: 2em;
 	padding-bottom: 0.1em;
+	margin-right: 1em;
+	margin-bottom: 1em;
+	margin-top: 0.6em;
 }
 
 #eep25 {
 	float: left;
-	width: auto;
+	width: 300;
 	padding: 2em;
+	padding-bottom: 0.1em;
+	margin-right: 1em;
+	margin-bottom: 0.5em;
 	padding-bottom: 0.1em;
 }
 
@@ -54,6 +60,9 @@
 	float: left;
 	padding: 2em;
 	padding-bottom: 0.1em;
+	margin-right: 1em;
+	margin-bottom: 1em;
+	margin-top: 0.6em;
 
 	img {
 		width: 185px;
@@ -69,18 +78,22 @@
 
 #mtk200 {
 	float: left;
+	margin-right: 1em;
+	padding-bottom: 0.1em;
 	width: 350px;
 }
 
 #mtk600 {
 	float: right;
 	width: 400px;
-	// width: auto;
+	margin-left: 0.5em;
 	padding: 0.5em;
+	padding-bottom: 0.1em;
 }
 
 #mtkEl {
 	float: right;
+	margin: 0.1em;
 }
 
 table.tableInfo {

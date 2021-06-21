@@ -33,14 +33,12 @@
 
 		<div id="main">
 			<div id="content">
-				<h1>Контакты</h1>
-				<br/>
-				<h2>Наш адрес</h2>
+				<h1>Наш адрес</h1>
 				<p>
 				357562 г. Пятигорск, пос. Горячеводский, ул. 6-я линия, д. 121
 				</p>
-				<div class="loadContentWrapper">
-					<div id="yMap" class="loadContent">
+				<div class="loader-wrapper">
+					<div id="yMap" class="loader">
 						<iframe id="yMapFrame" class="hidden" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5ad816753ee90b38e5c98082a458e0c4941bf76021d999b9e078815680480f6f&amp;source=constructor"></iframe>
 					</div>
 				</div>
@@ -49,11 +47,12 @@
 					let yMap = document.getElementById("yMapFrame");
 					yMap.onload = function() {
 						yMap.classList.remove("hidden");
+						document.getElementById("yMap").classList.remove("loader");
 					};
 				</script>
 
 				<hr/>
-				<h2>Рабочие телефоны</h2>
+				<h1>Рабочие телефоны</h1>
 				<p>(8793) 31-66-68</p>
 				<p>(8793) 31-66-71</p>
 				<p>(8793) 31-66-72</p>
@@ -61,43 +60,53 @@
 				<p>т/факс (8793) 38-82-70</p>
 
 				<hr/>
-				<h2>Рабочий коллектив</h2>
-				<h3>Генеральный директор ОАО "Станкотерм"</h3>
+				<h1>Рабочий коллектив</h1>
+				<h2>Генеральный директор ОАО "Станкотерм"</h2>
 				<div class="director">
-					<img class="directorImg" height="158" width="200" src="/img/director.jpg">
+					<img class="directorImg" src="/img/director.jpg">
 					<p class="directorInfo">
-					<b>Чахиров Георгий  Лазаревич</b>
-						<br>
-						тел. (8793) 31-66-67, секретарь - 31-66-71 
-						<br>
-						тел/факс (8793) 38-82-70
-						<br>
-						<br>
-
-						e-mail: zavod_stankoterm@mail.ru 
+					<font size="4.9em"><b>Чахиров Георгий  Лазаревич</b></font>
+						<table>
+							<tr>
+								<td>телефон</td>
+								<td><span class="contact">(8793) 31-66-67</span></td>
+							</tr>
+							<tr>
+								<td>секретарь</td>
+								<td><span class="contact">31-66-71</span></td>
+							</tr>
+							<tr>
+								<td>тел/факс</td>
+								<td><span class="contact">(8793) 38-82-70</span></td>
+							</tr>
+							<tr>
+								<td>e-mail</td>
+								<td><span class="contact">zavod_stankoterm@mail.ru</span></td>
+							</tr>
+						</table>
 					</p>
 				</div>
-				<h3>Сотрудники</h3>
+				<h2>Сотрудники</h2>
+				<h3>Начальник отдела сбыта </h3>
 				<p>
-				<h4>Начальник отдела сбыта </h4>
 				Товпекина Галина Семеновна
 				<br/>
 				(8793) 31-66-68
 				</p>
+				<h3>Начальник отдела снабжения</h3>
 				<p>
-				<h4>Начальник отдела снабжения</h4>
 				Иванова Татьяна Андреевна
 				<br/>
 				(8793) 31-66-72
 				</p>
+				<h3>Зам. генерального директора</h3>
 				<p>
-				<h4>Зам. генерального директора</h4>
 				Сериков Владимир Александрович
 				<br/>
 				(8793) 31-66-65
 				</p>
+				<h3>Главный инженер</h3>
 				<p>
-				<h4>Главный инженер</h4>
 				Болдырев Владимир Федорович
 				<br/>
 				(8793) 38-84-07

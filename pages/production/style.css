@@ -11,10 +11,9 @@
 .imgCaption {
   display: inline-block;
   padding: 1em;
-  padding-bottom: 0.1em;
   width: auto;
   text-align: center;
-  border: 1px solid black; }
+  border: 1px solid #17a; }
   .imgCaption img {
     vertical-align: middle; }
   .imgCaption p {
@@ -27,19 +26,28 @@
 #eep {
   float: left;
   padding: 2em;
-  padding-bottom: 0.1em; }
+  padding-bottom: 0.1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  margin-top: 0.6em; }
 
 #eep25 {
   float: left;
-  width: auto;
+  width: 300;
   padding: 2em;
+  padding-bottom: 0.1em;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
   padding-bottom: 0.1em; }
 
 #eep60, #eep60frame {
   display: block;
   float: left;
   padding: 2em;
-  padding-bottom: 0.1em; }
+  padding-bottom: 0.1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  margin-top: 0.6em; }
   #eep60 img, #eep60frame img {
     width: 185px;
     height: 235px; }
@@ -51,15 +59,20 @@
 
 #mtk200 {
   float: left;
+  margin-right: 1em;
+  padding-bottom: 0.1em;
   width: 350px; }
 
 #mtk600 {
   float: right;
   width: 400px;
-  padding: 0.5em; }
+  margin-left: 0.5em;
+  padding: 0.5em;
+  padding-bottom: 0.1em; }
 
 #mtkEl {
-  float: right; }
+  float: right;
+  margin: 0.1em; }
 
 table.tableInfo {
   margin-top: 1em;
