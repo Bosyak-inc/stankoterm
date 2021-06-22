@@ -4683,7 +4683,7 @@ body {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #069;
     border-top-left-radius: 20px;
-    font-size: 0.5em;
+    font-size: 0.52em;
     padding: 0; }
     #header #menu span.ws {
       padding-left: 1em; }
@@ -4920,6 +4920,16 @@ body {
     height: 400;
     border: none;
     z-index: 100; }
+  #main .layer .title {
+    cursor: pointer;
+    display: none; }
+  #main .layer .content {
+    display: none;
+    position: fixed;
+    width: 200;
+    height: 200;
+    background-color: #ccc;
+    border: 1px solid red; }
   #main details.topic {
     color: red; }
     #main details.topic summary {

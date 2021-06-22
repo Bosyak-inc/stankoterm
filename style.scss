@@ -93,7 +93,7 @@ body {
 		border-bottom: 1px solid $menu-bot-border;
 		border-top-left-radius: 20px;
 
-		font-size: 0.5em;
+		font-size: 0.52em;
 		padding: 0;
 
 		span.ws {
@@ -460,6 +460,22 @@ body {
 			height: 400;
 			border: none;
 			z-index: 100;
+		}
+	}
+
+	.layer {
+		.title {
+			cursor: pointer;
+			display: none;
+		}
+
+		.content {
+			display: none;
+			position: fixed;
+			width: 200;
+			height: 200;
+			background-color: $gray;
+			border: 1px solid red;
 		}
 	}
 
