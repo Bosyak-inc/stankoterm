@@ -4683,7 +4683,7 @@ body {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #069;
     border-top-left-radius: 20px;
-    font-size: 0.6em;
+    font-size: 0.5em;
     padding: 0; }
     #header #menu span.ws {
       padding-left: 1em; }
@@ -4920,6 +4920,12 @@ body {
     height: 400;
     border: none;
     z-index: 100; }
+  #main details.topic {
+    color: red; }
+    #main details.topic summary {
+      border: 1px solid black; }
+      #main details.topic summary span {
+        font-size: 2.4; }
   #main details {
     margin: 1em 1ex 0.5ex 0;
     position: relative;
@@ -4930,8 +4936,7 @@ body {
     -moz-transition: min-height 0.15s linear, max-height 0.5s linear;
     -o-transition: min-height 0.15s linear, max-height 0.5s linear;
     transition: min-height 0.15s linear, max-height 0.5s linear;
-    will-change: max-height;
-    overflow: hidden; }
+    will-change: max-height; }
     #main details ul {
       margin-left: 1.5em; }
     #main details summary {

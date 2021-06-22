@@ -93,7 +93,7 @@ body {
 		border-bottom: 1px solid $menu-bot-border;
 		border-top-left-radius: 20px;
 
-		font-size: 0.6em;
+		font-size: 0.5em;
 		padding: 0;
 
 		span.ws {
@@ -419,6 +419,7 @@ body {
 			border-top: 1px solid $hr-top-border;
 			color: $hr-color;
 			text-align: center;
+			// clear: both;
 
 			&:after {
 				content: $gear $gear $gear;
@@ -462,6 +463,17 @@ body {
 		}
 	}
 
+	details.topic {
+		color: red;
+		summary {
+			border: 1px solid black;
+
+			span {
+				font-size: 2.4;
+			}
+		}
+	}
+
 	details {
 		margin: 1em 1ex 0.5ex 0;
 		position: relative;
@@ -470,7 +482,7 @@ body {
 		max-height: 3rem;
 		@include transition(min-height .15s linear, max-height .5s linear);
 		will-change: max-height;
-		overflow: hidden;
+		// overflow: hidden;
 
 		ul {
 			margin-left: 1.5em;

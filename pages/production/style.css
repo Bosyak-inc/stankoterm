@@ -9,6 +9,14 @@
     padding: 0.5em; }
   .illustrations .imgCaption {
     margin: 0; }
+  .illustrations #klen {
+    height: 267px;
+    vertical-align: bottom; }
+    .illustrations #klen img {
+      padding-top: 63px;
+      vertical-align: middle;
+      width: 100;
+      height: 145; }
 
 .imgCaption {
   display: inline-block;
@@ -59,6 +67,7 @@
   float: left;
   padding: 2em;
   padding-bottom: 0.1em;
+  margin-top: 0.6em;
   margin-right: 1em;
   margin-bottom: 1em; }
 
@@ -80,11 +89,17 @@
   margin: 0.1em; }
 
 table.tableInfo {
+  clear: both;
   width: 100%;
   margin-top: 1em;
   margin-bottom: 1em;
   background-color: #eee;
   border-collapse: collapse; }
+  table.tableInfo caption {
+    display: table-caption;
+    text-align: center;
+    caption-side: bottom;
+    font-size: 0.8em; }
   table.tableInfo tbody tr:hover td {
     background: #fff; }
   table.tableInfo tr {

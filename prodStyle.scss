@@ -15,6 +15,20 @@
 	.imgCaption {
 		margin: 0;
 	}
+
+	#klen {
+		height: 267px;
+		vertical-align: bottom;
+		img {
+			padding-top: 63px;
+			vertical-align: middle;
+			width: 100;
+			height: 145;
+		}
+
+		p {
+		}
+	}
 }
 
 .imgCaption {
@@ -79,6 +93,7 @@
 	float: left;
 	padding: 2em;
 	padding-bottom: 0.1em;
+	margin-top: 0.6em;
 	margin-right: 1em;
 	margin-bottom: 1em;
 }
@@ -104,11 +119,19 @@
 }
 
 table.tableInfo {
+	clear: both;
 	width: 100%;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	background-color: #eee;
 	border-collapse: collapse;
+
+	caption {
+		display: table-caption;
+		text-align: center;
+		caption-side: bottom;
+		font-size: 0.8em;
+	}
 
 	tbody tr:hover {
 		td{
