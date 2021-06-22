@@ -4814,7 +4814,7 @@ body {
       transition: background-color 200ms linear,opacity 200ms linear; }
   #main #nav {
     position: fixed;
-    top: 119px;
+    top: 103px;
     width: 230px;
     float: left;
     margin: 0 1px 0 0;
