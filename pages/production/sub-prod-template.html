@@ -38,64 +38,24 @@
 				<ul class="menu">
 					<li class="buttoned">
 						<nobr>
-						<a class="split wrap" href="/pages/production.html#ourProd">Продукция</a>
-						<a class="split" id="opsInp">
-							<i id="opsTxt" class="fa fa-angle-down"></i>
-						</a>
+						<a class="split text" href=""></a>
+						<span class="split button-container"><i class="fa fa-angle-down"></i></span>
 						</nobr>
-						<ul id="ourProdSub" class="subMenu">
-							<li><a href="/pages/production.html#heaters">Отопление</a></li>
-							<li><a href="/pages/production.html#fans">Вентиляция для птичников</a></li>
-							<li><a href="/pages/production.html#misc">Разное</a></li>
-							<li><a href="/pages/production.html#metal">Металлоконструкции</a></li>
+						<ul class="subBlock subMenu">
+							<li><a href=""></a></li>
 						</ul>
 					</li>
 					<li class="buttoned">
 						<nobr>
-						<a class="split wrap" href="/pages/production.html#services">Услуги</a>
-						<a class="split" id="servInp">
-							<i id="servTxt" class="fa fa-angle-down"></i>
-						</a>
+						<a class="split text" href="/pages/production.html#services"></a>
+						<span class="split button-container"><i class="fa fa-angle-down"></i></span>
 						</nobr>
-						<ul id="servSub" class="subMenu">
-							<li><a href="/pages/production.html#making">Изготовление</a></li>
-							<li><a href="/pages/production.html#repairing">Ремонт</a></li>
-							<li><a href="/pages/production.html#metalProc">Металло отбработка</a></li>
+						<ul class="subBlock subMenu">
+							<li><a href=""></a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
-
-	<script>
-		function SubMenu(bt, mn, txt, st = 0) {
-			this.stat   = st;
-			this.button = bt;
-			this.menu   = mn;
-			this.text   = txt;
-		}
-
-		let ourProd = new SubMenu(document.getElementById('opsInp'),
-								  document.getElementById('ourProdSub'),
-								  document.getElementById('opsTxt'));
-		let serv    = new SubMenu(document.getElementById('servInp'),
-								  document.getElementById('servSub'),
-								  document.getElementById('servTxt'));
-
-		function toggleSub(sm) {
-			if (sm.stat === 0) {
-				sm.stat = 1;
-				sm.menu.style.display = "block";
-				sm.text.className = "fa fa-angle-up";
-			} else {
-				sm.stat = 0;
-				sm.menu.style.display = "none";
-				sm.text.className = "fa fa-angle-down";
-			}
-		}
-
-		ourProd.button.addEventListener("click", function(){ toggleSub(ourProd); });
-		serv.button.addEventListener("click",    function(){ toggleSub(serv); });
-	</script>
 
 			<div id="content">
 
@@ -119,7 +79,7 @@
 				<div id="contacts">
 					<h2><a href="/pages/contacts.html">Контакты</a></h2>
 					<p><i class="fas fa-home"></i> г. Пятигорск, пос. Горячеводский, ул. 6-я линия, д. 121</p>
-					<p><i class="fas fa-clock"></i> Время работы - c 9:00 до XX:XX</p>
+					<p><i class="fas fa-clock"></i> Времея работы - с 8:00 до 17:00</p>
 					<p><i class="fas fa-phone-alt"></i> <span class="contact">(8793) 31-66-67</span></p>
 					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="contact">31-66-71</span></p>
 					<p><i class="fas fa-at"></i> <span class="contact">zavod_stankoterm@mail.ru</span></p>

@@ -5,10 +5,14 @@
 @import "pub/fonts/fontawesome/scss/fontawesome.scss";
 @import "pub/fonts/fontawesome/scss/solid.scss";
 
-$logo-width: 57;
-$logo-height: 84;
+
+$logo-width: 57px;
+$logo-height: 84px;
+$nav-width: 230px;
+$header-height: 103px;
 
 $gear: "⚙";
+$arrow-img: 'data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=';
 
 // IE 10-11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -93,7 +97,7 @@ body {
 		border-bottom: 1px solid $menu-bot-border;
 		border-top-left-radius: 20px;
 
-		font-size: 0.52em;
+		font-size: 0.55em;
 		padding: 0;
 
 		span.ws {
@@ -280,14 +284,19 @@ body {
 	}
 	
 	#nav {
+		position: fixed;
+		top: $header-height + 16px;
+		width: $nav-width;
+
 		float: left;
 		margin: 0 1px 0 0;
 		padding: 1em 0;
 		border-right: 1px dotted $nav-border-right;
-		width: 200px;
+		overflow: hidden;
+
+		$txt-padding: 0.8ex 1em 0.8ex 1em;
 
 		ul {
-			overflow: hidden;
 			padding: 0;
 			margin: 0;
 
@@ -299,7 +308,7 @@ body {
 				a {
 					display: block;
 					margin: 0;
-					padding: 0.8ex 2em 0.8ex 1em;
+					padding: $txt-padding;
 
 					color: $nav-link-foreground;
 
@@ -313,26 +322,31 @@ body {
 				display: table;
 				width: 100%;
 
-				.wrap {
-					width: 102.4px;
-				}
-
 				.split {
-					display: table-cell;
+					display: inline-block;
+					color: $nav-link-foreground;
+					padding: $txt-padding;
 
-					li {
-						width: 80%;
+					&:hover {
+						background-color: $nav-link-hover-background;
 					}
 				}
 
-				#servInp, #opsInp {
-					cursor: pointer;
-					display: table-cell;
-					user-select: none;
-
+				.button-container {
 					float: right;
-					width: .1em;
-					height: 1em;
+					cursor: pointer;
+					user-select: none;
+					display: flex;
+					align-items: center;
+					padding: 7.2px 12px 7.2px 12px;
+					height: 19px;
+				}
+
+				.text {
+					width: $nav-width - 34px - 32px;
+				}
+
+				#servInp, #opsInp {
 				}
 
 				#servTxt, #opsTxt {
@@ -384,7 +398,7 @@ body {
 	#content {
 		background-color: $content-background;
 		color: $content-foreground;
-		margin: 0 0 0 200px;
+		margin: 0 0 0 $nav-width;
 		max-width: 50em;
 		padding: 1.5em;
 		margin-bottom: 10em;
@@ -434,14 +448,14 @@ body {
 	}
 
 	.loader-wrapper {
-		width: 800;
-		height: 400;
 		display: flex;
-		justify-content: center; /*Центрирование по горизонтали*/
+		width: 800px;
+		height: 400px;
+		justify-content: center;
 		align-items: center;
 	}
 
-	$radius: 100;
+	$radius: 100px;
 
 	.loader {
 		width: $radius;
@@ -456,39 +470,38 @@ body {
 
 	#yMap {
 		iframe {
-			width: 800;
-			height: 400;
+			width: 800px;
+			height: 400px;
 			border: none;
 			z-index: 100;
 		}
 	}
 
-	.layer {
-		.title {
-			cursor: pointer;
-			display: none;
-		}
+	// .layer {
+	// 	.title {
+	// 		cursor: pointer;
+	// 		display: none;
+	// 	}
 
-		.content {
-			display: none;
-			position: fixed;
-			width: 200;
-			height: 200;
-			background-color: $gray;
-			border: 1px solid red;
-		}
-	}
+	// 	.content {
+	// 		display: none;
+	// 		position: fixed;
+	// 		width: 200;
+	// 		height: 200;
+	// 		background-color: $gray;
+	// 		border: 1px solid red;
+	// 	}
+	// }
 
-	details.topic {
-		color: red;
-		summary {
-			border: 1px solid black;
+	// details.topic {
+	// 	summary {
+	// 		border: 1px solid black;
 
-			span {
-				font-size: 2.4;
-			}
-		}
-	}
+	// 		span {
+	// 			font-size: 2.4;
+	// 		}
+	// 	}
+	// }
 
 	details {
 		margin: 1em 1ex 0.5ex 0;
@@ -521,17 +534,16 @@ body {
 				@include hover-underline-sliding(0.3s);
 			}
 		
-			$img-marker: 'data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=';
-
 			&::before {
 				content: "";
 				left: 0;
 				top: .1em;
 				position: absolute;
-				background: url($img-marker) no-repeat 50% 50% / 1em 1em;
+				background: url($arrow-img) no-repeat 50% 50% / 1em 1em;
 				width: 1em;
 				height: 1em;
 				@include transition(transform .1s linear);
+				// @include transform(rotate(90deg));
 			}
 
 			& ~ * {
@@ -556,6 +568,10 @@ body {
 			}
 		}
 	}
+}
+
+.arrow {
+	background: url($arrow-img) no-repeat 50% 50% / 1em 1em;
 }
 
 * a {

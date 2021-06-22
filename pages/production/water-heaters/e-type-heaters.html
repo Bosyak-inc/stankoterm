@@ -38,45 +38,20 @@
 				<ul class="menu">
 					<li class="buttoned">
 						<nobr>
-						<a class="split wrap" href="/pages/production.html#ourProd">Продукция</a>
-						<a class="split" id="opsInp">
-							<i id="opsTxt" class="fa fa-angle-down"></i>
-						</a>
+						<a class="split text" href="#types">Типы ЭПЗ</a>
+						<span class="split button-container"><i class="fa fa-angle-down"></i></span>
 						</nobr>
-						<ul id="ourProdSub" class="subMenu">
-							<li><a href="/pages/production.html#heaters">Отопление</a></li>
-							<li><a href="/pages/production.html#fans">Вентиляция для птичников</a></li>
-							<li><a href="/pages/production.html#misc">Разное</a></li>
-							<li><a href="/pages/production.html#metal">Металлоконструкции</a></li>
+						<ul class="subBlock subMenu">
+							<li><a href="#min">ЭПЗ малой мощьности</a></li>
+							<li><a href="#med">ЭПЗ средней мощьности</a></li>
+							<li><a href="#hig">ЭПЗ высокой мощьности</a></li>
 						</ul>
 					</li>
-					<li class="buttoned">
-						<nobr>
-						<a class="split wrap" href="/pages/production.html#services">Услуги</a>
-						<a class="split" id="servInp">
-							<i id="servTxt" class="fa fa-angle-down"></i>
-						</a>
-						</nobr>
-						<ul id="servSub" class="subMenu">
-							<li><a href="/pages/production.html#making">Изготовление</a></li>
-							<li><a href="/pages/production.html#repairing">Ремонт</a></li>
-							<li><a href="/pages/production.html#metalProc">Металло отбработка</a></li>
-						</ul>
+					<li>
+						<a class="split text" href="#specification">Характеристики</a>
 					</li>
 				</ul>
 			</div>
-
-		<script>
-			let ourProd = new SubMenu(document.getElementById('opsInp'),
-									  document.getElementById('ourProdSub'),
-									  document.getElementById('opsTxt'));
-			let serv    = new SubMenu(document.getElementById('servInp'),
-									  document.getElementById('servSub'),
-									  document.getElementById('servTxt'));
-
-			ourProd.button.addEventListener("click", function(){ toggleSub(ourProd); });
-			serv.button.addEventListener("click",    function(){ toggleSub(serv); });
-		</script>
 
 			<div id="content">
 				<h1>Электроводонагреватели электродного типа (электрокотлы) ЭПЗ</h1>
@@ -121,18 +96,18 @@
 				</p>
 
 				<hr/>
-				<h1>Предназначение типов ЭПЗ</h1>
-				<h2>ЭПЗ малой мощьности</h2>
+				<h1><article id="types">Типы ЭПЗ</article></h1>
+				<h2><article id="min">ЭПЗ малой мощьности</article></h2>
 				<p>
 				Для отопления небольших помещений - дачных домиков, гаражей, торговых ларьков, бытовок и сторожек, "Станкотерм" выпускает малогабаритные электроводонагреватели ЭПЗ-3И1 и ЭПЗ-6И1. В корпусах из термостойкого полипропилена находятся фазный и нулевой электроды, между которыми установлен регулятор мощности. На крышке корпуса установлена поворотная ручка регулятора мощности. Электроводонагреватели ЭПЗ-3И1 и ЭПЗ-6И1 используются в системах отопления с естественной циркуляцией, поэтому не требуют установки циркуляционного насоса. Они комплектуются щитами ЩУВ-6М для автоматического регулирования температуры воды в системе отопления. 
 				</p>
 
-				<h2>ЭПЗ средней мощности</h2>
+				<h2><article id="med">ЭПЗ средней мощности</article></h2>
 				<p>
 				Электроводонагреватель ЭПЗ-25И2М - последняя модель электрокотла мощностью 25 кВт. Он предназначен для отопления коттеджей, офисов, магазинов, других жилых и производственных помещений, площадью до 250 квадратных метров. Может работать в системах с естественной и принудительной циркуляцией воды. Электроводонагреватель ЭПЗ-25И2М комплектуется щитом ЩУВ-2М для поддержания необходимой температуры. Мощность котла регулируется поворотной ручкой.  
 				</p>
 
-				<h2>ЭПЗ высокой мощьности</h2>
+				<h2><article id="hig">ЭПЗ высокой мощьности</article></h2>
 				<p>
 				Для отопления производственных помещений, казарм, магазинов, ферм, многоквартирных зданий и комплектации миникотельных "Станкотерм" выпускает электроводонагреватели ЭПЗ-100И2. Они используются в системах отопления с принудительной циркуляцией для отопления помещений площадью до 1200 квадратных метров. Котлы ЭПЗ-100И2 комплектуются двумя вариантами щитов управления: терморегулятором РТ-100С или щитом ЩУВ-1М. В обоих вариантах автоматически поддерживается заданная температура воды в системе отопления. Щит ЩУВ-1М отличается наличием автоматического выключателя и магнитного пускателя. Мощность котла регулируется поворотной рукояткой, закрепленной на оси на крышке котла. Электроводонагреватель ЭПЗ-100И2 признан победителем конкурса Программы "100 лучших товаров России" 2004 года.
 				</p>
@@ -141,7 +116,7 @@
 				</p>
 
 				<hr/>
-				<h1>Характеристики ЭПЗ</h1>
+				<h1><article id="specification">Характеристики</article></h1>
 				<table class="tableInfo">
 					<caption>Таб. 1</caption>
 					<tr>
@@ -245,7 +220,7 @@
 				<div id="contacts">
 					<h2><a href="/pages/contacts.html">Контакты</a></h2>
 					<p><i class="fas fa-home"></i> г. Пятигорск, пос. Горячеводский, ул. 6-я линия, д. 121</p>
-					<p><i class="fas fa-clock"></i> Время работы - c 9:00 до XX:XX</p>
+					<p><i class="fas fa-clock"></i> Времея работы - с 8:00 до 17:00</p>
 					<p><i class="fas fa-phone-alt"></i> <span class="contact">(8793) 31-66-67</span></p>
 					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="contact">31-66-71</span></p>
 					<p><i class="fas fa-at"></i> <span class="contact">zavod_stankoterm@mail.ru</span></p>

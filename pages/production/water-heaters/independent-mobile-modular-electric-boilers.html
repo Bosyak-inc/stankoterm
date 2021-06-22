@@ -36,47 +36,11 @@
 
 			<div id="nav">
 				<ul class="menu">
-					<li class="buttoned">
-						<nobr>
-						<a class="split wrap" href="/pages/production.html#ourProd">Продукция</a>
-						<a class="split" id="opsInp">
-							<i id="opsTxt" class="fa fa-angle-down"></i>
-						</a>
-						</nobr>
-						<ul id="ourProdSub" class="subMenu">
-							<li><a href="/pages/production.html#heaters">Отопление</a></li>
-							<li><a href="/pages/production.html#fans">Вентиляция для птичников</a></li>
-							<li><a href="/pages/production.html#misc">Разное</a></li>
-							<li><a href="/pages/production.html#metal">Металлоконструкции</a></li>
-						</ul>
-					</li>
-					<li class="buttoned">
-						<nobr>
-						<a class="split wrap" href="/pages/production.html#services">Услуги</a>
-						<a class="split" id="servInp">
-							<i id="servTxt" class="fa fa-angle-down"></i>
-						</a>
-						</nobr>
-						<ul id="servSub" class="subMenu">
-							<li><a href="/pages/production.html#making">Изготовление</a></li>
-							<li><a href="/pages/production.html#repairing">Ремонт</a></li>
-							<li><a href="/pages/production.html#metalProc">Металло отбработка</a></li>
-						</ul>
+					<li>
+						<a href="#construction">Конструкция</a>
 					</li>
 				</ul>
 			</div>
-
-	<script>
-		let ourProd = new SubMenu(document.getElementById('opsInp'),
-								  document.getElementById('ourProdSub'),
-								  document.getElementById('opsTxt'));
-		let serv    = new SubMenu(document.getElementById('servInp'),
-								  document.getElementById('servSub'),
-								  document.getElementById('servTxt'));
-
-		ourProd.button.addEventListener("click", function(){ toggleSub(ourProd); });
-		serv.button.addEventListener("click",    function(){ toggleSub(serv); });
-	</script>
 
 			<div id="content">
 				<h1>Автономные мобильные блочные модульные электрические котельные "МТК Э"</h1>
@@ -86,7 +50,7 @@
 				</span>
 
 				<p> Автономная мобильная блочная электрическая котельная типа "МТК Э" предназначена для отопления любых жилых, производственных, бытовых и других зданий и помещений объемом до 21500 куб. метров, может использоваться для нагрева воды в производственных и хозяйственных целях. Автономные электрические котельные используются в районах с избыточным электроснабжением, в районах с дефицитом других источников энергии. Мобильные модульные электрокотельные могут использоваться коммунальными и техническими службами в качестве резервных или аварийных источников теплоснабжения для предотвращения негативных последствий возможных аварий и неисправностей котельных и теплосетей.</p>
-				<h1>Конструкция</h1>
+				<h1><article id="construction">Конструкция</article></h1>
 				<p>Мобильная автоматическая электрическая котельная "МТК Э" представляет собой цельнометаллический сварной контейнер с двойными утепленными стенками. В контейнере размещены электроводонагреватели типа ЭПЗ-100И2 или ЭПЗ-250И2 с индивидуальными автоматическими щитами управления. В автономной мобильной блочной модульной электрической котельной установлены также основной и резервный циркуляционные насосы, фильтр грязевик, трубы подачи, обратки и подпитки, водяная арматура и прочая регулировочная и контрольная аппаратура.</p>
 				<p>На заводе "Станкотерм" выпускаются автономные мобильные электрокотельные мощностью 200, 300, 400, 500 и 750 киловатт. Габаритные размеры автономных мобильных блочных модульных котельных позволяют перевозить их любым видом транспорта.</p>
 			</div>
@@ -109,7 +73,7 @@
 				<div id="contacts">
 					<h2><a href="/pages/contacts.html">Контакты</a></h2>
 					<p><i class="fas fa-home"></i> г. Пятигорск, пос. Горячеводский, ул. 6-я линия, д. 121</p>
-					<p><i class="fas fa-clock"></i> Время работы - c 9:00 до XX:XX</p>
+					<p><i class="fas fa-clock"></i> Времея работы - с 8:00 до 17:00</p>
 					<p><i class="fas fa-phone-alt"></i> <span class="contact">(8793) 31-66-67</span></p>
 					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="contact">31-66-71</span></p>
 					<p><i class="fas fa-at"></i> <span class="contact">zavod_stankoterm@mail.ru</span></p>

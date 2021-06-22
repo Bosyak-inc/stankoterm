@@ -99,7 +99,8 @@ table.tableInfo {
     display: table-caption;
     text-align: center;
     caption-side: bottom;
-    font-size: 0.8em; }
+    font-size: 0.8em;
+    margin-top: 10px; }
   table.tableInfo tbody tr:hover td {
     background: #fff; }
   table.tableInfo tr {
