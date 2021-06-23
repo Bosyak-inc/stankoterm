@@ -61,14 +61,14 @@ function SubElem(button, subBlock, buttonSkin, state = 0) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	let header = document.getElementById("header");
-	let nav = document.getElementById("nav");
+	const header = document.getElementById("header");
+	const nav = document.getElementById("nav");
 
-	let headerHeight = elemHeight(header);
-	let navY = nav.offsetTop;
+	const headerHeight = elemHeight(header);
+	const navY = nav.offsetTop;
 
 	// go up button util
-	let goupBtn = document.getElementById("go_up");
+	const goupBtn = document.getElementById("go_up");
 
 	window.onscroll = function() {
 		goupCheck(goupBtn, headerHeight);
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 	// sub menu util
-	let buttonedC = document.getElementsByClassName("buttoned");
+	const buttonedC = document.getElementsByClassName("buttoned");
 	let buttoned = new Array(); 
 
 	let i = 0;

@@ -1,10 +1,10 @@
 @import "colorscheme.scss";
 @import "mixins.scss";
 @import "animations.scss";
+@import "fonts.scss";
 
 @import "pub/fonts/fontawesome/scss/fontawesome.scss";
 @import "pub/fonts/fontawesome/scss/solid.scss";
-
 
 $logo-width: 57px;
 $logo-height: 84px;
@@ -57,11 +57,12 @@ body {
 	$left-pos: $logo-width + 36px;
 
 	#headerTitle {
+		font-family: Fedra Sans;
 		position: absolute;
 		left: $left-pos;
 		top: 0.3em;
 
-		width: 284px;
+		width: 16em;
 		height: 34px;
 
 		// animation: spin 1s linear infinite;
@@ -83,6 +84,7 @@ body {
 	}
 
 	#menu {
+		// font-family: Aoudax Cyrillic;
 		display: block;
 		position: absolute;
 		bottom: 0;
@@ -227,6 +229,7 @@ body {
 	}
 
 	#CopyRight {
+		font-family: Droid Sans;
 		display: table;
 		width: 100%;
 
@@ -351,6 +354,21 @@ body {
 
 				#servTxt, #opsTxt {
 				}
+
+				.lvl2 {
+					a {
+						padding-left: 2.3em;
+					}
+
+					.button-container {
+						padding: 5.6px 12px 5.6px 12px;
+						height: 16px;
+					}
+
+					.text {
+						width: calc(#{$nav-width} - 32px - (12.8px + 29.44px));
+					}
+				}
 			}
 		}
 
@@ -358,6 +376,14 @@ body {
 			padding: 0;
 			display: none;
 			font-size: 80%;
+
+			.lvl2 {
+				li {
+					a {
+						padding-left: 4.6em;
+					}
+				}
+			}
 
 			li {
 				a {
@@ -425,6 +451,7 @@ body {
 		}
 
 		hr {
+			font-family: Fedra Sans;
 			margin-top: 1.2em;
 			margin-bottom: 2.2em;
 
@@ -439,7 +466,7 @@ body {
 				content: $gear $gear $gear;
 				display: inline-block;
 				position: relative;
-				top: -0.6em;
+				top: -0.67em;
 				font-size: 1.5em;
 				padding: 0 0.25em;
 				background: $content-background;

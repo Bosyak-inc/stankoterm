@@ -5,6 +5,12 @@
   100% {
     transform: rotate(360deg); } }
 
+@font-face {
+  font-family: "Aoudax Cyrillic";
+  src: url("/pub/fonts/AoudaxCyrillic/AoudaxCyrillic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -4661,10 +4667,11 @@ body {
     margin-bottom: 0;
     text-align: center; }
   #header #headerTitle {
+    font-family: Fedra Sans;
     position: absolute;
     left: 93px;
     top: 0.3em;
-    width: 284px;
+    width: 16em;
     height: 34px;
     transition: all 1s; }
     #header #headerTitle span {
@@ -4772,6 +4779,7 @@ body {
       #footer #fcontent h2 a:hover {
         color: #333; }
   #footer #CopyRight {
+    font-family: Droid Sans;
     display: table;
     width: 100%;
     font-size: 0.8em;
@@ -4854,10 +4862,19 @@ body {
           height: 19px; }
         #main #nav ul li.buttoned .text {
           width: 164px; }
+        #main #nav ul li.buttoned .lvl2 a {
+          padding-left: 2.3em; }
+        #main #nav ul li.buttoned .lvl2 .button-container {
+          padding: 5.6px 12px 5.6px 12px;
+          height: 16px; }
+        #main #nav ul li.buttoned .lvl2 .text {
+          width: calc(230px - 32px - (12.8px + 29.44px)); }
     #main #nav ul.subMenu {
       padding: 0;
       display: none;
       font-size: 80%; }
+      #main #nav ul.subMenu .lvl2 li a {
+        padding-left: 4.6em; }
       #main #nav ul.subMenu li a {
         padding-left: 2.3em; }
   #main #content {
@@ -4891,6 +4908,7 @@ body {
       #main #content a:hover {
         background-size: 100% 2px; }
     #main #content hr {
+      font-family: Fedra Sans;
       margin-top: 1.2em;
       margin-bottom: 2.2em;
       padding: 0;
@@ -4902,7 +4920,7 @@ body {
         content: "⚙" "⚙" "⚙";
         display: inline-block;
         position: relative;
-        top: -0.6em;
+        top: -0.67em;
         font-size: 1.5em;
         padding: 0 0.25em;
         background: #fff; }

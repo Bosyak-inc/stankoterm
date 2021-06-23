@@ -45,18 +45,6 @@
 				</ul>
 			</div>
 
-	<script>
-		let ourProd = new SubMenu(document.getElementById('opsInp'),
-								  document.getElementById('ourProdSub'),
-								  document.getElementById('opsTxt'));
-		let serv    = new SubMenu(document.getElementById('servInp'),
-								  document.getElementById('servSub'),
-								  document.getElementById('servTxt'));
-
-		ourProd.button.addEventListener("click", function(){ toggleSub(ourProd); });
-		serv.button.addEventListener("click",    function(){ toggleSub(serv); });
-	</script>
-
 			<div id="content">
 				<h1>Оборудование детских игровых площадок</h1>
 
@@ -65,7 +53,7 @@
 				</p>
 
 				<hr/>
-				<h1>Цены</h1>
+				<h1><article id="prices">Цены</article></h1>
 				<table style="margin-right: 0.5em;" class="tableInfo">
 					<caption>Таб. 1</caption>
 					<tr>
@@ -139,7 +127,7 @@
 				</table>
 
 				<hr/>
-				<h1>Иллюстации</h1>
+				<h1><article id="illustration">Иллюстации</article></h1>
 				<span class="imgCaption">
 					<img src="/img/production/table-and-benches.jpg"/>
 					<p>Столик и скамейки</p>
