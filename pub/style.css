@@ -4672,12 +4672,21 @@ body {
     left: 93px;
     top: 0.3em;
     width: 16em;
-    height: 34px;
-    transition: all 1s; }
-    #header #headerTitle span {
-      transition: 0.5s; }
+    height: 34px; }
     #header #headerTitle a {
       color: #17a; }
+      #header #headerTitle a span {
+        display: inline-block;
+        animation-name: spin;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; }
+        #header #headerTitle a span:before {
+          padding: 1px;
+          content: ''; }
+        #header #headerTitle a span:after {
+          padding: 1px;
+          content: ''; }
   #header #menu {
     display: block;
     position: absolute;

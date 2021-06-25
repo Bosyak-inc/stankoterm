@@ -65,23 +65,36 @@ body {
 		width: 16em;
 		height: 34px;
 
-		// animation: spin 1s linear infinite;
-		// animation-play-state: paused;
-		transition: all 1s;
-
-		span {
-			transition: 0.5s;
-		}
-
-		&:hover span {
-			// color: $gray;
-			// animation-play-state: running;
-		}
-
 		a {
 			color: $title-foreground;
+
+			span {
+				display: inline-block;
+				// width: 1em;
+				// height: 1em;
+				// transition: all 1s;
+				// transform: rotateZ(0deg);
+				animation-name: spin;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+				animation-timing-function: linear;
+
+				&:before {
+					padding: 1px;
+					content: '';
+				}
+
+				&:after {
+					padding: 1px;
+					content: '';
+				}
+			}
 		}
 	}
+
+	// #headerTitle a:hover span {
+		// transform: rotateZ(20deg);
+	// }
 
 	#menu {
 		// font-family: Aoudax Cyrillic;
