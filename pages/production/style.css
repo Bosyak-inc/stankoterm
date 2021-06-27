@@ -2,12 +2,14 @@
   display: block;
   background-color: #fff;
   margin-top: 1em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  text-align: center; }
   .illustrations img {
     width: 100px;
     height: 200px;
     padding: 0.5em; }
   .illustrations .imgCaption {
+    text-align: center;
     margin: 0; }
   .illustrations #klen {
     height: 267px;
@@ -28,6 +30,7 @@
   .imgCaption img {
     vertical-align: middle; }
   .imgCaption p {
+    text-size: 90%;
     padding: 0 1em;
     text-align: center; }
   .imgCaption .wrap1 {

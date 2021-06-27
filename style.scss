@@ -10,7 +10,7 @@ $logo-width: 57px;
 $logo-height: 84px;
 $nav-width: 230px;
 $header-height: 103px;
-$content-width: 70em;
+$content-width: 60em;
 
 $gear: "⚙";
 $arrow-img: 'data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjM0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC41OSAxNi4zNGw0LjU4LTQuNTktNC41OC00LjU5TDEwIDUuNzVsNiA2LTYgNnoiLz48L3N2Zz4=';
@@ -448,6 +448,33 @@ body {
 			margin: 1.5em 0;
 			width: 100%;
 
+			.sub-block {
+				// background-color: blue;
+
+				.header {
+					clear: both;
+					font-size: 90%;
+					padding: 0.2em;
+					// border-top: 1px solid red;
+					// background-color: red;
+				}
+
+				.content {
+					// background-color: orange;
+				}
+			}
+
+			.header {
+				clear: both;
+				text-align: center;
+				border-bottom: 1px solid #ccc;
+				padding: 1.5em;
+			}
+
+			.content {
+				padding: 1.5em;
+			}
+
 			.row {
 				display: flex;
 				flex-direction: row;
@@ -458,16 +485,6 @@ body {
 					padding: 10px;
 					width: calc((#{$content-width}	- 60px) / 3);
 				}
-			}
-
-			.header {
-				text-align: center;
-				border-bottom: 1px solid #ccc;
-				padding: 1.5em;
-			}
-
-			.content {
-				padding: 1.5em;
 			}
 		}
 
