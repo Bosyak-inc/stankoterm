@@ -4896,8 +4896,18 @@ body {
       border-radius: 5px;
       margin: 1.5em 0;
       width: 100%; }
+      #main #content .content-block .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 20px 30px; }
+        #main #content .content-block .row .row-block {
+          padding: 10px;
+          width: calc((70em	- 60px) / 3); }
       #main #content .content-block .header {
-        border-bottom: 1px solid #ccc; }
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        padding: 1.5em; }
       #main #content .content-block .content {
         padding: 1.5em; }
     #main #content a {
