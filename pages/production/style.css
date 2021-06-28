@@ -3,13 +3,14 @@
   background-color: #fff;
   margin-top: 1em;
   margin-bottom: 1em;
-  text-align: center; }
+  padding: 2em 0;
+  text-align: center;
+  background-color: #f8f8f8; }
   .illustrations img {
     width: 100px;
     height: 200px;
     padding: 0.5em; }
   .illustrations .imgCaption {
-    text-align: center;
     margin: 0; }
   .illustrations #klen {
     height: 267px;
@@ -26,7 +27,8 @@
   padding: 1em;
   width: auto;
   text-align: center;
-  border: 1px solid #17a; }
+  border: 1px solid #17a;
+  background-color: #eee; }
   .imgCaption img {
     vertical-align: middle; }
   .imgCaption p {

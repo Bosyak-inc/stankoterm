@@ -5,6 +5,7 @@ $black: #000;
 $gray: #ccc;
 $gray-hard: #333;
 $gray-light: #eee;
+$gray-white-smoke: #f8f8f8;
 
 // BODY
 	// HEADER
@@ -33,6 +34,13 @@ $gray-light: #eee;
 			$content-foreground: $main-foreground;
 			$content-background: $main-background;
 			$content-link-foreground: blue;
+			// content-block
+			$content-block-background: $gray-white-smoke;
+			$content-block-border: $gray;
+			// illustrations
+			$illustration-background: $content-block-background;
+			// imgCaption
+			$img-caption-background: $gray-light;
 
 		// nav
 			$nav-border-right: $gray;

@@ -5,6 +5,9 @@
 	background-color: #fff;
 	margin-top: 1em;
 	margin-bottom: 1em;
+	padding: 2em 0;
+	text-align: center;
+	background-color: $illustration-background;
 
 	img {
 		width: 100px;
@@ -39,6 +42,7 @@
 	width: auto;
 	text-align: center;
 	border: 1px solid $imgCaption-border;
+	background-color: $img-caption-background;
 
 	img {
 		vertical-align: middle;
