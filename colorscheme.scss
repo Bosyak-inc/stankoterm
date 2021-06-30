@@ -35,12 +35,15 @@ $gray-white-smoke: #f8f8f8;
 			$content-background: $main-background;
 			$content-link-foreground: blue;
 			// content-block
-			$content-block-background: $gray-white-smoke;
+			$content-block-background: $white; //$gray-white-smoke;
 			$content-block-border: $gray;
 			// illustrations
 			$illustration-background: $content-block-background;
 			// imgCaption
-			$img-caption-background: $gray-light;
+			$img-caption-background: $content-block-background;
+			// review
+			$review-mark-color: $blue;
+			$review-item-background: $gray-light;
 
 		// nav
 			$nav-border-right: $gray;
@@ -54,7 +57,6 @@ $gray-white-smoke: #f8f8f8;
 		$footer-foreground: $black;
 		$footer-background: $gray-light;
 		$footer-link-foreground: $black;
-		$footer-contact-foreground: $gray-hard;
 		$footer-link-background: $gray-hard;
 		// CopyRight
 			$cr-foreground: $white;
@@ -69,4 +71,5 @@ $gray-white-smoke: #f8f8f8;
 	$link-foreground: blue;
 	$imgCaption-border: $blue;
 	$loader-foreground: $blue;
-	$loader-background: $gray-light;
+	$loader-background: $content-block-background;
+	$contact-foreground: $blue;
