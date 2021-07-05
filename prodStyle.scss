@@ -51,7 +51,7 @@
 		padding: 0 1em;
 		text-align: center;
 		align-self: center;
-		font-family: Fedra Sans;
+		font-family: Gilroy;
 	}
 
 	.wrap1 {
@@ -130,6 +130,7 @@ table.tableInfo {
 	margin-bottom: 1em;
 	background-color: #eee;
 	border-collapse: collapse;
+	font-family: Lato;
 
 	caption {
 		display: table-caption;
@@ -156,6 +157,7 @@ table.tableInfo {
 		}
 
 		th {
+			font-family: Sans;
 			background-color: #17a;
 			color: #fff;
 		}
@@ -166,6 +168,7 @@ table.tableInfo {
 			border-bottom: 1px solid #17a;
 
 			&:first-child {
+				font-family: Raleway;
 				background-color: #ccc;
 				border-bottom: 1px solid #eee;
 				border-right: none;

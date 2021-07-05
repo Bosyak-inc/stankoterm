@@ -36,90 +36,182 @@
 
 			<div id="nav">
 				<ul class="menu">
-					<li><a href="#annexes">Приложения</a></li>
-					<li><a href="#memos">Памятки</a></li>
-					<li><a href="#plans">Планы</a></li>
-					<li><a href="#orders">Приказы</a></li>
+					<li><a href="#docs">Докуметы</a></li>
+					<!-- <li><a href="#annexes">Приложения</a></li> -->
+					<!-- <li><a href="#memos">Памятки</a></li> -->
+					<!-- <li><a href="#plans">Планы</a></li> -->
+					<!-- <li><a href="#orders">Приказы</a></li> -->
 					<li><a href="#info">Об огранизации</a></li>
 				</ul>
 			</div>
 
 			<div id="content">
-				<div id="annexes" class="content-block">
+				<div id="docs" class="content-block">
 					<div class="header">
-						<h2>Приложения</h2>
+						<h2>Документы</h2>
 					</div>
+
+					<div class="content-menu">
+						<button class="btn" onclick="filterSelection('annexes')">Приложения</button>
+						<button class="btn" onclick="filterSelection('memos')">Памятки</button>
+						<button class="btn" onclick="filterSelection('orders')">Приказы</button>
+						<button class="btn" onclick="filterSelection('plans')">Планы</button>
+						<button class="btn" onclick="filterSelection('acorruption')">Антиропуционная политика</button>
+						<button class="btn active" onclick="filterSelection('all')">Все документы</button>
+					</div>
+
 					<div class="content">
-						<h3>
-							<i class="fas fa-file-pdf"></i>
-							<a target="_blank" href="/doc/annexes/anti-corruption-policy.pdf">Положение об антикоррупционной политике</a>
-						</h3>
-						<h3>
-							<i class="fas fa-file-pdf"></i>
-							<a target="_blank" href="/doc/annexes/annex-to-the-order-1.pdf">Приложение к приказу №<span class="number">1</span></a>
-						</h3>
-						<h3>
-							<i class="fas fa-file-pdf"></i>
-							<a target="_blank" href="/doc/annexes/annex-to-the-order-2.pdf">Приложение к приказу №<span class="number">2</span></a>
-						</h3>
-						<h3>
-							<i class="fas fa-file-pdf"></i>
-							<a target="_blank" href="/doc/annexes/annex-to-the-order-3.pdf">Приложение к приказу №<span class="number">3</span></a>
-						</h3>
-						<h3>
-							<i class="fas fa-file-pdf"></i>
-							<a target="_blank" href="/doc/annexes/annex-to-the-order-4.pdf">Приложение к приказу №<span class="number">4</span></a>
-						</h3>
+
+						<div class="row docs">
+
+							<div class="filterd row-block annexes">
+								<div class="header">
+									<h1>Приложение к приказу №<span class="number">1</span></h1>
+								</div>
+								<div class="content">
+									<i class="fas fa-file-pdf"></i> <a target="_blank" href="/doc/annexes/annex-to-the-order-1.pdf">скачать</a>
+								</div>
+							</div>
+
+							<div class="filterd row-block annexes">
+								<div class="header">
+									<h1>Приложение к приказу №<span class="number">2</span></h1>
+								</div>
+								<div class="content">
+									<i class="fas fa-file-pdf"></i> <a target="_blank" href="/doc/annexes/annex-to-the-order-2.pdf">скачать</a>
+								</div>
+							</div>
+
+							<div class="filterd row-block annexes">
+								<div class="header">
+									<h1>Приложение к приказу №<span class="number">3</span></h1>
+								</div>
+								<div class="content">
+									<i class="fas fa-file-pdf"></i> <a target="_blank" href="/doc/annexes/annex-to-the-order-3.pdf">скачать</a>
+								</div>
+							</div>
+
+							<div class="filterd row-block annexes">
+								<div class="header">
+									<h1>Приложение к приказу №<span class="number">4</span></h1>
+								</div>
+								<div class="content">
+									<i class="fas fa-file-pdf"></i> <a target="_blank" href="/doc/annexes/annex-to-the-order-4.pdf">скачать</a>
+								</div>
+							</div>
+
+							<div class="filterd row-block memos acorruption">
+								<div class="header">
+									<h1>Памятка по противодействию коррупции</h1>
+								</div>
+								<div class="content">
+									<i class="fas fa-file-pdf"></i> <a target="_blank" href="/doc/memos/anti-corruption-memo.pdf">скачать</a>
+								</div>
+							</div>
+
+							<div class="filterd row-block acorruption annexes">
+								<div class="header">
+									<h1>Положение об антикоррупционной политике</h1>
+								</div>
+								<div class="content">
+									<i class="fas fa-file-pdf"></i> <a target="_blank" href="/doc/annexes/anti-corruption-policy.pdf">скачать</a>
+								</div>
+							</div>
+
+							<div class="filterd row-block plans acorruption">
+								<div class="header">
+									<h1>План мероприятий по противодействию коррупции</h1>
+								</div>
+								<div class="content">
+									<i class="fas fa-file-pdf"></i> <a target="_blank" href="/doc/plans/anti-corruption-action-plan.pdf">скачать</a>
+								</div>
+							</div>
+
+							<div class="filterd row-block orders acorruption">
+								<div class="header">
+									<h1>Приказ об исполнении по противодействию коррупции</h1>
+								</div>
+								<div class='content'>
+									<i class="fas fa-file-pdf"></i> <a target="_blank" href="/doc/orders/anti-corruption-execution-order.pdf">скачать</a>
+								</div>
+							</div>
+
+							<div class="filterd row-block orders acorruption">
+								<div class="header">
+									<h1>Приказ о плане действий по противодействию коррупции</h1>
+								</div>
+								<div class="content">
+									<i class="fas fa-file-pdf"></i> <a target="_blank" href="/doc/orders/anti-corruption-action-plan-order.pdf">скачать</a>
+								</div>
+							</div>
+
+							<div class="filterd row-block orders acorruption">
+								<div class="header">
+									<h1>Приказ о создании комиссий по противодействию коррупции</h1>
+								</div>
+								<div class="content">
+									<i class="fas fa-file-pdf"></i> <a target="_blank" href="/doc/orders/order-to-establish-a-commission-to-combat-corruption.pdf">скачать</a>
+								</div>
+							</div>
+
+							<div class="filterd row-block orders">
+								<div class="header">
+									<h1>Приказ об утверждения положения о конфликте интересов</h1>
+								</div>
+								<div class='content'>
+									<i class="fas fa-file-pdf"></i> <a target="_blank" href="/doc/orders/conflict-of-interest-statement-approval-order.pdf">скачать</a>
+								</div>
+							</div>
+
+						</div>
+
 					</div>
 				</div>
 
-				<div id="memos" class="content-block">
-					<div class="header">
-						<h2>Памятки</h2>
-					</div>
-					<div class="content">
-						<h3>
-							<i class="fas fa-file-pdf"></i>
-							<a target="_blank" href="/doc/memos/anti-corruption-memo.pdf">Памятка по противодействию коррупции</a>
-						</h3>
-					</div>
-				</div>
+<script>
+	filterSelection("all")
+	function filterSelection(c) {
+		let x, i;
+		x = document.getElementsByClassName("filterd");
+		if (c == "all") c = "";
+		for (i = 0; i < x.length; i++) {
+			w3RemoveClass(x[i], "show");
+			if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+		}
+	}
 
-				<div id="plans" class="content-block">
-					<div class="header">
-						<h2>Планы</h2>
-					</div>
-					<div class="content">
-						<h3>
-							<i class="fas fa-file-pdf"></i>
-							<a target="_blank" href="/doc/plans/anti-corruption-action-plan.pdf">План мероприятий по противодействию коррупции</a>
-						</h3>
-					</div>
-				</div>
+	function w3AddClass(element, name) {
+		let i, arr1, arr2;
+		arr1 = element.className.split(" ");
+		arr2 = name.split(" ");
+		for (i = 0; i < arr2.length; i++) {
+			if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+		}
+	}
 
-				<div id="orders" class="content-block">
-					<div class="header">
-						<h2>Приказы</h2>
-					</div>
-					<div class="content">
-						<h3>
-							<i class="fas fa-file-pdf"></i>
-							<a target="_blank" href="/doc/orders/anti-corruption-execution-order.pdf">Приказ об исполнении по противодействию коррупции</a>
-						</h3>
-						<h3>
-							<i class="fas fa-file-pdf"></i>
-							<a target="_blank" href="/doc/orders/anti-corruption-action-plan-order.pdf">Приказ о плане действий по противодействию коррупции</a>
-						</h3>
-						<h3>
-							<i class="fas fa-file-pdf"></i>
-							<a target="_blank" href="/doc/orders/order-to-establish-a-commission-to-combat-corruption.pdf">Приказ о создании комиссий по противодействию коррупции</a>
-						</h3>
-						<h3>
-							<i class="fas fa-file-pdf"></i>
-							<a target="_blank" href="/doc/orders/conflict-of-interest-statement-approval-order.pdf">Приказ об утверждения положения о конфликте интересов</a>
-						</h3>
-					</div>
-				</div>
+	function w3RemoveClass(element, name) {
+		let i, arr1, arr2;
+		arr1 = element.className.split(" ");
+		arr2 = name.split(" ");
+		for (i = 0; i < arr2.length; i++) {
+			while (arr1.indexOf(arr2[i]) > -1) {
+				arr1.splice(arr1.indexOf(arr2[i]), 1);     
+			}
+		}
+		element.className = arr1.join(" ");
+	}
+
+	// Add active class to the current button (highlight it)
+	var btnContainer = document.getElementsByClassName("content-menu")[0];
+	var btns = btnContainer.getElementsByClassName("btn");
+	for (let i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click", function(){
+			let current = document.getElementsByClassName("active");
+			current[0].className = current[0].className.replace(" active", "");
+			this.className += " active";
+		});
+	}
+</script>
 
 				<div id="info" class="content-block">
 					<div class="header">

@@ -37,7 +37,7 @@
     padding: 0 1em;
     text-align: center;
     align-self: center;
-    font-family: Fedra Sans; }
+    font-family: Gilroy; }
   .imgCaption .wrap1 {
     display: inherit;
     max-width: 350px; }
@@ -102,7 +102,8 @@ table.tableInfo {
   margin-top: 1em;
   margin-bottom: 1em;
   background-color: #eee;
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  font-family: Lato; }
   table.tableInfo caption {
     display: table-caption;
     text-align: center;
@@ -118,6 +119,7 @@ table.tableInfo {
       text-align: left;
       padding: 0.2em; }
     table.tableInfo tr th {
+      font-family: Sans;
       background-color: #17a;
       color: #fff; }
     table.tableInfo tr td {
@@ -125,6 +127,7 @@ table.tableInfo {
       border-right: 1px solid #17a;
       border-bottom: 1px solid #17a; }
       table.tableInfo tr td:first-child {
+        font-family: Raleway;
         background-color: #ccc;
         border-bottom: 1px solid #eee;
         border-right: none; }

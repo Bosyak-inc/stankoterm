@@ -3,7 +3,6 @@
 	<head>
 		<title>Новости | Официальный сайт ОАО "Станкотерм"</title>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<script src="/engine/utils.js"></script>
 		<link rel="stylesheet" href="/pub/style.css">
 		<link href="/pub/fonts/fontawesome/css/solid.css" rel="stylesheet">
@@ -42,20 +41,15 @@
 					</div>
 
 					<div class="content-menu">
-						<input type="radio" id="latest" name="news"/>
-						<label for="latest">Самые новые</label>
-
-						<input type="radio" id="last-10-year" name="news"/>
-						<label for="last-10-year">Последнии 10 лет</label>
-
-						<input type="radio" id="all-news" name="news"/>
-						<label for="all-news">Все</label>
+						<button style="order: -1;" class="btn" onclick="filterSelection('recent')">Самые новые</button>
+						<button class="btn active" onclick="filterSelection('all')">Все</button>
+						<button style="order: 1;" class="btn" onclick="filterSelection('last10years')">Последние 10 лет</button>
 					</div>
 
 					<div class="content">
-						<div class="row">
+						<div class="row news">
 
-							<div class="latest row-block gray-scale-back">
+							<div onclick="window.location.href='#openModal-2020'" class="row-block filterd news-item">
 								<div class="header">
 									<h2>2020</h2>
 								</div>
@@ -78,7 +72,7 @@
 								</div>
 							</div>
 
-							<div class="last-10-year row-block gray-scale-back">
+							<div onclick="window.location.href='#openModal-2019'" class="row-block filterd news-item">
 								<div class="header">
 									<h2>2019</h2>
 								</div>
@@ -111,7 +105,7 @@
 								</div>
 							</div>
 
-							<div class="last-10-year row-block gray-scale-back">
+							<div onclick="window.location.href='#openModal-2018'" class="row-block filterd news-item">
 								<div class="header">
 									<h2>2018</h2>
 								</div>
@@ -136,7 +130,7 @@
 								</div>
 							</div>
 
-							<div class="last-10-year row-block gray-scale-back">
+							<div onclick="window.location.href='#openModal-2017'" class="row-block filterd news-item">
 								<div class="header">
 									<h2>2017</h2>
 								</div>
@@ -161,7 +155,7 @@
 								</div>
 							</div>
 
-							<div class="last-10-year row-block gray-scale-back">
+							<div onclick="window.location.href='#openModal-2016'" class="row-block filterd news-item">
 								<div class="header">
 									<h2>2016</h2>
 								</div>
@@ -186,7 +180,7 @@
 								</div>
 							</div>
 
-							<div class="last-10-year row-block gray-scale-back">
+							<div onclick="window.location.href='#openModal-2015'" class="row-block filterd news-item">
 								<div class="header">
 									<h2>2015</h2>
 								</div>
@@ -213,7 +207,7 @@
 								</div>
 							</div>
 
-							<div class="last-10-year row-block gray-scale-back">
+							<div onclick="window.location.href='#openModal-2014'" class="row-block filterd news-item">
 								<div class="header">
 									<h2>2014</h2>
 								</div>
@@ -239,7 +233,7 @@
 								</div>
 							</div>
 
-							<div class="last-10-year row-block gray-scale-back">
+							<div onclick="window.location.href='#openModal-2013'" class="row-block filterd news-item">
 								<div class="header">
 									<h2>2013</h2>
 								</div>
@@ -267,6 +261,51 @@
 				</div>
 			</div>
 		</div>
+
+<script>
+	filterSelection("all")
+	function filterSelection(c) {
+		let x, i;
+		x = document.getElementsByClassName("filterd news-item");
+		if (c == "all") c = "";
+		for (i = 0; i < x.length; i++) {
+			w3RemoveClass(x[i], "show");
+			if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+		}
+	}
+
+	function w3AddClass(element, name) {
+		let i, arr1, arr2;
+		arr1 = element.className.split(" ");
+		arr2 = name.split(" ");
+		for (i = 0; i < arr2.length; i++) {
+			if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+		}
+	}
+
+	function w3RemoveClass(element, name) {
+		let i, arr1, arr2;
+		arr1 = element.className.split(" ");
+		arr2 = name.split(" ");
+		for (i = 0; i < arr2.length; i++) {
+			while (arr1.indexOf(arr2[i]) > -1) {
+				arr1.splice(arr1.indexOf(arr2[i]), 1);     
+			}
+		}
+		element.className = arr1.join(" ");
+	}
+
+	// Add active class to the current button (highlight it)
+	var btnContainer = document.getElementsByClassName("content-menu")[0];
+	var btns = btnContainer.getElementsByClassName("btn");
+	for (let i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click", function(){
+			let current = document.getElementsByClassName("active");
+			current[0].className = current[0].className.replace(" active", "");
+			this.className += " active";
+		});
+	}
+</script>
 
 		<div id="footer">
 			<div id="fcontent">

@@ -38,7 +38,7 @@ function navMove(nav, navY) {
 		nav.style.top = 0 + 'px';
 	} else {
 		// nav.style.top = (diff + nav.style.paddingTop) + 'px';
-		nav.style.top = (diff + 22) + 'px';
+		nav.style.top = (diff) + 'px';
 	}
 }
 
@@ -61,7 +61,6 @@ function SubElem(button, subBlock, buttonSkin, state = 0) {
 	};
 }
 
-// document.addEventListener('DOMContentLoaded', () => {
 window.onload = function() {
 	const header = document.getElementById("header");
 	const headerHeight = elemHeight(header);
@@ -102,18 +101,31 @@ window.onload = function() {
 	}
 
 	// -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-	if (document.getElementsByClassName("modal")) {
-		var scrollbar = document.body.clientWidth - window.innerWidth + 'px';
-		document.querySelector('[href="#openModal"]').addEventListener('click', function () {
-			document.body.style.overflow = 'hidden';
-			document.querySelector('#openModal').style.marginLeft = scrollbar;
-		});
-		
-		document.querySelector('[href="#close"]').addEventListener('click', function () {
-			document.body.style.overflow = 'visible';
-			document.querySelector('#openModal').style.marginLeft = '0px';
-		});
-	}
+	var scrollbar = document.body.clientWidth - window.innerWidth + 'px';
+	document.querySelector('[href="#openModal"]').addEventListener('click', function () {
+		document.body.style.overflow = 'hidden';
+		document.querySelector('#openModal').style.marginLeft = scrollbar;
+	});
+	
+	document.querySelector('[href="#close"]').addEventListener('click', function () {
+		document.body.style.overflow = 'visible';
+		document.querySelector('#openModal').style.marginLeft = '0px';
+	});
+}
 
-	// -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-};
+document.addEventListener('DOMContentLoaded', () => {
+	const news = document.getElementsByClassName("news")[0];
+	let newsBlocks = news.getElementsByClassName("row-block");
+	let i = 0;
+	Array.from(newsBlocks).forEach(function(child) {
+		if (i < 1) {
+			child.classList.add("recent");
+		}
+		if (i < 10) {
+			child.classList.add("last10years");
+		}
+		// child.classList.add("allnews");
+
+		i++;
+	});
+});
