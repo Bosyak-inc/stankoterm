@@ -65,6 +65,40 @@
 	-webkit-user-select: $prop;
 }
 
+@mixin box-shadow($props...) {
+	-webkit-box-shadow: $props;
+	box-shadow: $props;
+}
+
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin flex-direction($prop) {
+	-webkit-flex-direction: $prop;
+	-ms-flex-direction: $prop;
+	flex-direction: $prop;
+}
+
+@mixin background-clip($prop) {
+	-webkit-background-clip: $prop;
+	background-clip: $prop;
+}
+
+@mixin flex-align-items($prop) {
+	-webkit-align-items: $prop;
+	-ms-flex-align: $prop;
+	align-items: $prop;
+}
+
+@mixin flex-justify-content($prop) {
+	-webkit-justify-content: $prop;
+	justify-content: $prop;
+}
+
 @mixin hover-underline-sliding($time) {
 	text-decoration: none;
 	font-weight: bold;
@@ -76,5 +110,25 @@
 
 	&:hover {
 		background-size: 100% 2px;
+	}
+}
+
+@mixin uninit-hover-uderline-sliding() {
+	&:hover {
+		background-size: 0 0;
+	}
+}
+
+@mixin font-face($fontFamily, $fileName, $fontWeight, $fontStyle, $fontPath) {
+	@font-face {
+		font-family: $fontFamily;
+		src: url('#{$fontPath}/#{$fileName}.ttf');
+		src:
+		// url('#{$fontPath}/#{$fileName}.eot?#iefix') format('embedded-opentype'),
+		// url('#{$fontPath}/#{$fileName}.woff2') format('woff2'),
+		// url('#{$fontPath}/#{$fileName}.woff') format('woff'),
+		url('#{$fontPath}/#{$fileName}.ttf') format('truetype');
+		font-weight: $fontWeight;
+		font-style: $fontStyle;
 	}
 }

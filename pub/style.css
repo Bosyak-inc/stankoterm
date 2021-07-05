@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(/pub/fonts/Gilroy/stylesheet.css);
 @keyframes spin {
   0% {
     transform: rotate(0deg); }
@@ -6,10 +7,81 @@
     transform: rotate(360deg); } }
 
 @font-face {
-  font-family: "Aoudax Cyrillic";
-  src: url("/pub/fonts/AoudaxCyrillic/AoudaxCyrillic.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal; }
+  font-family: "Fedra Sans";
+  src: url("/pub/fonts/Fedra Sans/FedraSansPro-Medium.ttf");
+  src: url("/pub/fonts/Fedra Sans/FedraSansPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Fedra Sans";
+  src: url("/pub/fonts/Fedra Sans/FedraSansPro-MediumItalic.ttf");
+  src: url("/pub/fonts/Fedra Sans/FedraSansPro-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Fedra Sans";
+  src: url("/pub/fonts/Fedra Sans/FedraSansPro-Normal.ttf");
+  src: url("/pub/fonts/Fedra Sans/FedraSansPro-Normal.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Fedra Sans";
+  src: url("/pub/fonts/Fedra Sans/FedraSansPro-NormalItalic.ttf");
+  src: url("/pub/fonts/Fedra Sans/FedraSansPro-NormalItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("/pub/fonts/Bebasneue/bebasneueregular.ttf");
+  src: url("/pub/fonts/Bebasneue/bebasneueregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("/pub/fonts/Bebasneue/bebasneuebold.ttf");
+  src: url("/pub/fonts/Bebasneue/bebasneuebold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/pub/fonts/Raleway/Raleway-Regular.ttf");
+  src: url("/pub/fonts/Raleway/Raleway-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Raleway Black";
+  src: url("/pub/fonts/Raleway/Raleway-Black.ttf");
+  src: url("/pub/fonts/Raleway/Raleway-Black.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/pub/fonts/Raleway/Raleway-Bold.ttf");
+  src: url("/pub/fonts/Raleway/Raleway-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("/pub/fonts/Lato/Lato-Regular.ttf");
+  src: url("/pub/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: url("/pub/fonts/Lato/Lato-Bold.ttf");
+  src: url("/pub/fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
 
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
@@ -4646,10 +4718,11 @@ readers do not read off random characters that represent icons */
       opacity: 1; } }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans;
   font-size: 16px;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  background: linear-gradient(0deg, #e8f2f7, #fff); }
 
 #header {
   position: relative;
@@ -4666,15 +4739,18 @@ body {
     text-align: center; }
   #header #headerTitle {
     font-family: Fedra Sans;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     left: 93px;
-    top: 0.3em;
-    width: 16em;
-    height: 34px; }
+    top: 0.3em; }
     #header #headerTitle a {
       color: #17a; }
       #header #headerTitle a span {
         display: inline-block;
+        font-family: sans;
         animation-name: spin;
         animation-duration: 5s;
         animation-iteration-count: infinite;
@@ -4686,6 +4762,10 @@ body {
           padding: 1px;
           content: ''; }
   #header #menu {
+    font-family: 'Raleway Black';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 0.55em;
     display: block;
     position: absolute;
     bottom: 0;
@@ -4697,7 +4777,6 @@ body {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #069;
     border-top-left-radius: 20px;
-    font-size: 0.55em;
     padding: 0; }
     #header #menu span.ws {
       padding-left: 1em; }
@@ -4770,6 +4849,7 @@ body {
       margin: 0;
       padding: 0; }
       #footer #fcontent #forclients ul li {
+        list-style-type: none;
         transition: 0.8s all; }
         #footer #fcontent #forclients ul li a {
           color: #000;
@@ -4807,8 +4887,11 @@ body {
         color: #ccc; }
 
 #main {
+  clear: both;
   margin: 0;
   padding: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
   min-height: calc(99vh - 103px);
   position: relative; }
   #main #go_up {
@@ -4830,11 +4913,10 @@ body {
       transition: background-color 200ms linear, opacity 1s linear; }
   #main #nav {
     position: fixed;
-    left: 0;
     top: 103px;
+    left: 0;
     width: 230px;
-    float: left;
-    margin: 0 1px 0 0;
+    margin: 0 5px 0 0;
     padding: 1em 0;
     overflow: hidden; }
     #main #nav ul {
@@ -4843,14 +4925,24 @@ body {
       #main #nav ul li {
         list-style: none;
         padding: 0;
-        margin: 0; }
+        margin: 0;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out; }
         #main #nav ul li a {
           display: block;
           margin: 0;
           padding: 0.8ex 1em 0.8ex 1em;
           color: #17a; }
           #main #nav ul li a:hover {
-            background-color: #eee; }
+            background-color: #f8f8f8; }
+      #main #nav ul li:hover {
+        -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+        background: linear-gradient(30deg, #f8f8f8 0%, #fff 100%); }
       #main #nav ul li.buttoned {
         display: table;
         width: 100%; }
@@ -4859,7 +4951,7 @@ body {
           color: #17a;
           padding: 0.8ex 1em 0.8ex 1em; }
           #main #nav ul li.buttoned .split:hover {
-            background-color: #eee; }
+            background-color: #f8f8f8; }
         #main #nav ul li.buttoned .button-container {
           float: right;
           cursor: pointer;
@@ -4886,17 +4978,19 @@ body {
       #main #nav ul.subMenu li a {
         padding-left: 2.3em; }
   #main #content {
-    background-color: #fff;
+    display: inline-block;
     color: #000;
     margin: 0 0 0 230px;
     max-width: 60em;
-    margin-bottom: 10em; }
+    min-width: 60em; }
     #main #content .content-block {
       background-color: #fff;
       border: 1px solid #ccc;
       border-radius: 5px;
       margin: 1.5em 0;
       width: 100%; }
+      #main #content .content-block p {
+        line-height: 1.5em; }
       #main #content .content-block .send-feendback-block {
         display: flex;
         justify-content: center;
@@ -4969,9 +5063,10 @@ body {
             height: 100%;
             width: 100%;
             position: absolute;
+            background-color: #f8f8f8;
             transition: all .4s ease-in-out; }
             #main #content .content-block .showcase .showcase-block .img-container img {
-              object-fit: cover;
+              object-fit: contain;
               width: 100%;
               height: 100%; }
           #main #content .content-block .showcase .showcase-block .wrapper {
@@ -5003,6 +5098,8 @@ body {
           padding: 0.2em;
           background: linear-gradient(0deg, #eee, #fff); }
       #main #content .content-block .header {
+        font-family: Bebas Neue;
+        font-weight: normal;
         clear: both;
         text-align: center;
         border-bottom: 1px solid #ccc;
@@ -5020,7 +5117,126 @@ body {
           padding: 10px;
           flex-basis: 200px;
           flex-grow: 1;
-          background: linear-gradient(135deg, #eee 0%, #fff 50%); }
+          border-left: 1px solid #eee;
+          border-top: 1px solid #eee; }
+          #main #content .content-block .row .row-block h1, #main #content .content-block .row .row-block h2, #main #content .content-block .row .row-block h3, #main #content .content-block .row .row-block h4, #main #content .content-block .row .row-block h5 {
+            font-family: Bebas Neue; }
+    #main #content .gray-scale-back {
+      background: linear-gradient(135deg, #eee 0%, #fff 50%); }
+    #main #content .gray-back {
+      background-color: #ccc; }
+    #main #content .content-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: stratch;
+      background-color: #333;
+      min-height: 50px;
+      font-size: 20px; }
+      #main #content .content-menu label {
+        color: white;
+        cursor: pointer;
+        align-self: center; }
+      #main #content .content-menu input[type="radio"] {
+        display: none; }
+      #main #content .content-menu input[type="radio"]:checked + label {
+        border-bottom: 2px solid #17a;
+        border-radius: 2px; }
+      #main #content .content-menu input[type="radio"][id="latest"]:checked ~ .last-10-year {
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        opacity: 0; }
+      #main #content .content-menu input[type="radio"][id="last-10-year"]:checked ~ .latest {
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        opacity: 0; }
+    #main #content .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      z-index: 1050;
+      opacity: 0;
+      -webkit-transition: opacity 200ms ease-in;
+      -moz-transition: opacity 200ms ease-in;
+      -o-transition: opacity 200ms ease-in;
+      transition: opacity 200ms ease-in;
+      pointer-events: none;
+      margin: 0;
+      padding: 0; }
+      #main #content .modal:target {
+        opacity: 1;
+        pointer-events: auto;
+        overflow-y: auto; }
+      #main #content .modal .modal-dialog {
+        position: relative;
+        width: auto;
+        height: auto;
+        margin: 10px;
+        min-width: 60em; }
+        #main #content .modal .modal-dialog .modal-content {
+          position: relative;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          background-color: #fff;
+          -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: .3rem;
+          outline: 0; }
+          #main #content .modal .modal-dialog .modal-content .modal-header {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            padding: 1.5em;
+            border-bottom: 1px solid #ccc; }
+            #main #content .modal .modal-dialog .modal-content .modal-header .close {
+              float: right;
+              font-family: sans-serif;
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 1;
+              color: #000;
+              text-shadow: 0 1px 0 #fff;
+              opacity: .5;
+              text-decoration: none; }
+              #main #content .modal .modal-dialog .modal-content .modal-header .close:hover {
+                background-size: 0 0; }
+              #main #content .modal .modal-dialog .modal-content .modal-header .close:focus, #main #content .modal .modal-dialog .modal-content .modal-header .close:hover {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+                opacity: .75; }
+          #main #content .modal .modal-dialog .modal-content .modal-body {
+            position: relative;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            padding: 1.5em;
+            overflow: auto; }
     #main #content a {
       text-decoration: none;
       font-weight: bold;
@@ -5050,20 +5266,18 @@ body {
         background: #fff; }
     #main #content .director {
       clear: none;
-      display: inline; }
+      display: flex;
+      flex-direction: row; }
       #main #content .director img.directorImg {
         clear: none;
         width: 400px;
         height: 300px;
-        display: inline-block;
         padding: 0.1em;
         padding-top: 1em; }
       #main #content .director .directorInfo {
+        width: 100%;
         clear: none;
-        display: inline-block;
-        margin: 0;
-        padding: 1em;
-        padding-top: 1em;
+        margin-left: 1em;
         vertical-align: top; }
     #main #content .loader-wrapper {
       position: relative;
@@ -5151,31 +5365,41 @@ body {
           -o-transition: rotate(90deg);
           transform: rotate(90deg); }
 
+ul li::marker {
+  font-family: Fedra Sans;
+  font-weight: 700; }
+
+ul li:first-child {
+  list-style-type: "⚙ "; }
+  ul li:first-child::marker {
+    font-size: 2rem; }
+
 * a {
-  color: blue; }
+  color: #069; }
 
 h1 {
-  margin: 0.3em 1ex 0.8em 0;
+  margin: 0.3em 0ex 0.3em 0;
   font-size: 1.4em; }
 
 h2 {
-  margin: 0.3em 1ex 0.8em 0;
+  margin: 0.3em 0ex 0.3em 0;
   font-size: 1.3em; }
 
 h3 {
-  margin: 0.3em 1ex 0.8em 0;
+  margin: 0.3em 0ex 0.3em 0;
   font-size: 1.1em; }
 
 h4 {
-  margin: 0.3em 1ex 0.8em 0;
+  margin: 0.3em 0ex 0.3em 0;
   font-size: 1em; }
 
 #header a, #nav a, #menu a, #footer a {
   text-decoration: none; }
 
 .contact {
+  font-family: Lato;
+  font-weight: 700;
   color: #17a;
-  font-style: italic;
   clear: both; }
 
 .hidden {
@@ -5190,3 +5414,6 @@ h4 {
 
 .tooltip:hover span {
   display: block; }
+
+.number {
+  font-family: Lato; }

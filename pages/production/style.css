@@ -1,40 +1,43 @@
 .illustrations {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
   background-color: #fff;
   margin-top: 1em;
   margin-bottom: 1em;
   padding: 2em 0;
-  text-align: center;
-  background-color: #f8f8f8; }
-  .illustrations img {
-    width: 100px;
-    height: 200px;
-    padding: 0.5em; }
+  background-color: #fff; }
   .illustrations .imgCaption {
-    margin: 0; }
-  .illustrations #klen {
-    height: 267px;
-    vertical-align: bottom; }
-    .illustrations #klen img {
-      padding-top: 63px;
-      vertical-align: middle;
-      width: 100;
-      height: 145; }
+    flex-basis: 100px;
+    width: 100px;
+    height: 250px;
+    flex-grow: 1;
+    padding: 1em; }
+  .illustrations img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%; }
 
 .imgCaption {
-  display: inline-block;
-  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2em;
   padding: 1em;
   width: auto;
-  text-align: center;
   border: 1px solid #17a;
-  background-color: #eee; }
+  background-color: #fff; }
   .imgCaption img {
-    vertical-align: middle; }
+    object-fit: contain; }
   .imgCaption p {
     text-size: 90%;
     padding: 0 1em;
-    text-align: center; }
+    text-align: center;
+    align-self: center;
+    font-family: Fedra Sans; }
   .imgCaption .wrap1 {
     display: inherit;
     max-width: 350px; }
@@ -68,7 +71,7 @@
     width: 185px;
     height: 235px; }
 
-#epp, #oks {
+#epp.imgCaption, #oks.imgCaption {
   float: left;
   padding: 2em;
   padding-bottom: 0.1em;

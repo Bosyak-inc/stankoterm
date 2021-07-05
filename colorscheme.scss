@@ -8,6 +8,7 @@ $gray-light: #eee;
 $gray-white-smoke: #f8f8f8;
 
 // BODY
+	$body-background: #e8f2f7;
 	// HEADER
 		$header-background: $gray-light;
 
@@ -44,6 +45,7 @@ $gray-white-smoke: #f8f8f8;
 			// review
 			$review-mark-color: $blue;
 			$review-item-background: $gray-light;
+			// modal
 
 		// nav
 			$nav-border-right: $gray;
@@ -51,7 +53,7 @@ $gray-white-smoke: #f8f8f8;
 			$nav-background: $content-background;
 			$nav-link-foreground: $nav-foreground;
 			$nav-link-background: $nav-background;
-			$nav-link-hover-background: $gray-light;
+			$nav-link-hover-background: $gray-white-smoke;
 
 	// FOOTER
 		$footer-foreground: $black;
@@ -68,7 +70,7 @@ $gray-white-smoke: #f8f8f8;
 // OTHER
 	$hr-color: $gray-hard;
 	$hr-top-border: $gray-hard;
-	$link-foreground: blue;
+	$link-foreground: $blue-hard;
 	$imgCaption-border: $blue;
 	$loader-foreground: $blue;
 	$loader-background: $content-block-background;

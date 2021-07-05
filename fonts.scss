@@ -1,7 +1,16 @@
-@font-face {
-	font-family: "Aoudax Cyrillic"; 
-	src: url("/pub/fonts/AoudaxCyrillic/AoudaxCyrillic.ttf") format("truetype"); 
-	font-style: normal; 
-	font-weight: normal; 
-}
+@import '/pub/fonts/Gilroy/stylesheet.css';
 
+@include font-face('Fedra Sans', 'FedraSansPro-Medium', 500, normal, '/pub/fonts/Fedra Sans');
+@include font-face('Fedra Sans', 'FedraSansPro-MediumItalic', 500, italic, '/pub/fonts/Fedra Sans');
+@include font-face('Fedra Sans', 'FedraSansPro-Normal', normal, normal, '/pub/fonts/Fedra Sans');
+@include font-face('Fedra Sans', 'FedraSansPro-NormalItalic', normal, italic, '/pub/fonts/Fedra Sans');
+
+@include font-face('Bebas Neue', 'bebasneueregular', 400, normal, '/pub/fonts/Bebasneue');
+@include font-face('Bebas Neue', 'bebasneuebold', 700, normal, '/pub/fonts/Bebasneue');
+
+@include font-face('Raleway', 'Raleway-Regular', 400, normal, '/pub/fonts/Raleway');
+@include font-face('Raleway Black', 'Raleway-Black', 400, normal, '/pub/fonts/Raleway');
+@include font-face('Raleway', 'Raleway-Bold', 700, normal, '/pub/fonts/Raleway');
+
+@include font-face('Lato', 'Lato-Regular', normal, normal, '/pub/fonts/Lato');
+@include font-face('Lato', 'Lato-Bold', 700, normal, '/pub/fonts/Lato');
