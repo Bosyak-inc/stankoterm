@@ -99,14 +99,14 @@
 	justify-content: $prop;
 }
 
-@mixin hover-underline-sliding($time) {
+@mixin hover-underline-sliding($time, $prop) {
 	text-decoration: none;
 	font-weight: bold;
 	background-image: linear-gradient(currentColor, currentColor);
 	background-position: 0% 100%;
 	background-repeat: no-repeat;
 	background-size: 0% 2px;
-	transition: background-size $time;
+	transition: background-size $time $prop;
 
 	&:hover {
 		background-size: 100% 2px;

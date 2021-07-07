@@ -285,17 +285,11 @@ readers do not read off random characters that represent icons */
 .fa-angle-double-up:before {
   content: "\f102"; }
 
-.fa-angle-down:before {
-  content: "\f107"; }
-
 .fa-angle-left:before {
   content: "\f104"; }
 
 .fa-angle-right:before {
   content: "\f105"; }
-
-.fa-angle-up:before {
-  content: "\f106"; }
 
 .fa-angry:before {
   content: "\f556"; }
@@ -389,9 +383,6 @@ readers do not read off random characters that represent icons */
 
 .fa-asymmetrik:before {
   content: "\f372"; }
-
-.fa-at:before {
-  content: "\f1fa"; }
 
 .fa-atlas:before {
   content: "\f558"; }

@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<script src="/engine/utils.js"></script>
 		<link rel="stylesheet" href="/pub/style.css">
-		<link href="/pub/fonts/fontawesome/css/solid.css" rel="stylesheet">
+		<link href="/pub/fonts/fontawesome/css/all.css" rel="stylesheet">
 	</head>
 	<body>
 		<div id="header">
@@ -34,9 +34,52 @@
 				<nobr><i class="fas fa-angle-double-up"></i> Наверх</nobr>
 			</div>
 
+			<div id="nav">
+				<ul class="menu">
+					<li><a href="#important">Важное</a></li>
+					<li><a href="#allnews">Все новости</a></li>
+				</ul>
+			</div>
+
 			<div id="content">
+
 				<div class="content-block">
-					<div class="header">
+					<div id="important" class="header">
+						<h1>Важное</h1>
+					</div>
+					<div class="content">
+
+						<div class="row">
+							
+							<div class="row-block gray-scale-back">
+								<div class="header">
+									<h1>Получение дивидендов</h1>
+								</div>
+								<div class="content">
+									<h1>До 18.06.2021 года (включительно) необходимо посетить регистратора</h1>
+									<p>Это необходимо для получения дивидендов. Дивиденды выплачиваются только перечислением.</p>
+									<h3>Адрес:</h3> <p><span class="contact">Пятигорский филиал АО ВТБ регистратор,<br/> Ставропольский край, г. Пятигорск, ул крайнего 49, офис 211 2-ой этаж (н-рынок деловой региональный центр)</span></p>
+									<h3>Телефон:</h3> <p><span class='contact'>8 (879) 3–33-89-50</span></p>
+									<h3>Прием зарегистрированных лиц:</h3> <p>Понедельник-Пятница с <span class="number">9:00</span> до <span class="number">13:00</span></p>
+									<h3>При себе иметь:</h3>
+									<p>
+										Паспорт,
+										Номер ИНН,
+										Номер снилс,
+										Банковские реквизиты:
+										или сберкнижка,
+										или реквизиты банковской карты.
+									</p> 
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+				<div class="content-block">
+					<div id="allnews" class="header">
 						<h1>Новости</h1>
 					</div>
 
@@ -54,17 +97,19 @@
 									<h2>2020</h2>
 								</div>
 								<div class="content">
-									<a href="#openModal-2020">Посмотреть сводку</a>
+									<a class="openModal" href="#openModal-2020">Посмотреть сводку</a>
 
 									<div id="openModal-2020" class="modal">
 										<div class="modal-dialog">
 											<div class="modal-content">
 												<div class="modal-header">
 													<h3 class="modal-title">Сводка за 2020 год</h3>
-													<a href="#close" title="Close" class="close">×</a>
+													<a class="close" href="#close" title="Close" class="close">×</a>
 												</div>
 												<div class="modal-body">
-													<i class="fas fa-file-word"></i> <a href="/doc/news/2020/shareholders-meeting-notice-2020.doc">Уведомление о собрании акционеров</a> ОАО "Станкотерм" за 2020 год. 10.06.2021 г.
+													<p><i class="fas fa-file-word"></i> <a href="/doc/news/2020/shareholders-meeting-notice-2020.doc">Уведомление о собрании акционеров</a> ОАО "Станкотерм" за 2020 год. 10.06.2021 г.</p>
+													<p><i class="fas fa-file-word"></i> <a href="/doc/news/2020/voting-report-2020.docx">Отчет о голосовании</a> ОАО "Станкотерм" за 2020 год.</p>
+													<p><i class="fas fa-file-word"></i> <a href="/doc/news/2020/ad-2020.doc">Объявление</a></p>
 												</div>
 											</div>
 										</div>
@@ -266,7 +311,7 @@
 	filterSelection("all")
 	function filterSelection(c) {
 		let x, i;
-		x = document.getElementsByClassName("filterd news-item");
+		x = document.getElementsByClassName("filterd");
 		if (c == "all") c = "";
 		for (i = 0; i < x.length; i++) {
 			w3RemoveClass(x[i], "show");

@@ -3,14 +3,13 @@
 @import "animations.scss";
 @import "fonts.scss";
 
-@import "pub/fonts/fontawesome/scss/fontawesome.scss";
-@import "pub/fonts/fontawesome/scss/solid.scss";
-
 $logo-width: 57px;
 $logo-height: 84px;
 $nav-width: 230px;
 $header-height: 103px;
-$content-width: 60em;
+$content-width: 960px;
+$go_up-width: 130px;
+$min-page-width: calc(#{$content-width} + #{$nav-width} + #{$go_up-width});
 
 $content-header-font-family: Bebas Neue;
 
@@ -41,6 +40,7 @@ body {
 	font-size: 1.75em;
 	background-color: $header-background;
 	height: $header-height;
+	min-width: $min-page-width;
 
 	img.logo {
 		position: absolute;
@@ -50,11 +50,7 @@ body {
 		margin: 0.2em;
 		margin-bottom: 0;
 		text-align: center;
-		// transition: 0.5s all;
 	}
-
-	// img.logo:hover {
-	// }
 
 	$left-pos: $logo-width + 36px;
 
@@ -67,9 +63,7 @@ body {
 		position: absolute;
 		left: $left-pos;
 		top: 0.3em;
-
-		// width: 16em;
-		// height: 34px;
+		@include transition(1s all ease-in-out);
 
 		a {
 			color: $title-foreground;
@@ -77,15 +71,8 @@ body {
 			span {
 				display: inline-block;
 				font-family: sans;
-				// width: 1em;
-				// height: 1em;
-				// transition: all 1s;
-				// transform: rotateZ(0deg);
-				animation-name: spin;
-				animation-duration: 5s;
-				animation-iteration-count: infinite;
-				animation-timing-function: linear;
-
+				animation: spin 5s infinite linear;
+				text-shadow: none;
 
 				&:before {
 					padding: 1px;
@@ -96,6 +83,10 @@ body {
 					padding: 1px;
 					content: '';
 				}
+			}
+
+			&:hover span {
+				animation: spin 5s infinite linear, blink 2s infinite linear;
 			}
 		}
 	}
@@ -110,6 +101,9 @@ body {
 		bottom: 0;
 		left: $left-pos;
 		width: calc(100% - #{$left-pos});
+		height: 33.4px;
+
+		// transition: 0s all ease-in-out;
 
 		clear: none;
 
@@ -181,6 +175,7 @@ body {
 	color: $footer-foreground;
 	padding: 0;
 	margin: 0;
+	min-width: $min-page-width;
 
 	z-index: 999;
 
@@ -290,14 +285,20 @@ body {
 	#go_up {
 		display: none;
 		position: fixed;
+		top: 0;
 		right: 0;
 		height: 100%;
-		width: 130px;
+		width: $go_up-width;
 		text-align: center;
 		padding-top: 1em;
 		opacity: 0;
 		transition: background-color 200ms linear, opacity 1s linear;
 		cursor: pointer;
+
+		nobr {
+			position: relative;
+			top: 40px;
+		}
 
 		background-color: $go_up-background;
 		color: $go_up-foreground;
@@ -316,7 +317,6 @@ body {
 		left: 0;
 		width: $nav-width;
 
-		margin: 0 5px 0 0;
 		padding: 1em 0;
 		overflow: hidden;
 
@@ -418,7 +418,7 @@ body {
 
 	#content {
 		color: $content-foreground;
-		margin: 0 0 0 $nav-width+2;
+		margin: 0 0 0 $nav-width;
 		max-width: $content-width;
 		min-width: $content-width;
 
@@ -567,14 +567,12 @@ body {
 							position: absolute;
 							bottom: 0px;
 							left: 0px;
-
-							span {
-								@include transition(1s all ease-in-out);
-							}
+							overflow: hidden;
 						}
 
 						.hidden-text {
 							display: none;
+							@include transform(scale(0));
 						}
 					}
 				}
@@ -585,6 +583,8 @@ body {
 
 				.showcase-block:hover .hidden-text {
 					display: inline-block;
+					@include transition(1s all ease-in-out);
+					@include transform(scale(1));
 				}
 
 			   	.showcase-block:hover .hidden-text + span {
@@ -632,7 +632,7 @@ body {
 					}
 
 					background-size: 150% 150%;
-					animation: animate_gradient 5s ease infinite;
+					animation: animate_gradient 20s ease-in-out infinite;
 					margin: 10px;
 					padding: 10px;
 					flex-basis: 200px;
@@ -688,7 +688,6 @@ body {
 			flex-direction: row;
 			justify-content: space-around;
 			align-items: center;
-			// background-color: $gray-hard;
 			background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 			background-size: 400% 400%;
 			animation: animate_gradient 5s ease infinite;
@@ -705,9 +704,11 @@ body {
 				color: white;
 				font-size: 18px;
 				margin: 10px 30px;
+				@include transition(1s ease-in-out);
 
 				&:hover {
-					color: $gray-light;
+					@include transition(1s ease-in-out);
+					color: $blue;
 				}
 
 				&.active {
@@ -734,6 +735,7 @@ body {
 			margin: 0;
 			padding: 0;
 			text-align: left;
+			cursor: default;
 
 			&:target {
 				opacity: 1;
@@ -743,6 +745,7 @@ body {
 
 			.modal-dialog {
 				position: relative;
+				top: 40px;
 				width: auto;
 				height: auto;
 				margin: 10px;
@@ -803,7 +806,7 @@ body {
 		}
 
 		a {
-			@include hover-underline-sliding(0.3s);
+			@include hover-underline-sliding(0.3s, ease-in-out);
 		}
 
 		hr.cog {
@@ -910,7 +913,7 @@ body {
 				@include transition(color .12s);
 				
 				span {
-					@include hover-underline-sliding(0.3s);
+					@include hover-underline-sliding(0.3s, ease-in-out);
 				}
 			
 				&::before {
@@ -951,7 +954,7 @@ body {
 
 }
 
-ul {
+ul.gear {
 	li::marker {
 		font-family: Fedra Sans;
 		font-weight: 700;
@@ -1020,5 +1023,5 @@ h4 {
 }
 
 .number {
-	font-family: Lato;
+	font-family: serif;
 }
