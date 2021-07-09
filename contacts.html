@@ -1,0 +1,241 @@
+<!DOCTYPE html> 
+<html lang="ru">
+	<head>
+		<title>Контакты | Официальный сайт ОАО "Станкотерм"</title>
+		<meta charset="utf-8">
+		<script src="/engine/utils.js"></script>
+		<link rel="stylesheet" href="/pub/style.css">
+		<link rel="stylesheet" href="/pages/production/style.css">
+		<link href="/pub/fonts/fontawesome/css/all.css" rel="stylesheet">
+		<link href="/pub/fonts/fontawesome/css/brands.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="header">
+			<a href="/index.html" alt="ОАО Станкотерм">
+				<img class="logo" src="/img/logo.png"></img>
+			</a>
+			
+			<span id="headerTitle">
+				<a href="/index.html">ОАО "Станк<span><i class="fas fa-cog"></i></span>терм"</a>
+			</span>
+
+			<div id="menu">
+				<span class="ws"></span>
+				<a data-hover="Главная" href="/index.html">Главная</a>
+				<a data-hover="Продукция" href="/pages/production.html">Продукция</a>
+				<a data-hover="Реестр цен" href="/pages/prices.html">Реестр цен</a>
+				<a data-hover="Новости" href="/pages/news.html">Новости</a>
+				<a data-hover="Документы" href="/pages/documents.html">Документы</a>
+				<a data-hover="Отзывы" href="/pages/reviews.html">Отзывы</a>
+				<a class="opened" data-hover="Контакты" href="/pages/contacts.html">Контакты</a>
+			</div>
+		</div>
+
+		<div id="main">
+			<div id="go_up">
+				<nobr><i class="fas fa-angle-double-up"></i> Наверх</nobr>
+			</div>
+
+			<div id="nav">
+				<ul class="menu">
+					<li><a href="#ourAdress">Контакты</a></li>
+					<li><a href="#team">Рабочий коллектив</a></li>
+				</ul>
+			</div>
+
+			<div id="content">
+				<div id="ourAdress" class="content-block">
+					<div class="header">
+						<h1>Нас найти легко</h1>
+					</div>
+					<div class="content">
+						<div class="row">
+							<div class="row-block gray-scale-back">
+								<h1>Наш адрес</h1>
+								<p><div class="contact">г. Пятигорск, пос. Горячеводский, ул. 6-я линия, д. 121</div></p>
+							</div>
+							<div class="row-block gray-scale-back">
+								<h1>Телефоны</h1>
+								<p>
+									<div class="contact">(8793) 31-66-68</div>
+									<div class="contact">(8793) 31-66-71</div>
+									<div class="contact">(8793) 31-66-72</div>
+									<div class="contact">(8793) 38-84-07</div>
+									<i class="fa fa-fax"></i> факс <div class="contact">(8793) 38-82-70</div>
+								</p>
+							</div>
+							<div class="row-block gray-scale-back">
+								<h1>Электронная почта</h1>
+								<p><div class="contact">zavod_stankoterm@mail.ru</div></p>
+							</div>
+						</div>
+						<div class="loader-wrapper">
+							<div id="yMap" class="loader">
+								<iframe id="yMapFrame" class="hidden" src="https://yandex.ru/map-widget/v1/?um=constructor%3A5ad816753ee90b38e5c98082a458e0c4941bf76021d999b9e078815680480f6f&amp;source=constructor"></iframe>
+							</div>
+						</div>
+
+						<script>
+							let yMap = document.getElementById("yMapFrame");
+							yMap.onload = function() {
+								yMap.classList.remove("hidden");
+								document.getElementById("yMap").classList.remove("loader");
+							};
+						</script>
+					</div>
+				</div>
+
+				<div id="team" class="content-block">
+					<div class="header">
+						<h1>Рабочий коллектив</h1>
+					</div>
+					<div class="content">
+
+						<div class="row">
+
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="/img/chahirov-gl.jpg"/>
+								</div>
+								<div class="team-content">
+									<h3 class="name">Чахиров Георгий Лазаревич</h3>
+									<h4 class="title">Генеральный директор</h4>
+								</div>
+								<ul class="social">
+									<li>
+										<div class="tooltip">
+											<div class="tooltiptext">
+												<span class="number">(8793) 31-66-68</span>
+											</div>
+											<a href="" aria-hidden="true"><i class="fa fa-phone-alt"></i></a>
+										</div>
+									</li>
+									<li>
+										<div class="tooltip">
+											<div class="tooltiptext">
+												Факс: <span class="number">(8793) 38-82-70</span>
+											</div>
+											<a href="" aria-hidden="true"><i class="fa fa-fax"></i></a>
+										</div>
+									</li>
+									<li>
+										<div class="tooltip">
+											<div class="tooltiptext">
+												Секретарь: <span class="number">31-66-71</span>
+											</div>
+											<a href="" aria-hidden="true"><i class="fa fa-female"></i></a>
+										</div>
+									</li>
+									<li><a target="_blank" href="https://vk.com/chaxirov_gl" aria-hidden="true"><i class="fab fa-vk"></i></a></li>
+								</ul>
+							</div>
+
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="/img/default-user-img.png"/>
+								</div>
+								<div class="team-content">
+									<h3 class="name">Товпекина Галина Семеновна</h3>
+									<h4 class="title">Начальник отдела сбыта</h4>
+								</div>
+								<ul class="social">
+									<div class="tooltip">
+										<div class="tooltiptext">
+											<span class="number">(8793) 31-66-68</span>
+										</div>
+										<li><a href="" aria-hidden="true"><i class="fa fa-phone-alt"></i></a></li>
+									</div>
+								</ul>
+							</div>
+
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="/img/default-user-img.png"/>
+								</div>
+								<div class="team-content">
+									<h3 class="name">Иванова Татьяна Андреевна</h3>
+									<h4 class="title">Начальник отдела снабжения</h4>
+								</div>
+								<ul class="social">
+									<div class="tooltip">
+										<div class="tooltiptext">
+											<span class="number">(8793) 31-66-72</span>
+										</div>
+										<li><a href="" aria-hidden="true"><i class="fa fa-phone-alt"></i></a></li>
+									</div>
+								</ul>
+							</div>
+
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="/img/default-user-img.png"/>
+								</div>
+								<div class="team-content">
+									<h3 class="name">Сериков Владимир Александрович</h3>
+									<h4 class="title">Зам. генерального директора</h4>
+								</div>
+								<ul class="social">
+									<div class="tooltip">
+										<div class="tooltiptext">
+											<span class="number">(8793) 31-66-65</span>
+										</div>
+										<li><a href="" aria-hidden="true"><i class="fa fa-phone-alt"></i></a></li>
+									</div>
+								</ul>
+							</div>
+
+							<div class="our-team">
+								<div class="picture">
+									<img class="img-fluid" src="/img/default-user-img.png"/>
+								</div>
+								<div class="team-content">
+									<h3 class="name">Болдырев Владимир Федорович</h3>
+									<h4 class="title">Главный инженер</h4>
+								</div>
+								<ul class="social">
+									<div class="tooltip">
+										<div class="tooltiptext">
+											<span class="number">(8793) 31-66-07</span>
+										</div>
+										<li><a href="" aria-hidden="true"><i class="fa fa-phone-alt"></i></a></li>
+									</div>
+								</ul>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div id="fcontent">
+				<div id="info">
+					<h2><a href="/index.html">Станкотерм</a></h2> 
+					<p>ОАО "Станкотерм" учереждено в 1998. Основной вид деятельности - выпуск отопительного и водонагрейного оборудования бытового и производственного назначения, а так же станков и механизмов и товаров народного потребления.</p>
+				</div>
+				<div id="forclients">
+					<h2>Клиентам</h2>
+					<ul>
+						<li><a href="/pages/production.html">Продукция</a></li>
+						<li><a href="/pages/prices.html">Реест цен</a></li>
+						<li><a href="/pages/documents.html">Документы</a></li>
+					</ul>
+				</div>
+				<div id="contacts">
+					<h2><a href="/pages/contacts.html">Контакты</a></h2>
+					<p><i class="fas fa-home"></i> г. Пятигорск, пос. Горячеводский, ул. 6-я линия, д. 121</p>
+					<p><i class="fas fa-clock"></i> Времея работы - с 8:00 до 17:00</p>
+					<p><i class="fas fa-phone-alt"></i> <span class="contact">(8793) 31-66-68</span></p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="contact">31-66-71</span></p>
+					<p><i class="fas fa-at"></i> <span class="contact">zavod_stankoterm@mail.ru</span></p>
+				</div>
+			</div>
+
+			<div id="CopyRight">
+				<p>© 2021 <a href="/index.html">stankoter.ru</a> | All Rights Reserved | Design by sIIsgOO</p>
+			</div>
+		</div>
+	</body>
+</html>

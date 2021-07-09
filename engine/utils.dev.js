@@ -1,12 +1,31 @@
-function getOffset( el ) {
-	var _x = 0;
-	var _y = 0;
-	while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
-		_x += el.offsetLeft - el.scrollLeft;
-		_y += el.offsetTop - el.scrollTop;
-		el = el.offsetParent;
-	}
-	return { top: _y, left: _x };
+function getOffset(elem) {
+	let box = elem.getBoundingClientRect();
+	let body = document.body;
+	let docEl = document.documentElement;
+	
+	let scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+	let scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+	
+	let clientTop = docEl.clientTop || body.clientTop || 0;
+	let clientLeft = docEl.clientLeft || body.clientLeft || 0;
+	
+	let top = box.top + scrollTop - clientTop;
+	let left = box.left + scrollLeft - clientLeft;
+	
+	return {
+		top: top,
+	    left: left
+	};
+}
+
+function getPadding(el) {
+	let style = el.currentStyle || window.getComputedStyle(el);
+	return {
+		left: parseInt(style.paddingLeft),
+		right: parseInt(style.paddingRight),
+		top: parseInt(style.paddingTop),
+		bottom: parseInt(style.paddingBottom),
+	};
 }
 
 function elemHeight(elem) {
@@ -63,8 +82,17 @@ function setupScroll() {
 		BorderTop: this.menu.style.borderTop,
 		BorderTopLeftRadius: this.menu.style.borderTopLeftRadius,
 		Y: this.menu.pageYOffset,
-		Height: elemHeight(this.menu)
+		Height: elemHeight(this.menu),
+
+		ws: {
+			ws: this.menu.getElementsByClassName("ws")[0],
+			paddingLeft: "",
+			x: "",
+		}
 	};
+
+	menu.ws.paddingLeft = getPadding(menu.ws.ws).left;
+	menu.ws.x = getOffset(menu.ws.ws).left;
 
 	function menuMove() {
 		if (window.pageYOffset > headerHeight) {
@@ -73,10 +101,12 @@ function setupScroll() {
 			menu.menu.style.top = posScroll(headerHeight);
 			menu.menu.style.left = 0;
 			// menu.menu.style.transform = "translate(" + (-menu.Left) + "px)";
-			menu.menu.style.borderTopLeftRadius = 0;
+			menu.menu.style.borderTopLeftRadius = 0 + 'px';
 			menu.menu.style.width = "100%";
 			menu.menu.style.borderTop = "none";
 			menu.menu.style.clear = "both";
+
+			menu.ws.ws.style.paddingLeft = menu.ws.paddingLeft + menu.ws.x + 'px';
 		} else if (window.pageYOffset <= headerHeight) {
 			menu.menu.style.position = menu.Position;
 			menu.menu.style.left = menu.Left;
@@ -86,6 +116,8 @@ function setupScroll() {
 			menu.menu.style.borderTop = menu.BorderTop;
 			menu.menu.style.borderTopLeftRadius = menu.BorderTopLeftRadius;
 			menu.menu.style.clear = "none";
+
+			menu.ws.ws.style.paddingLeft = menu.ws.paddingLeft + 'px';
 		}
 	}
 
@@ -93,7 +125,6 @@ function setupScroll() {
 		if (window.pageYOffset >= treshold) {
 			goup.style.opacity = 0.5;
 			goup.style.display = 'block';
-			goup.style.top = 0 + 'px';
 		} else {
 			goup.style.display = 'none';
 		}
@@ -107,23 +138,25 @@ function setupScroll() {
 		});
 	});
 
-	function navMove(nav, navY) {
-		nav.style.top = posScroll(navY, menu.Height);
+	let nav = {
+		nav: document.getElementById("nav"),
+		y: headerHeight,
+	};
+
+	function navMove(nav) {
+		nav.nav.style.top = posScroll(nav.y, menu.Height);
 	}
 
-	let nav = document.getElementById("nav");
-	let navY = headerHeight;
-
-	if (!nav) {
+	if (!(nav.nav)) {
 		navMove = function() {};
 	}
 
 	goupMove(goup, headerHeight);
-	navMove(nav, navY);
+	navMove(nav);
 	menuMove();
 	window.addEventListener('scroll', function() {
 		goupMove(goup, headerHeight);
-		navMove(nav, navY);
+		navMove(nav);
 		menuMove();
 	});
 }

@@ -7,8 +7,17 @@
 		<link rel="stylesheet" href="/pub/style.css">
 		<link href="/pub/fonts/fontawesome/css/all.css" rel="stylesheet">
 		<link href="/pub/fonts/fontawesome/css/regular.css" rel="stylesheet">
+		<link href="/pub/fonts/fontawesome/css/solid.css" rel="stylesheet">
 	</head>
 	<body>
+		<!-- <script src="/engine/jquery-1.7.1.min.js"></script> -->
+		<!-- <script src="/engine/jquery.maskedinput.js"></script> -->
+		<!-- <script type="text/javascript"> -->
+		<!-- 	jQuery(function($){ -->
+		<!-- 	   $("#phone").mask("+7 (999) 999-9999"); -->
+		<!-- 	   $("#phone2").mask("+7 (999) 999-9999"); -->
+		<!-- 	}); -->
+		<!-- </script> -->
 		<div id="header">
 			<a href="/index.html">
 				<img class="logo" src="/img/logo.png" alt="logo">
@@ -81,12 +90,80 @@
 
 					<div class="content">
 						<div class="send-feendback-block">
+							<!-- <form id="feedback" action="#" method="post" name="feedback"> -->
+							<!-- 	<input id="name" class="txt" name="name" type="name" placeholder="Ваше имя"> -->
+							<!-- 	<input id="phone" class="txt" name="phone" type="phone" placeholder="Ваш телефон"> --> 
+							<!-- 	<input id="email" class="txt" name="email" type="email" placeholder="Ваш e-mail"> --> 
+							<!-- 	<textarea id="msg" class="txtarea" name="msg" placeholder="Ваше сообщение:"></textarea> -->
+							<!-- 	<button id="send">Отправить</button> -->
+							<!-- </form> -->
 							<script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script><iframe src="https://forms.yandex.ru/u/60dc88b68665dabbb8344cbd/?iframe=1" frameborder="0" name="ya-form-60dc88b68665dabbb8344cbd" width="650"></iframe>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+<!-- <script type="text/javascript"> -->
+<!-- 	function validateEmail(email) { --> 
+<!-- 		var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; -->
+<!-- 		return reg.test(email); -->
+<!-- 	} -->
+
+<!-- 	$(document).ready(function() { -->
+<!-- 		$("#contact").submit(function() { return false; }); -->
+<!-- 		$("#send").on("click", function() { -->
+<!-- 			var emailval  = $("#email").val(); -->
+<!-- 			var namevl  = $("#name").val(); -->
+<!-- 			var phonevl  = $("#phone").val(); -->
+<!-- 			var msgval    = $("#msg").val(); -->
+<!-- 			var msglen    = msgval.length; -->
+<!-- 			var mailvalid = validateEmail(emailval); -->
+
+<!-- 			if(mailvalid == false) { -->
+<!-- 				$("#email").addClass("error"); -->
+<!-- 			} -->
+<!-- 			else if(mailvalid == true){ -->
+<!-- 				$("#email").removeClass("error"); -->
+<!-- 			} -->
+<!-- 			if(mailvalid == false) { -->
+<!-- 				$("#name").addClass("error"); -->
+<!-- 			} -->
+<!-- 			else if(mailvalid == true){ -->
+<!-- 				$("#name").removeClass("error"); -->
+<!-- 			} -->
+<!-- 			if(mailvalid == false) { -->
+<!-- 				$("#phone").addClass("error"); -->
+<!-- 			} -->
+<!-- 			else if(mailvalid == true){ -->
+<!-- 				$("#phone").removeClass("error"); -->
+<!-- 			} -->
+<!-- 			if(msglen < 4) { -->
+<!-- 				$("#msg").addClass("error"); -->
+<!-- 			} -->
+<!-- 			else if(msglen >= 4){ -->
+<!-- 				$("#msg").removeClass("error"); -->
+<!-- 			} -->
+      
+<!-- 			if(mailvalid == true && msglen >= 4) { -->
+<!-- 				$("#send").replaceWith("<em>отправка...</em>"); -->
+<!-- 				$.ajax({ -->
+<!-- 					type: 'POST', -->
+<!-- 					url: '/engine/sendFeedback.php', -->
+<!-- 					data: $("#feedback").serialize(), -->
+<!-- 					success: function(data) { -->
+<!-- 						if(data == "true") { -->
+<!-- 							$("#feedback").fadeOut("fast", function(){ -->
+<!-- 								$(this).before("<p><b>Ваше сообщение отправлено.</b></p>"); -->
+<!-- 								setTimeout("$.fancybox.close()", 1000); -->
+<!-- 							}); -->
+<!-- 						} -->
+<!-- 					} -->
+<!-- 				}); -->
+<!-- 			} -->
+<!-- 		}); -->
+<!-- 	}); -->
+<!-- </script> -->
 
 		<div id="footer">
 			<div id="fcontent">

@@ -7,6 +7,18 @@
 		<script src="/engine/utils.js"></script>
 		<link rel="stylesheet" href="/pub/style.css" />
 		<link href="/pub/fonts/fontawesome/css/all.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/slider/slider.min.css" />
+		<script src="/slider/slider.min.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				new SimpleAdaptiveSlider('.slider', {
+					loop: true,
+					autoplay: true,
+					interval: 5000,
+					swipe: true,
+			   });
+			});
+		</script>
 	</head>
 	<body>
 		<div id="header">
@@ -35,10 +47,131 @@
 				<nobr><i class="fas fa-angle-double-up"></i> Наверх</nobr>
 			</div>
 
+			<div id="nav">
+				<ul class="menu">
+					<li class="buttoned">
+						<nobr>
+						<span class="split button-container">
+							<i class="skin fa fa-angle-down"></i>
+						</span>
+
+						<a class="split text" href="#production">Продукция</a>
+						</nobr>
+						<ul class="subBlock subMenu">
+							<li><a href="#benefits">Преимущества</a></li>
+						</ul>
+					</li>
+					<li><a href="#history">История</a></li>
+					<li><a href="#partenrs">Партнеры</a></li>
+					<li><a href="#activity">Активность</a></li>
+				</ul>
+			</div>
+
 			<div id="content">
 				<div class="content-block">
-					<div class="header">
-						<h1>История</h1>
+					<div in="production" class="header">
+						<h1>Продукция</h1>
+					</div>
+					<div class="content">
+
+						<div class="slider">
+							<div class="slider__wrapper">
+								<div class="slider__items">
+									<div class="slider__item">
+										<div class="slider__item__img__text">
+											<div class="img-cont"><img src="/img/representations/epz.png"/></div>
+											<div class="text-cont">
+												<h1>Электрокотлы ЭПЗ</h1>
+												<p>разработаны Московским НИИЭТО, испытаны и сертифицированы, пожаробезопасны, не подлежат госгортехнадзору. Все типы электроводонагревателей, выпускаемых ОАО "Станкотерм"</p>
+											</div>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="slider__item__img__text">
+											<div class="img-cont"><img src="/img/representations/eep.png"/></div>
+											<div class="text-cont">
+												<h1>Электропарогенератор ЭЭП</h1>
+												<p>Электропарогенераторы электродного типа ЭЭП разработаны Московским НИИ электротермического оборудования и специалистами "Станкотерма" для применения в различных отраслях экономики: для гидротермической обработки гречки, риса и других круп с целью улучшения их технологических и пищевых качеств; для получения соевого "молока", и т.д. и т.п.</p>
+											</div>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="slider__item__img__text">
+											<div class="img-cont"><img src="/img/representations/kjvg.png"/></div>
+											<div class="text-cont">
+												<h1>Котлы отопительные газовые</h1>
+												<p>Они предназначены для нагрева воды в автономных отопительных системах, водоподогревателях для горячего водоснабжения, для комплектации блочных котельных МТК.</p>
+											</div>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="slider__item__img__text">
+											<div class="img-cont"><img src="/img/representations/epp.png"/></div>
+											<div class="text-cont">
+												<h1>Автономные тэновые электропароперегреватели ЭПП</h1>
+												<p>Исходя из мощности наших электропарогенераторов, были спроектированы и внедрены в производство тэновые электрические пароперегреватели, которые могут использоваться с парогенераторами любого типа и любого другого производителя.</p>
+											</div>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="slider__item__img__text">
+											<div class="img-cont"><img src="/img/representations/vost2.png"/></div>
+											<div class="text-cont">
+												<h1>ВОСТ</h1>
+												<p>Вентилятор  предназначен для приточной и вытяжной вентиляции промышленных, общественных и сельскохозяйственных зданий.<p>
+											</div>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="slider__item__img__text">
+											<div class="img-cont"><img src="/img/representations/incubation-truck.png"/></div>
+											<div class="text-cont">
+												<h1>Тележка инкубатора</h1>
+												<p>Тележка предназначена для предварительных инкубаторов.</p>
+											</div>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="slider__item__img__text">
+											<div class="img-cont"><img src="/img/representations/air-valve.png"/></div>
+											<div class="text-cont">
+												<h1>Воздушный клапан с электроприводом</h1>
+												<p>Воздушные клапаны предназначены для перекрывания потока или регулирования расхода приточного, рециркуляционного или вытяжного воздуха и других невзрывоопасных и неагрессивных смесей.</p>
+											</div>
+										</div>
+									</div>
+									<div class="slider__item">
+										<div class="slider__item__img__text">
+											<div class="img-cont"><img src="/img/representations/mtk.png"/></div>
+											<div class="text-cont">
+												<h1>Автономные блочные мобильные модульные котельные МТК</h1>
+												<p>Мобильная котельная МТК (модуль тепловой контейнерный) представляет собой единый комплекс, работающий в автоматическом режиме, предназначенный для автономного отопления зданий высотой до 15 метров и общей площадью до 6000 квадратных метров.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<br/>
+						<div class="sub-block">
+							<div id="benefits" class="header">
+								<h1>Наши преимущества</h1>
+							</div>
+							<div class="content">
+								<ol class="nambered">
+									<li>Основная номенклатура отопительных изделий завода разработана институтом ВНИИЭТО г. Москва, поэтому надежность, высокий технический уровень и эффективность нашей продукции отвечает самым высоким требованиям.</li>
+									<li>Котлы и парогенераторы нашего производства, благодаря своей долговечности, эффективности, цене, в полтора - два раза ниже, чем у других производителей аналогичной продукции.</li>
+									<li>Наша продукция пользуется спросом не только в России, но и в странах СНГ.</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-block">
+					<div id="history" class="header">
+						<h1>О заводе</h1>
 					</div>
 					<div class="content">
 						<p>Открытое акционерное общество "Станкотерм" учреждено в <span class="number">1998</span> году на базе ОАО "Станкотерм", основанного в <span class="number">1965</span> году. Основной вид деятельности завода - выпуск отопительного и водогрейного оборудования бытового и производственного назначения, а так же станков и механизмов и товаров народного потребления. Номенклатура завода - более <span class="number">100</span> наименований изделий.</p>
@@ -46,16 +179,49 @@
 				</div>
 
 				<div class="content-block">
-					<div class="header">
-						<h1>Высокий уровень качества</h1>
+					<div id="partners" class="header">
+						<h1>Наши партеры</h1>
 					</div>
 					<div class="content">
-						<p>Основная номенклатура отопительных изделий завода разработана институтом ВНИИЭТО г. Москва, поэтому надежность, высокий технический уровень и эффективность нашей продукции отвечает самым высоким требованиям. Котлы и парогенераторы нашего производства, благодаря своей долговечности, эффективности, цене, в полтора - два раза ниже, чем у других производителей аналогичной продукции, пользуются спросом не только в России, но и в странах СНГ. <i class="fas fa-file-word"></i> <a href="/doc/partners.doc">Наши партнеры</a>.</p>
+
+						<div class="partners-block">
+							<div class="partners-member">
+								<a target="_blank" href="https://www.bereg.net">
+									<div class="partners-logo">
+										<img src="https://www.bereg.net/img/logo01.png"/>
+									</div>
+								</a>
+							</div>
+							<div class="partners-member">
+								<a target="_blank" href="https://agrarnik.biz">
+									<div class="partners-logo">
+										<img src="https://agrarnik.biz/wp-content/uploads/2020/10/logo4.png"/>
+									</div>
+								</a>
+							</div>
+							<div class="partners-member">
+								<a target="_blank" href="https://kpsk.ru">
+									<div class="partners-logo">
+										<img src="https://kpsk.ru/img/logo.png"/>
+									</div>
+								</a>
+							</div>
+							<div class="partners-member">
+								<a target="_blank" href="http://rosagrosnab.ru">
+									<div class="partners-logo">
+										<img src="http://rosagrosnab.ru/upload/phoenix/55f/55f6f64d96b4709c07073adba84ab801.png"/>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<br/>
+						<p>Полный список представлен в документе: <i class="fas fa-file-word"></i> <a href="/doc/partners.doc">Наши партнеры</a>.</p>
 					</div>
 				</div>
 
 				<div class="content-block">
-					<div class="header">
+					<div id="activity" class="header">
 						<h1>Мы активные!</h1>
 					</div>
 					<div class="content">
