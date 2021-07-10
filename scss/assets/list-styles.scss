@@ -1,0 +1,43 @@
+ol.nambered {
+	margin-left: 0;
+	list-style: none;
+	counter-reset: li;
+
+	li {
+		padding: 10px 0;
+		position: relative;
+		margin-bottom: 0.75em;
+		background: $gray-white-smoke;
+	}
+
+	li:before {
+		display: grid;
+		place-items: center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -2.0em;
+		width: 1.875em;
+		color: $white;
+		font-weight: bold;
+		background: $blue;
+		border-bottom-left-radius: 70em;
+		border-top-left-radius: 70em;
+		counter-increment: li;
+		content: counter(li);
+	}
+}
+
+ul.gear {
+	li::marker {
+		font-family: Fedra Sans;
+		font-weight: 700;
+	}
+
+	li:first-child {
+		list-style-type: "#{$gear} ";
+		&::marker {
+			font-size: 2rem;
+		}
+	}
+}

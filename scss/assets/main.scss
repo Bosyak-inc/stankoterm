@@ -1,0 +1,12 @@
+#main {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	min-height: calc(99vh - #{$header-height});
+	position: relative;
+	display: block;
+
+	@import "main/goup.scss";
+	@import "main/nav.scss";
+	@import "main/content.scss";
+}

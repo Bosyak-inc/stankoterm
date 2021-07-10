@@ -1,0 +1,11 @@
+.news > .row-block {
+	background: $gray-scale;
+}
+
+.news {
+	.news-item {
+		cursor: pointer;
+		justify-content: center;
+		text-align: center;
+	}
+}

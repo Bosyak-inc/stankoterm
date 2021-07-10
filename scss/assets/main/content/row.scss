@@ -1,0 +1,23 @@
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	// margin: 20px 30px;
+
+	.row-block {
+		h1, h2, h3, h4, h5 {
+			font-family: $content-header-font-family;
+		}
+
+		background-size: 150% 150%;
+		animation: animate_gradient 20s ease-in-out infinite;
+		margin: 10px;
+		// padding: 0 10px;
+		flex-basis: 200px;
+		flex-grow: 1;
+		// border-left: 1px solid $blue;
+		border-left: 1px solid $gray-hard;
+		border-top: 1px solid $gray-light;
+	}
+}

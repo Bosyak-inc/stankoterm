@@ -1,0 +1,76 @@
+#menu {
+	font-family: 'Raleway Black';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 0.55em;
+
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: $left-pos;
+	width: calc(100% - #{$left-pos});
+	height: $menu-height;
+
+	clear: none;
+	overflow: auto;
+
+	background-color: $menu-background;
+	border: none;
+	border-top: 1px solid $menu-top-border;
+	// border-bottom: 1px solid $menu-bot-border;
+	border-top-left-radius: 20px;
+
+	padding: 0;
+	margin: 0;
+
+	span.ws {
+		padding-left: 1em;
+	}
+
+	a {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0.5em 5px;
+		margin: 0 0.5em;
+
+		font-weight: 700;
+		text-shadow: none;
+		color: rgba(0,0,0,0.2);
+		outline: none;
+		overflow: hidden;
+
+		&::before {
+			color: $menu-foreground;
+			content: attr(data-hover);
+			position: absolute;
+			@include transition(transform 0.3s, opacity 0.3s);
+		}
+
+		&:hover::before,
+		&:focus::before {
+			@include transform(scale(0.9));
+			opacity: 0;
+		}
+	}
+
+	a.opened {
+		&:hover {
+			color: $menu-background;
+		}
+	
+		&::before {
+			opacity: 0;
+			@include transform(scale(1));
+		}
+		
+		&:hover::before,
+		&:focus::before {
+			color: $menu-foreground;
+			content: attr(data-hover);
+			position: absolute;
+			opacity: 1;
+			@include transition(transform 0.3s, opacity 0.3s);
+		}
+	}
+}

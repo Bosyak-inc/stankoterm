@@ -1,0 +1,47 @@
+.hidden-nav-ticker {
+	display: none;
+}
+.nav-btn {
+	z-index: 1000;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	transition: bottom .2s;
+	// -webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+
+	span {
+		position: relative;
+		text-align: center;
+		background-color: $blue;
+		color: $white;
+		padding: 1px 10px;
+		border-radius: 0 0 6px 6px;
+
+		&:hover {
+			background-color: $blue-hard;
+		}
+	}
+
+	span.open {
+		display: block;
+	}
+	span.close {
+		display: none;
+	}
+}
+.hidden-nav-ticker:checked ~ .nav-btn {
+	bottom: 100%;
+}
+.hidden-nav-ticker:checked ~ .hidden-nav {
+	top: 0;
+}
+
+.hidden-nav-ticker:checked ~ .nav-btn span.open {
+	display: none;
+}
+.hidden-nav-ticker:checked ~ .nav-btn span.close {
+	display: block;
+}

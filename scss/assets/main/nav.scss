@@ -1,0 +1,13 @@
+#nav {
+	position: fixed;
+	width: $nav-width;
+	left: 0;
+	display: block;
+	padding: 0;
+	z-index: 100;
+
+	$txt-padding: 0.8ex 1em 0.8ex 1em;
+
+	@import "nav/button.scss";
+	@import "nav/menu.scss";
+}

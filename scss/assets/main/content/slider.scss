@@ -1,0 +1,58 @@
+.slider {
+	max-height: 300px;
+	max-width: 100%;
+
+	.slider__control {
+		@include uninit-hover-uderline-sliding();
+		background-color: $blue;
+	}
+
+	.slider__indicators {
+		.slider__indicator {
+			background-color: $gray;
+		}
+
+		.slider__indicator_active {
+			background-color: $blue;
+		}
+	}
+
+	.slider__wrapper {
+		background-color: $content-block-background;
+		.slider__items {
+			.slider__item {
+				.slider__item__img__text {
+					position: relative;
+					display: flex;
+					flex-direction: row;
+					height: 100%;
+					width: 100%;
+
+					.text-cont {
+						height: 100%;
+						width: 100%;
+						padding: 0 2.5em;
+						text-align: center;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+					}
+
+					.img-cont {
+						height: calc(100% - 2em*2);
+						align-items: center;
+						padding: 2em;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						img {
+							object-fit: cover;
+							max-height: calc(300px - 2em*2);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

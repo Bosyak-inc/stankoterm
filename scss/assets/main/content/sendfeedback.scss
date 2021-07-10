@@ -1,0 +1,64 @@
+			.send-feendback-block {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				form#feedback {
+					margin: 0 auto;
+					width: 650px;
+				}
+
+				.txt {
+					display: inline-block;
+					color: $gray-hard;
+					width: 190px;
+					margin-bottom: 10px;
+					border: 1px solid $gray;
+					padding: 5px 9px;
+					font-size:15px!important;
+				}
+				.txtarea {
+					display:inline-block;
+					color: $gray-hard;
+					width:617px;
+					margin-bottom:10px;
+					border:1px solid $gray;
+					padding:5px 9px;
+					font-size:15px!important;
+					line-height:1.4em;
+					height:80px;
+				}
+				.txt:focus, .txtarea:focus {
+					border-style:solid;
+					border-color: $blue;
+					color:#444;
+				}
+				input.error, textarea.error {
+					border-color:#973D3D;
+					border-style:solid;
+					background:#F0BEBE;
+					color:#A35959;
+				}
+				input.error:focus, textarea.error:focus {
+					border-color:#973D3D;
+					color:#A35959;
+				}
+				#send { 
+					color:#FFFFFF;
+					display:block;
+					cursor:pointer;
+					padding:5px 11px;
+					font-size:1.2em;
+					border:solid 1px $gray-light;
+					border-radius:2px;
+					background: $blue;
+					width: 210px;
+					margin-bottom: 20px;
+					position: relative;
+					left: 7px;
+
+					&:hover {
+						background: $blue-hard;
+					}
+				}
+			}

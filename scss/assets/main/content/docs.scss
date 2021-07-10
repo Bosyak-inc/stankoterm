@@ -1,0 +1,9 @@
+#documents > .row-block {
+	background: $gray-scale;
+	cursor: pointer;
+
+	.content {
+		justify-content: center;
+		text-align: center;
+	}
+}

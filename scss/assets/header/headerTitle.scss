@@ -1,0 +1,36 @@
+#headerTitle {
+	font-family: Fedra Sans;
+	font-weight: 500;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: $left-pos;
+	top: 0.3em;
+	@include transition(1s all ease-in-out);
+
+	a {
+		color: $title-foreground;
+
+		span {
+			display: inline-block;
+			font-family: sans;
+			animation: spin 5s infinite linear;
+			text-shadow: none;
+
+			&:before {
+				padding: 1px;
+				content: '';
+			}
+
+			&:after {
+				padding: 1px;
+				content: '';
+			}
+		}
+
+		&:hover span {
+			animation: spin 5s infinite linear, blink 2s infinite linear;
+		}
+	}
+}

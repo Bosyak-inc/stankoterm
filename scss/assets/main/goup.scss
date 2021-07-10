@@ -1,0 +1,21 @@
+#go_up {
+	display: none;
+	position: fixed;
+	bottom: 1%;
+	right: 5%;
+	text-align: center;
+	padding: 1em 2em;
+	opacity: 0;
+	transition: background-color 200ms linear, opacity 1s linear;
+	cursor: pointer;
+
+	background-color: $go_up-background;
+	color: $go_up-foreground;
+
+	z-index: 500;
+
+	&:hover {
+		background: $go_up-hover-background;
+		transition: background-color 200ms linear, opacity 1s linear;
+	}
+}

@@ -1,0 +1,73 @@
+#content {
+	color: $content-foreground;
+	margin: auto;
+	max-width: $content-width;
+	min-width: $content-width;
+
+	.content-block {
+		background-color: $content-block-background;
+		// border: 1px solid $content-block-border;
+		border-radius: 5px;
+		margin: 1.5em 0;
+		width: 100%;
+		
+		p {
+			line-height: 1.5em;
+		}
+
+		.header {
+			font-family: $content-header-font-family;
+			font-weight: normal;
+			clear: both;
+			text-align: center;
+			border-bottom: 1px solid $blue;
+			padding: 1.5em;
+		}
+
+		.content {
+			padding: 10px 1.5em;
+
+			a {
+				@include hover-underline-sliding(0.3s, ease-in-out);
+			}
+		}
+
+		.sub-block {
+			margin-top: 3em;
+			.header {
+				clear: both;
+				font-size: 90%;
+				padding: 0.2em;
+				background: linear-gradient(0deg, $gray-light,  $content-block-background);
+			}
+		}
+
+		@import "content/row.scss";
+
+		@import "content/sendfeedback.scss";
+		@import "content/review-block.scss";
+		@import "content/showcase.scss";
+		@import "content/news.scss";
+		@import "content/docs.scss";
+		@import "content/partners.scss";
+		@import "content/modal.scss";
+		@import "content/our-team.scss";
+		@import "content/details.scss";
+		@import "content/slider.scss";
+
+		.gray-scale-back {
+			background: $gray-scale;
+		}
+
+		.filterd {
+			display: none;
+		}
+
+		.show {
+			display: block;
+		}
+	}
+
+	@import "content/content-menu.scss";
+	@import "content/map-loader.scss";
+}

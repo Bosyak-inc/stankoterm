@@ -1,0 +1,46 @@
+@import "variables.scss";
+@import "colorscheme.scss";
+@import "mixins.scss";
+@import "animations.scss";
+@import "fonts.scss";
+
+body {
+	font-family: 'Raleway', sans;
+	font-size: 16px;
+	min-width: $min-page-width;
+	padding: 0;
+	margin: 0;
+	background: linear-gradient(0deg, $body-background,  $content-block-background);
+}
+
+a {color: $link-foreground;}
+
+$h-margins: 0.3em 0ex 0.3em 0;
+h1 {margin: $h-margins;font-size: 1.4em;}
+h2 {margin: $h-margins;font-size: 1.3em;}
+h3 {margin: $h-margins;font-size: 1.1em;}
+h4 {margin: $h-margins;font-size: 1em;}
+
+#header a, #nav a, #menu a, #footer a {text-decoration: none;}
+.number {font-family: serif;}
+.hidden {display: none;}
+.contact {
+	font-family: Gilroy;
+	font-weight: 700;
+	color: $contact-foreground;
+	clear: both;
+}
+
+@import "assets/header.scss";
+@import "assets/main.scss";
+@import "assets/footer.scss";
+
+@import "assets/tooltip.scss";
+@import "assets/list-styles.scss";
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	@include ie_fix();
+}
+@supports (-ms-ime-align:auto) {
+	@include ie_fix();
+}

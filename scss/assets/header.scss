@@ -1,0 +1,23 @@
+#header {
+	position: relative;
+
+	font-size: 1.75em;
+	background-color: $header-background;
+	height: $header-height;
+	min-width: $min-page-width;
+
+	img.logo {
+		position: absolute;
+		top: $header-height/2 - $logo-height/2;
+		width: $logo-width;
+		height: $logo-height;
+		padding: 0;
+		margin-left: $header-height/2 - $logo-height/2;
+		margin-bottom: 0;
+		text-align: center;
+	}
+
+	$left-pos: $logo-width + 36px;
+	@import "header/headerTitle.scss";
+	@import "header/menu.scss";
+}
