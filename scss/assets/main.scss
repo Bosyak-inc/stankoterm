@@ -1,8 +1,8 @@
 #main {
-	clear: both;
+	clear: none;
 	margin: 0;
 	padding: 0;
-	min-height: calc(99vh - #{$header-height});
+	min-height: calc(100vh - #{$header-height});
 	position: relative;
 	display: block;
 

@@ -4,7 +4,8 @@
 	font-size: 1.75em;
 	background-color: $header-background;
 	height: $header-height;
-	min-width: $min-page-width;
+	// min-width: $min-page-width;
+	width: 100%;
 
 	img.logo {
 		position: absolute;

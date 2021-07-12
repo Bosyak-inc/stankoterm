@@ -4,7 +4,8 @@
 	color: $footer-foreground;
 	padding: 0;
 	margin: 0;
-	min-width: $min-page-width;
+	// min-width: $min-page-width;
+	width: 100%;
 
 	z-index: 999;
 

@@ -74,90 +74,80 @@ function setupScroll() {
 	const headerHeight = elemHeight(document.getElementById("header"));
 
 	let menu = {
-		menu: document.getElementById("menu"),
-		Position: this.menu.style.position,
-		LeftOffset: getOffset(this.menu).left,
-		Left: this.menu.style.left,
-		Top: this.menu.offsetTop,
-		BorderTop: this.menu.style.borderTop,
-		BorderTopLeftRadius: this.menu.style.borderTopLeftRadius,
-		Y: this.menu.pageYOffset,
-		Height: elemHeight(this.menu),
+		elem: "",
+		height: "",
+		ws: "",
+		wsPaddingLeft: "",
+		wsX: "",
 
-		ws: {
-			ws: this.menu.getElementsByClassName("ws")[0],
-			paddingLeft: "",
-			x: "",
+		move() {
+			let yOffset = window.pageYOffset
+			if (yOffset > headerHeight) {
+				this.elem.style.zIndex = "10000";
+				this.elem.style.position = "fixed";
+				this.elem.style.top = 0 + 'px';
+				this.elem.style.left = 0 + 'px';
+				// menu.menu.style.transform = "translate(" + (-menu.Left) + "px)";
+				this.elem.style.borderTopLeftRadius = 0 + 'px';
+				this.elem.style.width = "100%";
+				this.elem.style.borderTop = "none";
+				this.elem.style.clear = "both";
+
+				this.ws.style.paddingLeft = this.wsPaddingLeft + this.wsX + 'px';
+			} else if (yOffset <= headerHeight) {
+				this.elem.style.position = "";
+				this.elem.style.left = "";
+				this.elem.style.top = "";
+				this.elem.style.width = "";
+				this.elem.style.borderTop = "";
+				this.elem.style.borderTopLeftRadius = "";
+				this.elem.style.clear = "";
+
+				this.ws.style.paddingLeft = "";
+			}
 		}
 	};
+	menu.elem = document.getElementById("menu");
+	menu.height = elemHeight(menu.elem);
+	menu.ws = menu.elem.getElementsByClassName("ws")[0];
+	menu.wsPaddingLeft = getPadding(menu.ws).left;
+	menu.wsX = getOffset(menu.ws).left;
 
-	menu.ws.paddingLeft = getPadding(menu.ws.ws).left;
-	menu.ws.x = getOffset(menu.ws.ws).left;
 
-	function menuMove() {
-		if (window.pageYOffset > headerHeight) {
-			menu.menu.style.zIndex = "10000";
-			menu.menu.style.position = "fixed";
-			menu.menu.style.top = posScroll(headerHeight);
-			menu.menu.style.left = 0;
-			// menu.menu.style.transform = "translate(" + (-menu.Left) + "px)";
-			menu.menu.style.borderTopLeftRadius = 0 + 'px';
-			menu.menu.style.width = "100%";
-			menu.menu.style.borderTop = "none";
-			menu.menu.style.clear = "both";
+	let goup = {
+		elem: "",
+		treshold: "",
 
-			menu.ws.ws.style.paddingLeft = menu.ws.paddingLeft + menu.ws.x + 'px';
-		} else if (window.pageYOffset <= headerHeight) {
-			menu.menu.style.position = menu.Position;
-			menu.menu.style.left = menu.Left;
-			// menu.menu.style.transform = "translate(" + (menu.Left) + "px)";
-			menu.menu.style.top = menu.Top + 'px';
-			menu.menu.style.width = "calc(100% - " + (menu.LeftOffset) + "px)";
-			menu.menu.style.borderTop = menu.BorderTop;
-			menu.menu.style.borderTopLeftRadius = menu.BorderTopLeftRadius;
-			menu.menu.style.clear = "none";
-
-			menu.ws.ws.style.paddingLeft = menu.ws.paddingLeft + 'px';
+		move() {
+			if (window.pageYOffset >= this.treshold) {
+				this.elem.style.opacity = 0.5;
+				this.elem.style.display = 'block';
+			} else {
+				this.elem.style.display = 'none';
+			}
 		}
-	}
-
-	function goupMove(goup, treshold) {
-		if (window.pageYOffset >= treshold) {
-			goup.style.opacity = 0.5;
-			goup.style.display = 'block';
-		} else {
-			goup.style.display = 'none';
-		}
-	}
-	let goup = document.getElementById("go_up");
-
-	goup.addEventListener('click', function () {
-		window.scrollBy({
-			top: -document.documentElement.scrollHeight,
-			behavior: 'smooth'
-		});
-	});
+	};
+	goup.elem = document.getElementById("go_up");
+	goup.treshold = headerHeight;
+	goup.elem.addEventListener('click', () => {window.scrollBy({top: -document.documentElement.scrollHeight,behavior: 'smooth'});});
 
 	let nav = {
-		nav: document.getElementById("nav"),
+		elem: "",
 		y: headerHeight,
+
+		move() {
+			this?.elem?.style.top = posScroll(this.y, menu.height-1);
+		}
 	};
+	nav.elem = document.getElementById("nav");
 
-	function navMove(nav) {
-		nav.nav.style.top = posScroll(nav.y, menu.Height);
-	}
-
-	if (!(nav.nav)) {
-		navMove = function() {};
-	}
-
-	goupMove(goup, headerHeight);
-	navMove(nav);
-	menuMove();
+	goup.move();
+	nav.move();
+	menu.move();
 	window.addEventListener('scroll', function() {
-		goupMove(goup, headerHeight);
-		navMove(nav);
-		menuMove();
+		goup.move();
+		nav.move();
+		menu.move();
 	});
 }
 

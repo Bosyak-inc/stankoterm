@@ -1,8 +1,8 @@
 #content {
 	color: $content-foreground;
 	margin: auto;
-	max-width: $content-width;
-	min-width: $content-width;
+	width: 72.72%;
+	clear: none;
 
 	.content-block {
 		background-color: $content-block-background;

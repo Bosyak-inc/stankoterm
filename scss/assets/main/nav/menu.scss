@@ -1,47 +1,39 @@
-ul.hidden-nav {
-	display: inline-block;
-	position: fixed;
-	// left: -$nav-width;
-	left: 0;
-	top: -100%;
+.hidden-nav {
+	position: relative;
+	left: -$nav-width;
+	display: block;
+	height: 100%;
+	width: $nav-width;
 	background-color: $white;
+	clear: none;
 
-	transition: top .2s;
+	transition: left .2s;
 	-webkit-transform: translateZ(0);
 	-webkit-backface-visibility: hidden;
 	padding: 0;
 	margin: 0;
 
-	li {
-		list-style: none;
-		padding: 0;
+	a {
+		// padding: 0;
 		margin: 0;
 		@include transition(all .4s ease-in-out);
 
-		a {
-			display: block;
-			margin: 0;
-			padding: $txt-padding;
+		display: block;
+		margin: 0;
+		padding: $txt-padding;
 
-			color: $nav-link-foreground;
+		color: $nav-link-foreground;
 
-			@include transition(all .4s ease-in-out);
-			&:hover {
-				background-color: $nav-link-hover-background;
-			}
-		}
-	}
-
-	li:hover {
-		@include transition(all 1s ease-in-out);
-		background: linear-gradient(30deg, #{$nav-link-hover-background} 0%, $nav-background 100%);
-
-		a {
+		@include transition(all .4s ease-in-out);
+		&:hover {
+			background-color: $nav-link-hover-background;
+			background: linear-gradient(30deg, $nav-link-hover-background 0%, $nav-background 100%);
+			@include transition(all 1s ease-in-out);
 			transform: translateX(10px);
 		}
 	}
 
-	li.buttoned {
+	.buttoned {
 		display: table;
 		width: 100%;
 
@@ -86,22 +78,18 @@ ul.hidden-nav {
 	}
 }
 
-ul.subMenu {
+.subMenu {
 	padding: 0;
 	display: none;
 	font-size: 80%;
 
 	.lvl2 {
-		li {
-			a {
-				padding-left: 4.6em;
-			}
+		a {
+			padding-left: 4.6em;
 		}
 	}
 
-	li {
-		a {
-			padding-left: 2.3em;
-		}
+	a {
+		padding-left: 2.3em;
 	}
 }

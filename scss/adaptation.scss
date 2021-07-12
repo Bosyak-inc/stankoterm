@@ -1,0 +1,48 @@
+@media only screen and (max-width: 479px) {
+	#header {
+		// max-width: 479px;
+	}
+	#content {
+		// max-width: 479px;
+	}
+	#footer {
+		// max-width: 479px;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	#header {
+	}
+	#content {
+	}
+	#footer {
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#header {
+	}
+	#content {
+	}
+	#footer {
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	#header {
+	}
+	#content {
+	}
+	#footer {
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	@include ie_fix();
+}
+@supports (-ms-ime-align:auto) {
+	@include ie_fix();
+}

@@ -5,20 +5,22 @@
 	z-index: 1000;
 	cursor: pointer;
 	display: block;
-	width: 100%;
 	position: absolute;
 	left: 0;
-	transition: bottom .2s;
-	// -webkit-transform: translateZ(0);
+	transition: left .2s;
+	-webkit-transform: translateZ(0);
 	-webkit-backface-visibility: hidden;
+	height: 100%;
 
 	span {
+		height: calc(100% - 10px*2);
+		writing-mode: vertical-lr;
 		position: relative;
-		text-align: center;
 		background-color: $blue;
 		color: $white;
-		padding: 1px 10px;
-		border-radius: 0 0 6px 6px;
+		padding: 10px 1px;
+		border-radius: 0 0 6px 0;
+		text-align: center;
 
 		&:hover {
 			background-color: $blue-hard;
@@ -33,10 +35,10 @@
 	}
 }
 .hidden-nav-ticker:checked ~ .nav-btn {
-	bottom: 100%;
+	left: $nav-width;
 }
 .hidden-nav-ticker:checked ~ .hidden-nav {
-	top: 0;
+	left: 0;
 }
 
 .hidden-nav-ticker:checked ~ .nav-btn span.open {

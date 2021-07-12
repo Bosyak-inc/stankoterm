@@ -38,9 +38,4 @@ h4 {margin: $h-margins;font-size: 1em;}
 @import "assets/tooltip.scss";
 @import "assets/list-styles.scss";
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	@include ie_fix();
-}
-@supports (-ms-ime-align:auto) {
-	@include ie_fix();
-}
+@import "adaptation.scss";

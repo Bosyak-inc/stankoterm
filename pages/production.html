@@ -38,38 +38,34 @@
 			<div id="nav">
 				<input type="checkbox" id="hmt" class="hidden-nav-ticker">
 				<label class="nav-btn" for="hmt">
-					<span class="open">open</span>
-					<span class="close">close</span>
+					<span class="open"><i class="fa fa-arrow-right"></i></span>
+					<span class="close"><i class="fa fa-arrow-left"></i></span>
 				</label>
-				<ul class="hidden-nav menu">
-					<li class="buttoned">
-						<nobr>
+				<div class="hidden-nav menu">
+					<div class="buttoned">
 						<span class="split button-container">
 							<i class="skin fa fa-angle-down"></i>
 						</span>
 						<a class="split text" href="#ourProd">Продукция</a>
-						</nobr>
-						<ul class="subBlock subMenu">
-							<li><a href="#heaters">Отопление</a></li>
-							<li><a href="#fans">Вентиляция для птичников</a></li>
-							<li><a href="#misc">Разное</a></li>
-							<li><a href="#metal">Металлоконструкции</a></li>
-						</ul>
-					</li>
-					<li class="buttoned">
-						<nobr>
+						<div class="subBlock subMenu">
+							<a href="#heaters">Отопление</a>
+							<a href="#fans">Вентиляция для птичников</a>
+							<a href="#misc">Разное</a>
+							<a href="#metal">Металлоконструкции</a>
+						</div>
+					</div>
+					<div class="buttoned">
 						<span class="split button-container">
 							<i class="skin fa fa-angle-down"></i>
 						</span>
 						<a class="split text" href="#services">Услуги</a>
-						</nobr>
-						<ul class="subBlock subMenu">
-							<li><a href="#making">Изготовление</a></li>
-							<li><a href="#repairing">Ремонт</a></li>
-							<li><a href="#metalProc">Металло отбработка</a></li>
-						</ul>
-					</li>
-				</ul>
+						<div class="subBlock subMenu">
+							<a href="#making">Изготовление</a>
+							<a href="#repairing">Ремонт</a>
+							<a href="#metalProc">Металло отбработка</a>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<div id="content">
@@ -83,78 +79,83 @@
 							<div id="heaters" class="header">
 								<h1>Отопительное и водонагревательное оборудование</h1>
 							</div>
-							<div class="content">
-								<div class="showcase">
-									<div onclick="window.location.href='/pages/production/water-heaters/e-type-heaters.html'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/epz.png"/>
-										</div>
-										<div class="wrapper">
-											<span class="showcase-price">От <span class="number">4.920</span> руб.</span>
-											<span class="showcase-preview">ЭПЗ</span>
-											<div class="showcase-overview">
-												Электро&shy;водонагреватели электродного типа (электрокотлы)
-											</div>
+
+							<input name="Поиск..."/>
+							<input type="checkbox" id="toggle-listing-type" class="listing-type">
+							<label class="toggle-listing-type-btn" for="toggle-listing-type">
+								<span>Toggle</span>
+							</label>
+
+							<div class="showcase">
+								<div onclick="window.location.href='/pages/production/water-heaters/e-type-heaters.html'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/epz.png"/>
+									</div>
+									<div class="wrapper">
+										<span class="showcase-price">От <span class="number">4.920</span> руб.</span>
+										<span class="showcase-preview">ЭПЗ</span>
+										<div class="showcase-overview">
+											Электро&shy;водонагреватели электродного типа (электрокотлы)
 										</div>
 									</div>
-									<div onclick="window.location.href='/pages/production/water-heaters/autonomus-gas-heating-boilers.html'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/kjvg.png"/>
-										</div>
-										<div class="wrapper">
-											<span class="showcase-price">От <span class="number">12.000</span> руб.</span>
-											<span class="showcase-preview">КЖВГ</span>
-											<div class="showcase-overview">
-												Автономные отопительные котлы газовые<br/>
-											</div>
+								</div>
+								<div onclick="window.location.href='/pages/production/water-heaters/autonomus-gas-heating-boilers.html'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/kjvg.png"/>
+									</div>
+									<div class="wrapper">
+										<span class="showcase-price">От <span class="number">12.000</span> руб.</span>
+										<span class="showcase-preview">КЖВГ</span>
+										<div class="showcase-overview">
+											Автономные отопительные котлы газовые<br/>
 										</div>
 									</div>
-									<div onclick="window.location.href='/pages/production/water-heaters/independent-mobile-block-modular-boiler.html'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/mtk.png"/>
-										</div>
-										<div class="wrapper">
-											<span class="showcase-price">Цена зависит от комплектации.</span>
-											<span class="showcase-preview">МТК</span>
-											<div class="showcase-overview">
-												Автономные мобильные блочные модульные котельные
-											</div>
+								</div>
+								<div onclick="window.location.href='/pages/production/water-heaters/independent-mobile-block-modular-boiler.html'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/mtk.png"/>
+									</div>
+									<div class="wrapper">
+										<span class="showcase-price">Цена зависит от комплектации.</span>
+										<span class="showcase-preview">МТК</span>
+										<div class="showcase-overview">
+											Автономные мобильные блочные модульные котельные
 										</div>
 									</div>
-									<div onclick="window.location.href='/pages/production/water-heaters/independent-mobile-modular-electric-boilers.html'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/mtk-el.png"/>
-										</div>
-										<div class="wrapper">
-											<span class="showcase-price">Цена зависит от комплектации.</span>
-											<span class="showcase-preview">МТК Э</span>
-											<div div class="showcase-overview">
-												Автономные мобильные блочные модульные электрические котельные
-											</div>
+								</div>
+								<div onclick="window.location.href='/pages/production/water-heaters/independent-mobile-modular-electric-boilers.html'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/mtk-el.png"/>
+									</div>
+									<div class="wrapper">
+										<span class="showcase-price">Цена зависит от комплектации.</span>
+										<span class="showcase-preview">МТК Э</span>
+										<div div class="showcase-overview">
+											Автономные мобильные блочные модульные электрические котельные
 										</div>
 									</div>
-									<div onclick="window.location.href='/pages/production/water-heaters/electric-steam-generators-electrode-type-25.html'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/eep.png"/>
-										</div>
-										<div class="wrapper">
-											<span class="showcase-price">От <span class="number">149.160</span> руб.</span>
-											<span class="showcase-preview">ЭЭП</span>
-											<div class="showcase-overview">
-												Электро&shy;парогенераторы (электродного типа)
-											</div>
+								</div>
+								<div onclick="window.location.href='/pages/production/water-heaters/electric-steam-generators-electrode-type-25.html'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/eep.png"/>
+									</div>
+									<div class="wrapper">
+										<span class="showcase-price">От <span class="number">149.160</span> руб.</span>
+										<span class="showcase-preview">ЭЭП</span>
+										<div class="showcase-overview">
+											Электро&shy;парогенераторы (электродного типа)
 										</div>
 									</div>
-									<div onclick="window.location.href='/pages/production/water-heaters/electric-steam-generators-electrode-type.html'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/epp.png"/>
-										</div>
-										<div class="wrapper">
-											<span class="showcase-price">От <span class="number">149.160</span> руб.</span>
-											<span class="showcase-preview">ЭПП</span>
-											<div class="showcase-overview">
-												Электро&shy;пароперегреватели (с тэнами)
-											</div>
+								</div>
+								<div onclick="window.location.href='/pages/production/water-heaters/electric-steam-generators-electrode-type.html'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/epp.png"/>
+									</div>
+									<div class="wrapper">
+										<span class="showcase-price">От <span class="number">149.160</span> руб.</span>
+										<span class="showcase-preview">ЭПП</span>
+										<div class="showcase-overview">
+											Электро&shy;пароперегреватели (с тэнами)
 										</div>
 									</div>
 								</div>
@@ -163,76 +164,74 @@
 
 						<div class="sub-block">
 							<div class="header">
-								<h2><article id="fans">Оборудование вентиляционное для птичников</article></h2>
+								<h2><article id="fans">Оборудование для птичников</article></h2>
 							</div>
 
-							<div class="content">
-								<div class="showcase">
-									<div onclick="window.location.href='/doc/production/vost1.doc'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/vost1.png"/>
-										</div>
-										<div class="wrapper">
-											<span class="showcase-price">От <span class="number">24.360</span> руб.</span>
-											<span class="showcase-preview"><i class="fas fa-file-word"></i> ВОСТ <span class="number">1</span></span>
-											<div class="showcase-overview">
-												Вентилятор осевой
-											</div>
+							<div class="showcase">
+								<div onclick="window.location.href='/doc/production/vost1.doc'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/vost1.png"/>
+									</div>
+									<div class="wrapper">
+										<span class="showcase-price">От <span class="number">24.360</span> руб.</span>
+										<span class="showcase-preview"><i class="fas fa-file-word"></i> ВОСТ <span class="number">1</span></span>
+										<div class="showcase-overview">
+											Вентилятор осевой
 										</div>
 									</div>
-									<div onclick="window.location.href='/doc/production/vost2.doc'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/vost2.png"/>
-										</div>
-										<div class="wrapper">
-											<span class="showcase-price">От <span class="number">6.600</span> руб.</span>
-											<span class="showcase-preview"><i class="fas fa-file-word"></i> ВОСТ <span class="number">2</span></span>
-											<div class="showcase-overview">
-												Вентилятор осевой
-											</div>
+								</div>
+								<div onclick="window.location.href='/doc/production/vost2.doc'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/vost2.png"/>
+									</div>
+									<div class="wrapper">
+										<span class="showcase-price">От <span class="number">6.600</span> руб.</span>
+										<span class="showcase-preview"><i class="fas fa-file-word"></i> ВОСТ <span class="number">2</span></span>
+										<div class="showcase-overview">
+											Вентилятор осевой
 										</div>
 									</div>
-									<div onclick="window.location.href='/doc/production/vost3.doc'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/vost3.png"/>
-										</div>
-										<div class="wrapper">
-											<span class="showcase-price">От <span class="number">7.080</span> руб.</span>
-											<span class="showcase-preview"><i class="fas fa-file-word"></i> ВОСТ <span class="number">3</span></span><br/>
-											<div class="showcase-overview">
-												Вентилятор осевой
-											</div>
+								</div>
+								<div onclick="window.location.href='/doc/production/vost3.doc'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/vost3.png"/>
+									</div>
+									<div class="wrapper">
+										<span class="showcase-price">От <span class="number">7.080</span> руб.</span>
+										<span class="showcase-preview"><i class="fas fa-file-word"></i> ВОСТ <span class="number">3</span></span><br/>
+										<div class="showcase-overview">
+											Вентилятор осевой
 										</div>
 									</div>
-									<div onclick="window.location.href='/doc/production/valve.doc'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/air-valve.png"/>
-										</div>
-										<div class="wrapper">
-											<span class="showcase-price">От <span class="number">21.600</span> руб.</span>
-											<div class="showcase-preview"><i class="fas fa-file-word"></i> Воздушный клапан</div>
-											<div class="showcase-overview">с электроприводом</div>
-										</div>
+								</div>
+								<div onclick="window.location.href='/doc/production/valve.doc'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/air-valve.png"/>
 									</div>
-									<div onclick="window.location.href='/doc/production/cart.doc'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/incubation-truck.png"/>
-										</div>
-										<div class="wrapper">
-											<span class="showcase-price">От <span class="number">102.600</span> руб.</span>
-											<div class="showcase-preview"><i class="fas fa-file-word"></i> Тележка инкубационная</div>
-										</div>
+									<div class="wrapper">
+										<span class="showcase-price">От <span class="number">21.600</span> руб.</span>
+										<div class="showcase-preview"><i class="fas fa-file-word"></i> Воздушный клапан</div>
+										<div class="showcase-overview">с электроприводом</div>
 									</div>
-									<div onclick="window.location.href='/doc/production/container.docx'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/shipping-container.png"/>
-										</div>
-										<div class="wrapper">
-											<!-- <span class="showcase-price"></span> -->
-											<span class="showcase-preview"><i class="fas fa-file-word"></i> КТЛ u КТП</span><br/>
-											<div class="showcase-overview">
-												Контейнеры для транспортировки живой птицы
-											</div>
+								</div>
+								<div onclick="window.location.href='/doc/production/cart.doc'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/incubation-truck.png"/>
+									</div>
+									<div class="wrapper">
+										<span class="showcase-price">От <span class="number">102.600</span> руб.</span>
+										<div class="showcase-preview"><i class="fas fa-file-word"></i> Тележка инкубационная</div>
+									</div>
+								</div>
+								<div onclick="window.location.href='/doc/production/container.docx'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/shipping-container.png"/>
+									</div>
+									<div class="wrapper">
+										<!-- <span class="showcase-price"></span> -->
+										<span class="showcase-preview"><i class="fas fa-file-word"></i> КТЛ u КТП</span><br/>
+										<div class="showcase-overview">
+											Контейнеры для транспортировки живой птицы
 										</div>
 									</div>
 								</div>
@@ -243,82 +242,80 @@
 							<div id="misc" class="header">
 								<h2>Разное</h2>
 							</div>
-							<div class="content">
-								<div class="showcase">
-									<div onclick="window.location.href='/pages/production/misc/universal-construction-mechanism.html'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/oks.png"/>
-										</div>
-										<div class="wrapper">
-											<!-- <span class="showcase-price">От руб.</span> -->
-											<span class="showcase-preview">ОКС-<span class="number">8953</span>ПС</span>
-											<div class="showcase-overview">
-												Универсальный построечный механизм
-											</div>
-										</div>
+							<div class="showcase">
+								<div onclick="window.location.href='/pages/production/misc/universal-construction-mechanism.html'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/oks.png"/>
 									</div>
-									<div onclick="window.location.href='/pages/production/misc/playgrounds-equipment.html'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/playground-equipment.png"/>
-										</div>
-										<div class="wrapper">
-											<span class="showcase-price">От <span class="number">2.921</span> руб.</span>
-											<div class="showcase-preview">
-												Оборудование игровых площадок
-											</div>
-										</div>
-									</div>
-									<div onclick="window.location.href='/pages/production/misc/plastic-products.html'" class="showcase-block zoom-out">
-										<div class="img-container">
-											<img src="/img/representations/plastic-production.png"/>
-										</div>
-										<div class="wrapper">
-											<!-- <span class="showcase-price">От 1000 руб.</span> -->
-											<div class="showcase-preview">
-												Изделия из пластмасс
-											</div>
+									<div class="wrapper">
+										<!-- <span class="showcase-price">От руб.</span> -->
+										<span class="showcase-preview">ОКС-<span class="number">8953</span>ПС</span>
+										<div class="showcase-overview">
+											Универсальный построечный механизм
 										</div>
 									</div>
 								</div>
-								<details>
-									<summary><span>Колеса металические для сельхозмашин</span></summary>
-									<ul>
-										<li>Колесо диаметром 800мм ширина 180мм</li>
-										<li>Колесо диаметром 600мм ширина 250мм</li>
-										<li>Колесо диаметром 516мм ширина 178мм</li>
-										<li>Колесо диаметром 516мм ширина 154мм</li>
-									</ul>
-									<p><img width="536" height="402" src="/img/production/whils.jpg"/></p>
-								</details>
-								<details>
-									<summary><span>Пластиковые сидения для станионов</span></summary>
-									<p>Доступны варианты с высокой и низкой спинками</p>
-									<p><img width="266" height="200" src="/img/production/plastic-stadium-seat.jpg"/></p>
-								</details>
-								<details>
-									<summary><span>Урны и контейнеры для мусора</span></summary>
-									<p>Урны У-1, У-2, У-3, контейнер для сбора и вывоза мусора</p>
-									<p><img width="160" height="150" src="/img/production/urn.jpg"/></p>
-								</details>
-								<details>
-									<summary><span>Кольца установочные для обсадных колонн</span></summary>
-									<ul>
-										<li>КСС-102 (для обсадных колонн диаметром 102мм)</li>
-										<li>КСС-114 (для обсадных колонн диаметром 114мм)</li>
-										<li>КСС-127 (для обсадных колонн диаметром 127мм)</li>
-										<li>КСС-140 (для обсадных колонн диаметром 140мм)</li>
-										<li>КСС-146 (для обсадных колонн диаметром 146мм)</li>
-										<li>КСС-168 (для обсадных колонн диаметром 168мм)</li>
-										<li>КСС-178 (для обсадных колонн диаметром 178мм)</li>
-										<li>КСС-194 (для обсадных колонн диаметром 194мм)</li>
-										<li>КСС-219 (для обсадных колонн диаметром 219мм)</li>
-										<li>КСС-245 (для обсадных колонн диаметром 245мм)</li>
-										<li>КСС-324 (для обсадных колонн диаметром 324мм)</li>
-									</ul>
-									<p>Предназначены для фиксации на обсадной колонне центраторов, турбулизаторов  и другой технологической оснастки, с целью исключения их перемещения по колонне обсадных труб, при креплении нефтяных и газовых скважин.</p>
-									<p>Особенности: цельная неразъемная конструкция и прочные установочные винты позволяют выдерживать высокие нагрузки.</p>
-								</details>
+								<div onclick="window.location.href='/pages/production/misc/playgrounds-equipment.html'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/playground-equipment.png"/>
+									</div>
+									<div class="wrapper">
+										<span class="showcase-price">От <span class="number">2.921</span> руб.</span>
+										<div class="showcase-preview">
+											Оборудование игровых площадок
+										</div>
+									</div>
+								</div>
+								<div onclick="window.location.href='/pages/production/misc/plastic-products.html'" class="showcase-block zoom-out">
+									<div class="img-container">
+										<img src="/img/representations/plastic-production.png"/>
+									</div>
+									<div class="wrapper">
+										<!-- <span class="showcase-price">От 1000 руб.</span> -->
+										<div class="showcase-preview">
+											Изделия из пластмасс
+										</div>
+									</div>
+								</div>
 							</div>
+							<details>
+								<summary><span>Колеса металические для сельхозмашин</span></summary>
+								<ul>
+									<li>Колесо диаметром 800мм ширина 180мм</li>
+									<li>Колесо диаметром 600мм ширина 250мм</li>
+									<li>Колесо диаметром 516мм ширина 178мм</li>
+									<li>Колесо диаметром 516мм ширина 154мм</li>
+								</ul>
+								<p><img width="536" height="402" src="/img/production/whils.jpg"/></p>
+							</details>
+							<details>
+								<summary><span>Пластиковые сидения для станионов</span></summary>
+								<p>Доступны варианты с высокой и низкой спинками</p>
+								<p><img width="266" height="200" src="/img/production/plastic-stadium-seat.jpg"/></p>
+							</details>
+							<details>
+								<summary><span>Урны и контейнеры для мусора</span></summary>
+								<p>Урны У-1, У-2, У-3, контейнер для сбора и вывоза мусора</p>
+								<p><img width="160" height="150" src="/img/production/urn.jpg"/></p>
+							</details>
+							<details>
+								<summary><span>Кольца установочные для обсадных колонн</span></summary>
+								<ul>
+									<li>КСС-102 (для обсадных колонн диаметром 102мм)</li>
+									<li>КСС-114 (для обсадных колонн диаметром 114мм)</li>
+									<li>КСС-127 (для обсадных колонн диаметром 127мм)</li>
+									<li>КСС-140 (для обсадных колонн диаметром 140мм)</li>
+									<li>КСС-146 (для обсадных колонн диаметром 146мм)</li>
+									<li>КСС-168 (для обсадных колонн диаметром 168мм)</li>
+									<li>КСС-178 (для обсадных колонн диаметром 178мм)</li>
+									<li>КСС-194 (для обсадных колонн диаметром 194мм)</li>
+									<li>КСС-219 (для обсадных колонн диаметром 219мм)</li>
+									<li>КСС-245 (для обсадных колонн диаметром 245мм)</li>
+									<li>КСС-324 (для обсадных колонн диаметром 324мм)</li>
+								</ul>
+								<p>Предназначены для фиксации на обсадной колонне центраторов, турбулизаторов  и другой технологической оснастки, с целью исключения их перемещения по колонне обсадных труб, при креплении нефтяных и газовых скважин.</p>
+								<p>Особенности: цельная неразъемная конструкция и прочные установочные винты позволяют выдерживать высокие нагрузки.</p>
+							</details>
 						</div>
 
 						<div class="sub-block">

@@ -19,8 +19,13 @@
 
 	.slider__wrapper {
 		background-color: $content-block-background;
+		height: 100%;
+
 		.slider__items {
+			height: 100%;
+
 			.slider__item {
+				height: 100%;
 				.slider__item__img__text {
 					position: relative;
 					display: flex;
