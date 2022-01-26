@@ -1,2 +1,2 @@
-# [stankoterm.ru](Stankoter.ru)
+# [stankoterm.ru](stankoterm.ru)
 Site for ОАО "Станкотерм"
